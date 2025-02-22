@@ -2,6 +2,7 @@ import { useState } from "react";
 import Product from "../../components/Product/Product";
 import { productsData } from "../../data/productsData";
 import "./Products.scss";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 const Products = () => {
     const [search, setSearch] = useState("");
@@ -31,7 +32,7 @@ const Products = () => {
 
     return (
         <div className="products-container" id="products">
-            <h3 className="products-main-info">Продукція</h3>
+            <PageTitle name="Продукція" />
             <p className="filter-title">Фільтер</p>
             <div className="search-wrapper">
                 <input

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import map from "/ukraine.svg";
 import "./AboutUs.scss";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 const AboutUs = () => {
     useEffect(() => {
@@ -92,7 +93,7 @@ const AboutUs = () => {
     }
     return (
         <div className="about-us" id="about-us">
-            <h3 className="about-main-info">Про нас</h3>
+            <PageTitle name="Про нас" />
             <p className="about-info">
                 Компанія Ягода Карпат спеціалізується на переробці та
                 виробництві заморожених та сушених ягід, фруктів, грибів та

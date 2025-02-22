@@ -1,4 +1,5 @@
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
+import logo from "./../../assets/yagoda-karpat-ua-logo.svg";
 import "./Header.scss";
 
 const Header = () => {
@@ -16,7 +17,8 @@ const Header = () => {
     return (
         <header className="header">
             <a className="header__logo" href="#home">
-                Ягода Карпат
+                <img width={30} src={logo} alt="Logo" />
+                <span>Ягода Карпат</span>
             </a>
             <BurgerBtn />
         </header>

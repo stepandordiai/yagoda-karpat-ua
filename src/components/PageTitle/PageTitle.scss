@@ -1,0 +1,11 @@
+.page-title {
+    padding: 120px 25px 25px;
+    text-align: left;
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+@media screen and (max-width: 900px) {
+    .page-title {
+        padding: 90px 10px 10px;
+    }
+}

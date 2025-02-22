@@ -1,10 +1,11 @@
+import PageTitle from "../../components/PageTitle/PageTitle";
 import "./Contacts.scss";
 
 const Contacts = () => {
     return (
         <>
             <div className="contacts-container" id="contacts">
-                <h3 className="contacts-main-info">Контакти</h3>
+                <PageTitle name="Контакти" />
                 <div className="contacts-icons-container">
                     <div className="icon-container">
                         <i className="fa-solid fa-phone"></i>

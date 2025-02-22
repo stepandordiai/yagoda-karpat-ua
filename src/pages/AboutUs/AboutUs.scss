@@ -1,12 +1,5 @@
 .about-us {
-    min-height: 100vh;
     text-align: center;
-}
-
-.about-main-info {
-    padding: 120px 25px 25px;
-    text-align: right;
-    font-size: clamp(2rem, 6vw, 3rem);
 }
 
 .about-info {
@@ -40,9 +33,5 @@
     .contacts-grid-container {
         flex-direction: column;
         row-gap: 50px;
-    }
-
-    .about-main-info {
-        padding: 90px 10px 10px;
     }
 }
