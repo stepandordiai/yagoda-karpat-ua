@@ -39,14 +39,19 @@ const Footer = () => {
                 <a className="footer-logo" href="#section1">
                     Ягода Карпат
                 </a>
-                <div className="certificate-container">
-                    <p className="certificate-info">Наші сертифікати</p>
-                    <img
-                        width={100}
-                        loading="lazy"
-                        src={organicImg}
-                        alt="Organic Certificate"
-                    />
+                <div>
+                    <p className="certificates-info">Наші сертифікати</p>
+                    <div className="certificates">
+                        <img
+                            width={100}
+                            loading="lazy"
+                            src={organicImg}
+                            alt="Organic Certificate"
+                        />
+                        <p style={{ fontSize: "2rem", fontWeight: "700" }}>
+                            HACCP
+                        </p>
+                    </div>
                 </div>
                 <ul className="footer-nav">
                     <li>
@@ -165,10 +170,11 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className="footer__bottom">
-                    <p className="rights">
-                        © 2024 Ягода Карпат. Всі права захищені.
+                    <p>
+                        © 2024 - {new Date().getFullYear()} Ягода Карпат. Всі
+                        права захищені.
                     </p>
-                    <p className="creator">
+                    <p>
                         Made with love by{" "}
                         <a
                             className="creator-link"

@@ -8,16 +8,16 @@
 }
 
 .filter-title {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
+    padding-left: 10px;
+    margin-bottom: 5px;
 }
 
 .search-wrapper {
     height: 50px;
-    background-color: var(--color-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #fff;
+    @include flex-between-center;
     border-radius: 10px;
     padding-right: 5px;
 }
@@ -26,16 +26,13 @@
     flex-grow: 1;
     font-size: 1rem;
     padding: 0 10px;
-}
-
-.search-input::placeholder {
-    opacity: 0.5;
+    height: 100%;
 }
 
 .search-icon {
     @include grid-center;
     width: 40px;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     background: var(--color-dark);
     border-radius: inherit;
 }

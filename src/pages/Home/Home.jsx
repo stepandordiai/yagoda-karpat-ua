@@ -40,7 +40,7 @@ const Home = () => {
                     }
                     alt=""
                 />
-                <a className="home-contact-us-btn" href="">
+                <a className="home-contact-us-btn" href="#contacts">
                     Зв'яжіться з нами
                 </a>
                 {/* <div className="home-container__product-wrapper">

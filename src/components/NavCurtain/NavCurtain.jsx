@@ -50,16 +50,21 @@ const NavCurtain = () => {
         document
             .querySelector(".products-btn")
             .classList.toggle("products-btn--active");
+        document
+            .querySelector(".products-btn__icon")
+            .classList.toggle("products-btn__icon--active");
     }
 
     useEffect(() => {
         document.querySelectorAll(".js-link").forEach((link) => {
             link.addEventListener("click", () => {
                 const burgerBtn = document.querySelector(".burger-btn");
-                const midLine = document.querySelector(".burger-btn__line");
+                const midLine = document.querySelector(
+                    ".burger-btn__center-line"
+                );
                 const mobileMenu = document.querySelector(".nav-curtain");
                 burgerBtn.classList.remove("burger-btn--active");
-                midLine.classList.remove("burger-btn__line--active");
+                midLine.classList.remove("burger-btn__center-line--active");
                 mobileMenu.classList.remove("nav-curtain--active");
                 document
                     .querySelector(".curtain")
@@ -71,6 +76,9 @@ const NavCurtain = () => {
                 document
                     .querySelector(".products-btn")
                     .classList.remove("products-btn--active");
+                document
+                    .querySelector(".products-btn__icon")
+                    .classList.remove("products-btn__icon--active");
                 document.body.classList.remove("body--hidden");
             });
         });
@@ -100,7 +108,7 @@ const NavCurtain = () => {
                                 className="products-btn"
                                 onClick={showProducts}
                             >
-                                +
+                                <div className="products-btn__icon">+</div>
                             </button>
                         </div>
                         <div className="nav-curtain__grid-dropdown">

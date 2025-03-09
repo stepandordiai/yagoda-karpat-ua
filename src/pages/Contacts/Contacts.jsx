@@ -7,62 +7,68 @@ const Contacts = () => {
             <div className="contacts-container" id="contacts">
                 <PageTitle name="Контакти" />
                 <div className="contacts-icons-container">
-                    <div className="icon-container">
+                    <a href="tel:+380968065513" className="icon-container">
                         <i className="fa-solid fa-phone"></i>
-                        <p>+38 (096) 806 55 13</p>
-                    </div>
-                    <div className="icon-container">
+                        <span>+38 (096) 806 55 13</span>
+                    </a>
+                    <a
+                        href="mailto:dordyaysberries@gmail.com"
+                        className="icon-container"
+                    >
                         <i className="fa-solid fa-envelope"></i>
-                        <p>dordyaysberries@gmail.com</p>
-                    </div>
-                    <div className="icon-container">
+                        <span>dordyaysberries@gmail.com</span>
+                    </a>
+                    <a
+                        className="icon-container"
+                        href="https://maps.app.goo.gl/U8hieofkGSuBgP7R9"
+                        target="_blank"
+                    >
                         <i className="fa-solid fa-location-dot"></i>
-                        <p className="c-address">
+                        <span>
                             вул. Центральна, 34Б, с. Вільхівці, Тячівський р-н,
                             Закарпатська обл., Україна, 90542
-                        </p>
-                    </div>
+                        </span>
+                    </a>
                 </div>
             </div>
             <div className="form-map-container">
                 <form
                     className="form"
-                    action="mailto:hokageow@icloud.com"
+                    action="mailto:dordyaysberries@gmail.com"
                     method="post"
                     encType="text/plain"
                 >
-                    <div className="inputs__wrapper">
-                        <p className="form-info">Зв'яжіться з нами</p>
-                        <div className="input-container">
-                            <label htmlFor="first-name">Ім'я</label>
-                            <input
-                                id="first-name"
-                                className="input1"
-                                type="text"
-                            />
-                        </div>
-                        <div className="input-container">
-                            <label htmlFor="last-name">Прізвище</label>
-                            <input
-                                id="last-name"
-                                className="input2"
-                                type="text"
-                            />
-                        </div>
-                        <div className="input-container">
-                            <label htmlFor="tel">Номер телефону</label>
-                            <input id="tel" className="input3" type="tel" />
-                        </div>
-                        <div className="input-container">
-                            <label htmlFor="message">Повідомлення</label>
-                            <textarea
-                                className="input4"
-                                name=""
-                                id="message"
-                                cols="10"
-                                rows="10"
-                            ></textarea>
-                        </div>
+                    <p className="form__title">Зв'яжіться з нами</p>
+                    <div className="input-container">
+                        <label htmlFor="first-name">Ім'я</label>
+                        <input
+                            className="form__input"
+                            id="first-name"
+                            name="First name"
+                            type="text"
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label htmlFor="last-name">Прізвище</label>
+                        <input
+                            className="form__input"
+                            id="last-name"
+                            name="Last name"
+                            type="text"
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label htmlFor="phone-number">Номер телефону</label>
+                        <input
+                            className="form__input"
+                            id="phone-number"
+                            name="Phone number"
+                            type="tel"
+                        />
+                    </div>
+                    <div className="input-container">
+                        <label htmlFor="message">Повідомлення</label>
+                        <textarea name="Message" id="message"></textarea>
                     </div>
                     <button className="form-submit-btn" type="submit">
                         Відправити

@@ -29,13 +29,30 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 0;
     width: 50px;
     aspect-ratio: 1/1;
-    display: grid;
-    place-content: center;
-    background: var(--color-dark);
+    @include grid-center;
+    // background: var(--color-dark);
+    background: #fff;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.to-top-btn::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color-dark);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.to-top-btn:hover::before {
+    transform: scale(1);
 }
 
 .footer-details {
@@ -45,7 +62,7 @@
     text-align: center;
     background: #fff;
     border-radius: 0 10px 10px 10px;
-    padding: 10px;
+    padding: 25px;
 }
 
 .footer-logo {
@@ -53,9 +70,15 @@
     font-size: clamp(26px, 3vw, 36px);
 }
 
-.certificate-info {
+.certificates-info {
     font-size: 1.25rem;
     margin-bottom: 25px;
+}
+
+.certificates {
+    @include flex-center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .footer-nav {
@@ -93,8 +116,6 @@
     display: none;
 }
 
-// Footer bottom
-
 .footer__bottom {
     @include flex-between-center;
 }
@@ -112,6 +133,10 @@
 @media screen and (max-width: 900px) {
     .footer {
         margin-top: 10px;
+    }
+
+    .footer-details {
+        padding: 10px;
     }
 }
 
@@ -143,11 +168,6 @@
         transition: transform 0.6s;
     }
 
-    .dropdown-btn:hover::before {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-
     .dropdown-btn--active::before {
         transform: scaleX(1);
         transform-origin: bottom left;
@@ -177,9 +197,7 @@
         overflow: hidden;
         padding: 0 10px;
     }
-}
 
-@media (max-width: 700px) {
     .footer__bottom {
         flex-direction: column;
     }

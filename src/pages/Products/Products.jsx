@@ -33,19 +33,20 @@ const Products = () => {
     return (
         <div className="products-container" id="products">
             <PageTitle name="Продукція" />
-            <p className="filter-title">Фільтер</p>
-            <div className="search-wrapper">
-                <input
-                    className="search-input"
-                    type="text"
-                    placeholder="Який продукт ви шукаєте?"
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-                <div className="search-icon">
-                    <i className="fa-solid fa-magnifying-glass"></i>
+            <div>
+                <p className="filter-title">Фільтер</p>
+                <div className="search-wrapper">
+                    <input
+                        className="search-input"
+                        type="text"
+                        placeholder="Який продукт ви шукаєте?"
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
+                    <div className="search-icon">
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
             </div>
-
             {productsData
                 .filter((item) => {
                     return search.toLowerCase() === ""
