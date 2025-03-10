@@ -88,7 +88,7 @@ const NavCurtain = () => {
         <>
             <div className="curtain"></div>
             <div className="nav-curtain">
-                <ul className="menu-link">
+                <ul className="nav-curtain__list">
                     <li>
                         <a className="link js-link active-link" href="#home">
                             Головна

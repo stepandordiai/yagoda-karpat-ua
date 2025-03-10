@@ -9,15 +9,16 @@ const Footer = () => {
     };
 
     useEffect(() => {
+        const dropdownBtnIcon = document.querySelectorAll(
+            ".dropdown-btn__icon"
+        );
+        const gridDropdownWrapper = document.querySelectorAll(
+            ".grid-dropdown__wrapper"
+        );
+        const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+
         document.querySelectorAll(".js-dropdown-btn").forEach((btn, index) => {
             btn.addEventListener("click", () => {
-                const dropdownBtnIcon = document.querySelectorAll(
-                    ".dropdown-btn__icon"
-                );
-                const gridDropdownWrapper = document.querySelectorAll(
-                    ".grid-dropdown__wrapper"
-                );
-                const dropdownBtn = document.querySelectorAll(".dropdown-btn");
                 gridDropdownWrapper[index].classList.toggle(
                     "grid-dropdown__wrapper--active"
                 );
@@ -25,6 +26,20 @@ const Footer = () => {
                     "dropdown-btn__icon--active"
                 );
                 dropdownBtn[index].classList.toggle("dropdown-btn--active");
+            });
+        });
+
+        document.querySelectorAll(".js-footer__link").forEach((link) => {
+            link.addEventListener("click", () => {
+                gridDropdownWrapper.forEach((wrapper) => {
+                    wrapper.classList.remove("grid-dropdown__wrapper--active");
+                });
+                dropdownBtnIcon.forEach((icon) => {
+                    icon.classList.remove("dropdown-btn__icon--active");
+                });
+                dropdownBtn.forEach((btn) => {
+                    btn.classList.remove("dropdown-btn--active");
+                });
             });
         });
     }, []);
@@ -62,16 +77,33 @@ const Footer = () => {
                         <div className="grid-dropdown__wrapper">
                             <ul className="footer-nav__list grid-dropdown">
                                 <li>
-                                    <a href="#home">Головна</a>
+                                    <a className="js-footer__link" href="#home">
+                                        Головна
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#about-us">Про нас</a>
+                                    <a
+                                        className="js-footer__link"
+                                        href="#about-us"
+                                    >
+                                        Про нас
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#products">Продукція</a>
+                                    <a
+                                        className="js-footer__link"
+                                        href="#products"
+                                    >
+                                        Продукція
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#contacts">Контакти</a>
+                                    <a
+                                        className="js-footer__link"
+                                        href="#contacts"
+                                    >
+                                        Контакти
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -90,7 +122,10 @@ const Footer = () => {
                                     .map((product) => {
                                         return (
                                             <li key={product.id}>
-                                                <a href={"#" + product.id}>
+                                                <a
+                                                    className="js-footer__link"
+                                                    href={"#" + product.id}
+                                                >
                                                     {product.name}
                                                 </a>
                                             </li>
@@ -113,7 +148,10 @@ const Footer = () => {
                                     .map((product) => {
                                         return (
                                             <li key={product.id}>
-                                                <a href={"#" + product.id}>
+                                                <a
+                                                    className="js-footer__link"
+                                                    href={"#" + product.id}
+                                                >
                                                     {product.name}
                                                 </a>
                                             </li>
@@ -136,7 +174,10 @@ const Footer = () => {
                                     .map((product) => {
                                         return (
                                             <li key={product.id}>
-                                                <a href={"#" + product.id}>
+                                                <a
+                                                    className="js-footer__link"
+                                                    href={"#" + product.id}
+                                                >
                                                     {product.name}
                                                 </a>
                                             </li>
@@ -159,7 +200,10 @@ const Footer = () => {
                                     .map((product) => {
                                         return (
                                             <li key={product.id}>
-                                                <a href={"#" + product.id}>
+                                                <a
+                                                    className="js-footer__link"
+                                                    href={"#" + product.id}
+                                                >
                                                     {product.name}
                                                 </a>
                                             </li>

@@ -176,11 +176,11 @@
     .dropdown-btn__icon {
         display: initial;
         font-size: 2rem;
-        transition: rotate 0.3s;
+        transition: transform 0.3s;
     }
 
     .dropdown-btn__icon--active {
-        rotate: 45deg;
+        transform: rotate(45deg);
     }
 
     .grid-dropdown__wrapper {
@@ -196,6 +196,7 @@
     .grid-dropdown {
         overflow: hidden;
         padding: 0 10px;
+        justify-self: flex-start;
     }
 
     .footer__bottom {
