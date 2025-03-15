@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Product from "../../components/Product/Product";
+import Product from "../Product/Product";
 import { productsData } from "../../data/productsData";
 import "./Products.scss";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import PageTitle from "../PageTitle/PageTitle";
 
 const Products = () => {
     const [search, setSearch] = useState("");

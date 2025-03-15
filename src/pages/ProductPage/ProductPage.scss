@@ -1,0 +1,12 @@
+.coming-soon {
+    text-align: center;
+    font-size: clamp(1rem, 4vw, 2rem);
+    padding-top: 100px;
+    padding-bottom: 75px;
+}
+
+@media (max-width: 900px) {
+    .coming-soon {
+        padding-bottom: 90px;
+    }
+}

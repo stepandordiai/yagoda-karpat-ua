@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -64,18 +66,33 @@ const Product = ({ product }) => {
     return (
         <div className="product">
             <div className="product__img-wrapper">
-                <img className="product-img" src={productImages[0]} alt="" />
-                <div className="img-qty">
-                    {productImages.length}{" "}
-                    <i className="fa-solid fa-camera"></i>
-                </div>
+                {productImages ? (
+                    <>
+                        <img
+                            className="product-img"
+                            src={productImages[0]}
+                            alt=""
+                        />
+                        <div className="img-qty">
+                            {productImages.length}{" "}
+                            <i className="fa-solid fa-camera"></i>
+                        </div>
+                    </>
+                ) : (
+                    <div className="no-img"></div>
+                )}
             </div>
             <div className="product__info-container">
                 <div>
                     <p className="product__lat-name">{latName}</p>
                     <p className="product-name">{name}</p>
                 </div>
-                <button className="product__info-btn">Детальніше</button>
+                <NavLink
+                    to={`/product-page/${name}`}
+                    className="product__info-btn"
+                >
+                    Детальніше
+                </NavLink>
 
                 {/* <ul className="product-list-info">
                         <li className="pack">Пакування: {pack}</li>

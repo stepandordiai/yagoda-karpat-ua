@@ -214,10 +214,7 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className="footer__bottom">
-                    <p>
-                        © 2024 - {new Date().getFullYear()} Ягода Карпат. Всі
-                        права захищені.
-                    </p>
+                    <p>© Ягода Карпат 2025. Всі права захищені.</p>
                     <p>
                         Made with love by{" "}
                         <a

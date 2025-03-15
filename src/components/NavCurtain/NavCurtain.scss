@@ -5,14 +5,13 @@
     bottom: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
     pointer-events: none;
     transition: all 0.5s;
 }
 
 .curtain--active {
-    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav-curtain {
@@ -64,7 +63,7 @@
     height: 100%;
     transform: scaleY(0);
     transform-origin: bottom;
-    background: var(--color-dark);
+    background: var(--accent-clr);
     transition: transform 0.3s ease-out;
 }
 
@@ -83,7 +82,7 @@
     height: 100%;
     transform: scale(1);
     transform-origin: top;
-    background: var(--color-dark);
+    background: var(--accent-clr);
 }
 
 .nav-curtain__products-link {
@@ -112,7 +111,7 @@
     width: 0;
     height: 0;
     border-radius: 10px;
-    background: var(--color-dark);
+    background: var(--accent-clr);
     transition: all 0.3s;
 }
 
@@ -149,7 +148,7 @@
         a {
             transition: color 0.3s;
             &:hover {
-                color: var(--color-dark);
+                color: var(--accent-clr);
             }
         }
     }

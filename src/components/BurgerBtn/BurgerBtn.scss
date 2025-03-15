@@ -1,7 +1,7 @@
 @use "./../../mixins" as *;
 
 .burger-btn__wrapper {
-    background: var(--color-dark);
+    background: var(--accent-clr);
     width: 50px;
     aspect-ratio: 1/1;
     @include grid-center;

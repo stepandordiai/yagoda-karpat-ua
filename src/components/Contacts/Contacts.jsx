@@ -1,4 +1,4 @@
-import PageTitle from "../../components/PageTitle/PageTitle";
+import PageTitle from "../PageTitle/PageTitle";
 import "./Contacts.scss";
 
 const Contacts = () => {
@@ -16,7 +16,7 @@ const Contacts = () => {
                         className="icon-container"
                     >
                         <i className="fa-solid fa-envelope"></i>
-                        <span>dordyaysberries@gmail.com</span>
+                        <span>info@yagodakarpat.com</span>
                     </a>
                     <a
                         className="icon-container"

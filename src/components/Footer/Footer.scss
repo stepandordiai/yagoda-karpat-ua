@@ -42,7 +42,7 @@
     content: "";
     position: absolute;
     z-index: -1;
-    background: var(--color-dark);
+    background: var(--accent-clr);
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -106,7 +106,7 @@
             transition: color 0.15s;
 
             &:hover {
-                color: var(--color-dark);
+                color: var(--accent-clr);
             }
         }
     }
@@ -126,7 +126,7 @@
     transition: color 0.15s;
 
     &:hover {
-        color: var(--color-dark);
+        color: var(--accent-clr);
     }
 }
 
@@ -164,7 +164,7 @@
         height: 100%;
         transform: scaleX(0);
         transform-origin: bottom right;
-        background: var(--color-dark);
+        background: var(--accent-clr);
         transition: transform 0.6s;
     }
 
