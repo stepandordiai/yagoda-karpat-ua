@@ -1,10 +1,9 @@
 @use "./../../mixins" as *;
 
 .products-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
 .filter-title {
@@ -20,6 +19,7 @@
     @include flex-between-center;
     border-radius: 10px;
     padding-right: 5px;
+    margin-bottom: 25px;
 }
 
 .search-input {
@@ -39,16 +39,15 @@
 
 @media (max-width: 900px) {
     .products-container {
-        row-gap: 15px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .search-wrapper {
+        margin-bottom: 10px;
     }
 
     .products-info {
         padding: 0 10px;
-    }
-}
-
-@media (max-width: 900px) {
-    .products-container {
-        row-gap: 10px;
     }
 }

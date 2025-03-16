@@ -1,5 +1,4 @@
 import { HashLink } from "react-router-hash-link";
-import { NavLink } from "react-router-dom";
 import "./PageNavTitle.scss";
 
 const PageNavTitle = ({ title, previousTitle }) => {

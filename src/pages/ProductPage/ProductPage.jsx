@@ -11,19 +11,22 @@ const ProductPage = () => {
 
     const productData = productsData.filter((product) => {
         // FIXME:
-        return product.name === id;
+        return product.id === id;
     });
 
     const { pathname, hash } = useLocation();
 
     useEffect(() => {
-        document.title = id;
+        document.title = productData[0].name;
         // FIXME:
     }, [id, pathname, hash]);
 
     return (
         <>
-            <PageNavTitle title={id} previousTitle={"Продукція"} />
+            <PageNavTitle
+                title={productData[0].name}
+                previousTitle={"Продукція"}
+            />
             <p className="coming-soon">
                 Незабаром тут з'явиться інформація про продукт
             </p>

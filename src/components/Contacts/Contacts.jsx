@@ -4,8 +4,8 @@ import "./Contacts.scss";
 const Contacts = () => {
     return (
         <>
-            <div className="contacts-container" id="contacts">
-                <PageTitle name="Контакти" />
+            <div className="contacts-container">
+                <PageTitle name="Контакти" id={"contacts"} />
                 <div className="contacts-icons-container">
                     <a href="tel:+380968065513" className="icon-container">
                         <i className="fa-solid fa-phone"></i>

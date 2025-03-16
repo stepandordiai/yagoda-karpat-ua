@@ -31,8 +31,8 @@ const Products = () => {
     // });
 
     return (
-        <div className="products-container" id="products">
-            <PageTitle name="Продукція" />
+        <>
+            <PageTitle name="Продукція" id={"products"} />
             <div>
                 <p className="filter-title">Фільтер</p>
                 <div className="search-wrapper">
@@ -47,18 +47,20 @@ const Products = () => {
                     </div>
                 </div>
             </div>
-            {productsData
-                .filter((item) => {
-                    return search.toLowerCase() === ""
-                        ? item
-                        : item.name
-                              .toLowerCase()
-                              .startsWith(search.toLowerCase());
-                })
-                .map((product) => {
-                    return <Product product={product} key={product.id} />;
-                })}
-        </div>
+            <div className="products-container">
+                {productsData
+                    .filter((item) => {
+                        return search.toLowerCase() === ""
+                            ? item
+                            : item.name
+                                  .toLowerCase()
+                                  .startsWith(search.toLowerCase());
+                    })
+                    .map((product) => {
+                        return <Product product={product} key={product.id} />;
+                    })}
+            </div>
+        </>
     );
 };
 

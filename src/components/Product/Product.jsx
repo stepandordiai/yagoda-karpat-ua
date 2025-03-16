@@ -71,7 +71,8 @@ const Product = ({ product }) => {
                         <img
                             className="product-img"
                             src={productImages[0]}
-                            alt=""
+                            alt={name}
+                            loading="lazy"
                         />
                         <div className="img-qty">
                             {productImages.length}{" "}
@@ -83,12 +84,9 @@ const Product = ({ product }) => {
                 )}
             </div>
             <div className="product__info-container">
-                <div>
-                    <p className="product__lat-name">{latName}</p>
-                    <p className="product-name">{name}</p>
-                </div>
+                <p className="product-name">{name}</p>
                 <NavLink
-                    to={`/product-page/${name}`}
+                    to={`/product-page/${id}`}
                     className="product__info-btn"
                 >
                     Детальніше

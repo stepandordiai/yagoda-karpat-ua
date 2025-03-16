@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { productsData } from "../../data/productsData";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import organicImg from "./../../assets/img/certificates/organic-logo.jpg";
 import "./Footer.scss";
 
@@ -51,9 +53,9 @@ const Footer = () => {
                 <i className="fa-solid fa-arrow-up"></i>
             </div>
             <div className="footer-details">
-                <a className="footer-logo" href="#section1">
+                <HashLink className="footer-logo" to="/#home">
                     Ягода Карпат
-                </a>
+                </HashLink>
                 <div>
                     <p className="certificates-info">Наші сертифікати</p>
                     <div className="certificates">
@@ -68,8 +70,8 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <ul className="footer-nav">
-                    <li>
+                <div className="footer-nav">
+                    <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>Навігація</p>
                             <div className="dropdown-btn__icon">+</div>
@@ -77,38 +79,41 @@ const Footer = () => {
                         <div className="grid-dropdown__wrapper">
                             <ul className="footer-nav__list grid-dropdown">
                                 <li>
-                                    <a className="js-footer__link" href="#home">
+                                    <HashLink
+                                        className="js-footer__link"
+                                        to="/#home"
+                                    >
                                         Головна
-                                    </a>
+                                    </HashLink>
                                 </li>
                                 <li>
-                                    <a
+                                    <HashLink
                                         className="js-footer__link"
-                                        href="#about-us"
+                                        to="/#about-us"
                                     >
                                         Про нас
-                                    </a>
+                                    </HashLink>
                                 </li>
                                 <li>
-                                    <a
+                                    <HashLink
                                         className="js-footer__link"
-                                        href="#products"
+                                        to="/#products"
                                     >
                                         Продукція
-                                    </a>
+                                    </HashLink>
                                 </li>
                                 <li>
-                                    <a
+                                    <HashLink
                                         className="js-footer__link"
-                                        href="#contacts"
+                                        to="/#contacts"
                                     >
                                         Контакти
-                                    </a>
+                                    </HashLink>
                                 </li>
                             </ul>
                         </div>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>Ягоди</p>
                             <div className="dropdown-btn__icon">+</div>
@@ -117,24 +122,24 @@ const Footer = () => {
                             <ul className="footer-nav__list grid-dropdown">
                                 {productsData
                                     .filter((product) => {
-                                        return product.type == "berry";
+                                        return product.type === "berry";
                                     })
-                                    .map((product) => {
+                                    .map(({ id, name }) => {
                                         return (
-                                            <li key={product.id}>
-                                                <a
+                                            <li key={id}>
+                                                <NavLink
                                                     className="js-footer__link"
-                                                    href={"#" + product.id}
+                                                    to={`/product-page/${id}`}
                                                 >
-                                                    {product.name}
-                                                </a>
+                                                    {name}
+                                                </NavLink>
                                             </li>
                                         );
                                     })}
                             </ul>
                         </div>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>Фрукти</p>
                             <div className="dropdown-btn__icon">+</div>
@@ -143,24 +148,24 @@ const Footer = () => {
                             <ul className="footer-nav__list grid-dropdown">
                                 {productsData
                                     .filter((product) => {
-                                        return product.type == "fruit";
+                                        return product.type === "fruit";
                                     })
-                                    .map((product) => {
+                                    .map(({ id, name }) => {
                                         return (
-                                            <li key={product.id}>
-                                                <a
+                                            <li key={id}>
+                                                <NavLink
                                                     className="js-footer__link"
-                                                    href={"#" + product.id}
+                                                    to={`/product-page/${id}`}
                                                 >
-                                                    {product.name}
-                                                </a>
+                                                    {name}
+                                                </NavLink>
                                             </li>
                                         );
                                     })}
                             </ul>
                         </div>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>Овочі</p>
                             <div className="dropdown-btn__icon">+</div>
@@ -169,24 +174,24 @@ const Footer = () => {
                             <ul className="footer-nav__list grid-dropdown">
                                 {productsData
                                     .filter((product) => {
-                                        return product.type == "vegetable";
+                                        return product.type === "vegetable";
                                     })
-                                    .map((product) => {
+                                    .map(({ id, name }) => {
                                         return (
-                                            <li key={product.id}>
+                                            <li key={id}>
                                                 <a
                                                     className="js-footer__link"
-                                                    href={"#" + product.id}
+                                                    to={`/product-page/${id}`}
                                                 >
-                                                    {product.name}
+                                                    {name}
                                                 </a>
                                             </li>
                                         );
                                     })}
                             </ul>
                         </div>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>Гриби</p>
                             <div className="dropdown-btn__icon">+</div>
@@ -195,24 +200,24 @@ const Footer = () => {
                             <ul className="footer-nav__list grid-dropdown">
                                 {productsData
                                     .filter((product) => {
-                                        return product.type == "mushroom";
+                                        return product.type === "mushroom";
                                     })
-                                    .map((product) => {
+                                    .map(({ id, name }) => {
                                         return (
-                                            <li key={product.id}>
+                                            <li key={id}>
                                                 <a
                                                     className="js-footer__link"
-                                                    href={"#" + product.id}
+                                                    to={`/product-page/${id}`}
                                                 >
-                                                    {product.name}
+                                                    {name}
                                                 </a>
                                             </li>
                                         );
                                     })}
                             </ul>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
                 <div className="footer__bottom">
                     <p>© Ягода Карпат 2025. Всі права захищені.</p>
                     <p>

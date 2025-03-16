@@ -92,8 +92,8 @@ const AboutUs = () => {
     //     started2 = true;
     // }
     return (
-        <div className="about-us" id="about-us">
-            <PageTitle name="Про нас" />
+        <div className="about-us">
+            <PageTitle name="Про нас" id={"about-us"} />
             <p className="about-info">
                 Компанія Ягода Карпат спеціалізується на переробці та
                 виробництві заморожених та сушених ягід, фруктів, грибів та

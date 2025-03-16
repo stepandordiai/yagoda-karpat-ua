@@ -3,8 +3,12 @@ import Products from "./../../components/Products/Products";
 import AboutUs from "./../../components/AboutUs/AboutUs";
 import { productsData } from "../../data/productsData";
 import "./Home.scss";
+import { useEffect } from "react";
 
 const Home = () => {
+    useEffect(() => {
+        document.title = "Ягода Карпат";
+    }, []);
     // addEventListener("scroll", () => {
     //     const homeContainer = document.querySelector(".js-home-container");
 

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { productsData } from "../../data/productsData";
+import { NavLink } from "react-router-dom";
 import "./NavCurtain.scss";
 
 const NavCurtain = () => {
@@ -116,12 +117,12 @@ const NavCurtain = () => {
                                 {productsData.map(({ id, name }) => {
                                     return (
                                         <li key={id}>
-                                            <a
+                                            <NavLink
                                                 className="js-link"
-                                                href={"#" + id}
+                                                to={`/product-page/${id}`}
                                             >
                                                 {name}
-                                            </a>
+                                            </NavLink>
                                         </li>
                                     );
                                 })}
