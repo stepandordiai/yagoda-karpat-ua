@@ -10,7 +10,8 @@
     @include glass-effect;
     min-height: 70px;
     padding: 0 10px;
-    @include flex-between-center;
+    @include flex-end-center;
+    column-gap: 10px;
     border-radius: 10px;
     transition: transform 0.3s;
 }
@@ -20,11 +21,27 @@
 }
 
 .header__logo {
+    margin-right: auto;
     font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     column-gap: 5px;
+}
+
+.header__lang-select {
+    // background: var(--accent-clr);
+    border: 1px solid var(--accent-clr);
+    height: 50px;
+    @include grid-center;
+    border-radius: inherit;
+    padding: 0 10px;
+}
+
+.header__tel {
+    background: var(--accent-clr);
+    height: 50px;
+    padding: 0 10px;
+    border-radius: inherit;
+    @include grid-center;
 }
 
 @media (max-width: 900px) {

@@ -6,6 +6,7 @@
     aspect-ratio: 1/1;
     @include grid-center;
     border-radius: inherit;
+    cursor: pointer;
 }
 
 .burger-btn {
@@ -13,7 +14,6 @@
     width: 30px;
     padding: 15px 0;
     @include flex-center;
-    cursor: pointer;
 }
 
 .burger-btn::before {

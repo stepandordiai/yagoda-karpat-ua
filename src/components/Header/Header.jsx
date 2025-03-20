@@ -1,6 +1,6 @@
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { HashLink } from "react-router-hash-link";
-import logo from "./../../assets/yagoda-karpat-ua-logo.svg";
+import logo from "./../../assets/yagoda-karpat-logo.svg";
 import "./Header.scss";
 
 const Header = () => {
@@ -21,6 +21,10 @@ const Header = () => {
                 <img width={30} src={logo} alt="Logo" />
                 <span>Ягода Карпат</span>
             </HashLink>
+            <div className="header__lang-select">UA - Українська</div>
+            <a className="header__tel" href="tel:+380968065513">
+                +38 096 806 55 13
+            </a>
             <BurgerBtn />
         </header>
     );

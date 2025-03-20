@@ -1,1 +1,1 @@
-# Yagoda Karpat (UA)
+# Yagoda Karpat

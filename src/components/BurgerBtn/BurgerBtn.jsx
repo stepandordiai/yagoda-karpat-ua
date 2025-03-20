@@ -23,8 +23,8 @@ const BurgerBtn = () => {
     }
 
     return (
-        <div className="burger-btn__wrapper">
-            <div onClick={toggleBurgerBtn} className="burger-btn">
+        <div onClick={toggleBurgerBtn} className="burger-btn__wrapper">
+            <div className="burger-btn">
                 <span className="burger-btn__center-line"></span>
             </div>
         </div>
