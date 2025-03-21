@@ -9,8 +9,11 @@ import "swiper/css/bundle";
 // import required modules
 import { EffectCreative, Pagination, Navigation } from "swiper/modules";
 import "./Product.scss";
+import { useTranslation } from "react-i18next";
 
 const Product = ({ product }) => {
+    const { t } = useTranslation();
+
     const {
         id,
         productContainer,
@@ -89,7 +92,7 @@ const Product = ({ product }) => {
                     to={`/product-page/${id}`}
                     className="product__info-btn"
                 >
-                    Детальніше
+                    {t("products.show_more")}
                 </NavLink>
 
                 {/* <ul className="product-list-info">

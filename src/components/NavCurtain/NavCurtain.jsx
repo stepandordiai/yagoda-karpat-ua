@@ -1,9 +1,11 @@
 import { useEffect } from "react";
-import { productsData } from "../../data/productsData";
+// import { productsData } from "../../data/productsData";
+import ProductsData from "../../data/productsData";
 import { NavLink } from "react-router-dom";
 import "./NavCurtain.scss";
 
 const NavCurtain = () => {
+    const productsData = ProductsData();
     // addEventListener("scroll", () => {
     //     const links1 = document.querySelector(".home");
     //     const links2 = document.querySelector(".about");

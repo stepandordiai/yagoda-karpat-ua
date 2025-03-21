@@ -1,0 +1,52 @@
+{
+    "home": {
+        "home_title": "Wholesale manufacturer of frozen and dried foods",
+        "home_sec_title": "We produce frozen and dried berries, fruits, mushrooms and vegetables",
+        "contacts_us_btn": "Contact us"
+    },
+
+    "about_us": {
+        "title": "About us",
+        "sec_title": "Yagoda Karpat company specializes in the processing and production of frozen and dried berries, fruits, mushrooms and vegetables. All our products are grown and collected exclusively in ecologically clean regions of Ukraine.",
+        "year": "Років досвіду",
+        "product": "Продуктів",
+        "volume": "Об'єм продукції за сезон"
+    },
+
+    "products": {
+        "title": "Products",
+        "filter": "Filter",
+        "filter_placeholder": "Which product are you searching?",
+        "bilberry": "Bliberry frozen",
+        "lingonberry": "Lingonberry frozen",
+        "rosehip": "Rosehip frozen",
+        "plum": "Plum frozen",
+        "plum_half": "Plum frozen (half)",
+        "plum_dry": "Plum dried",
+        "prunus": "Чорнослив (pitted)",
+        "elderberry": "Elderberry black frozen",
+        "strawberry": "Strawberry frozen",
+        "raspberry": "Raspberry frozen",
+        "apricot": "Apricot frozen",
+        "sweet_pepper": "Sweet pepper frozen (sliced)",
+        "boletus": "Boletus frozen",
+        "chanterelle": "Chanterelle сушений",
+        "sour_cherry": "Sour cherry frozen",
+        "honey_fungus": "Honey fungus frozen",
+        "blackberry": "Blackberry frozen",
+        "grape": "Grape frozen",
+        "show_more": "Show more"
+    },
+
+    "contacts": {
+        "title": "Контакти",
+        "address": "вул. Центральна, 34Б, с. Вільхівці, Тячівський р-н, Закарпатська обл., Україна, 90542",
+        "contact_us_title": "Зв'яжіться з нами",
+        "first_name": "Ім'я",
+        "last_nmae": "Прізвище",
+        "tel": "Номер телефону",
+        "message": "Повідомлення",
+        "submit_btn": "Відправити",
+        "map_title": "Де нас знайти"
+    }
+}

@@ -1,11 +1,14 @@
 import { useEffect } from "react";
-import { productsData } from "../../data/productsData";
+// import { productsData } from "../../data/productsData";
+import ProductsData from "../../data/productsData";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import organicImg from "./../../assets/img/certificates/organic-logo.jpg";
 import "./Footer.scss";
 
 const Footer = () => {
+    const productsData = ProductsData();
+
     const scrollToTop = () => {
         document.documentElement.scrollTo(0, 0);
     };

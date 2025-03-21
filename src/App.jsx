@@ -6,9 +6,10 @@ import NavCurtain from "./components/NavCurtain/NavCurtain";
 
 import Home from "./pages/Home/Home";
 
-import "./App.scss";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import ScrollToTop from "./utils/ScrollToTop";
+import "./i18n";
+import "./App.scss";
 
 function App() {
     return (

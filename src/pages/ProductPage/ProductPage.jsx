@@ -3,10 +3,14 @@ import { useParams } from "react-router-dom";
 import "./ProductPage.scss";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { productsData } from "./../../data/productsData";
+// import { productsData } from "./../../data/productsData";
+import ProductsData from "../../data/productsData";
+
 import Product from "../../components/Product/Product";
 
 const ProductPage = () => {
+    const productsData = ProductsData();
+
     const { id } = useParams();
 
     const productData = productsData.filter((product) => {

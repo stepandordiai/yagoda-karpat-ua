@@ -1,9 +1,11 @@
 import Contacts from "./../../components/Contacts/Contacts";
 import Products from "./../../components/Products/Products";
 import AboutUs from "./../../components/AboutUs/AboutUs";
-import { productsData } from "../../data/productsData";
-import "./Home.scss";
+// import { productsData } from "../../data/productsData";
+
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import "./Home.scss";
 
 const Home = () => {
     useEffect(() => {

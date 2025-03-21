@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Product from "../Product/Product";
-import { productsData } from "../../data/productsData";
+// import { productsData } from "../../data/productsData";
+import ProductsData from "../../data/productsData";
 import "./Products.scss";
 import PageTitle from "../PageTitle/PageTitle";
 
 const Products = () => {
     const [search, setSearch] = useState("");
 
+    const productsData = ProductsData();
     // addEventListener("keyup", () => {
     //     const slider = document.querySelectorAll(".my-swiper");
     //     slider.forEach((slide) => {
