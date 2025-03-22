@@ -1,11 +1,15 @@
 import { useEffect } from "react";
-// import { productsData } from "../../data/productsData";
 import ProductsData from "../../data/productsData";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./NavCurtain.scss";
 
 const NavCurtain = () => {
+    const { t } = useTranslation();
+
     const productsData = ProductsData();
+
+    // FIXME:
     // addEventListener("scroll", () => {
     //     const links1 = document.querySelector(".home");
     //     const links2 = document.querySelector(".about");
@@ -94,18 +98,18 @@ const NavCurtain = () => {
                 <ul className="nav-curtain__list">
                     <li>
                         <a className="link js-link active-link" href="#home">
-                            Головна
+                            {t("footer.home")}
                         </a>
                     </li>
                     <li>
                         <a className="link js-link" href="#about-us">
-                            Про нас
+                            {t("about_us.title")}
                         </a>
                     </li>
                     <li>
                         <div className="nav-curtain__products-link">
                             <a className="link js-link" href="#products">
-                                Продукція
+                                {t("products.title")}
                             </a>
                             <button
                                 className="products-btn"
@@ -133,7 +137,7 @@ const NavCurtain = () => {
                     </li>
                     <li>
                         <a className="link js-link" href="#contacts">
-                            Контакти
+                            {t("contacts.title")}
                         </a>
                     </li>
                 </ul>

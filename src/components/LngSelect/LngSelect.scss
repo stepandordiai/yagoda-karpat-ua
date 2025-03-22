@@ -1,10 +1,10 @@
 @use "./../../mixins" as *;
 
-.lang-select {
+.lng-select {
     position: relative;
 }
 
-.lang-select__btn {
+.lng-select__btn {
     height: 50px;
     min-width: 50px;
     @include flex-center;
@@ -15,11 +15,11 @@
     cursor: pointer;
 }
 
-.lang-select__btn--active {
+.lng-select__btn--active {
     border: 1px solid var(--accent-clr);
 }
 
-.lang-select__dd {
+.lng-select__dd {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -35,12 +35,12 @@
     pointer-events: none;
 }
 
-.lang-select__dd--active {
+.lng-select__dd--active {
     opacity: 1;
     pointer-events: all;
 }
 
-.lang-select__option {
+.lng-select__option {
     height: 50px;
     min-width: 50px;
     @include flex-center;
@@ -55,6 +55,6 @@
     }
 }
 
-.lang-select__option--active {
+.lng-select__option--active {
     background: var(--accent-clr);
 }

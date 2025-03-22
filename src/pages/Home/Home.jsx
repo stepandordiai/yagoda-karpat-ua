@@ -8,6 +8,8 @@ import { useTranslation } from "react-i18next";
 import "./Home.scss";
 
 const Home = () => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         document.title = "Ягода Карпат";
     }, []);
@@ -35,13 +37,8 @@ const Home = () => {
             <div className="home js-home-container" id="home">
                 <div className="home-container__wrapper">
                     <div>
-                        <h1 className="home-main-info">
-                            Оптовий виробник замороженик та сушених продуктів
-                        </h1>
-                        <p className="home-info">
-                            Ми виробляємо заморожені та сушені ягоди, фрукти,
-                            гриби та овочі
-                        </p>
+                        <h1 className="home-main-info">{t("home.title")}</h1>
+                        <p className="home-info">{t("home.sec_title")}</p>
                     </div>
                     <img
                         className="home-container__img"
@@ -51,7 +48,7 @@ const Home = () => {
                         alt=""
                     />
                     <a className="home-contact-us-btn" href="#contacts">
-                        Зв'яжіться з нами
+                        {t("contact_us")}
                     </a>
                     {/* <div className="home-container__product-wrapper">
                     {productsData.map((product) => {

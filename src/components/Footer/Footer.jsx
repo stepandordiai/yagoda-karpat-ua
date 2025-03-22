@@ -4,9 +4,12 @@ import ProductsData from "../../data/productsData";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import organicImg from "./../../assets/img/certificates/organic-logo.jpg";
+import { useTranslation } from "react-i18next";
 import "./Footer.scss";
 
 const Footer = () => {
+    const { t } = useTranslation();
+
     const productsData = ProductsData();
 
     const scrollToTop = () => {
@@ -60,7 +63,9 @@ const Footer = () => {
                     Ягода Карпат
                 </HashLink>
                 <div>
-                    <p className="certificates-info">Наші сертифікати</p>
+                    <p className="certificates-info">
+                        {t("footer.our_certificates")}
+                    </p>
                     <div className="certificates">
                         <img
                             width={100}
@@ -76,7 +81,7 @@ const Footer = () => {
                 <div className="footer-nav">
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>Навігація</p>
+                            <p>{t("footer.navigation")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
@@ -86,7 +91,7 @@ const Footer = () => {
                                         className="js-footer__link"
                                         to="/#home"
                                     >
-                                        Головна
+                                        {t("footer.home")}
                                     </HashLink>
                                 </li>
                                 <li>
@@ -94,7 +99,7 @@ const Footer = () => {
                                         className="js-footer__link"
                                         to="/#about-us"
                                     >
-                                        Про нас
+                                        {t("about_us.title")}
                                     </HashLink>
                                 </li>
                                 <li>
@@ -102,7 +107,7 @@ const Footer = () => {
                                         className="js-footer__link"
                                         to="/#products"
                                     >
-                                        Продукція
+                                        {t("products.title")}
                                     </HashLink>
                                 </li>
                                 <li>
@@ -110,7 +115,7 @@ const Footer = () => {
                                         className="js-footer__link"
                                         to="/#contacts"
                                     >
-                                        Контакти
+                                        {t("contacts.title")}
                                     </HashLink>
                                 </li>
                             </ul>
@@ -118,7 +123,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>Ягоди</p>
+                            <p>{t("footer.berries")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
@@ -144,7 +149,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>Фрукти</p>
+                            <p>{t("footer.fruits")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
@@ -170,7 +175,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>Овочі</p>
+                            <p>{t("footer.vegetables")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
@@ -182,12 +187,12 @@ const Footer = () => {
                                     .map(({ id, name }) => {
                                         return (
                                             <li key={id}>
-                                                <a
+                                                <NavLink
                                                     className="js-footer__link"
                                                     to={`/product-page/${id}`}
                                                 >
                                                     {name}
-                                                </a>
+                                                </NavLink>
                                             </li>
                                         );
                                     })}
@@ -196,7 +201,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>Гриби</p>
+                            <p>{t("footer.mushrooms")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
@@ -208,12 +213,12 @@ const Footer = () => {
                                     .map(({ id, name }) => {
                                         return (
                                             <li key={id}>
-                                                <a
+                                                <NavLink
                                                     className="js-footer__link"
                                                     to={`/product-page/${id}`}
                                                 >
                                                     {name}
-                                                </a>
+                                                </NavLink>
                                             </li>
                                         );
                                     })}

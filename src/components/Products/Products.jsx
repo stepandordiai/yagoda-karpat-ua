@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Product from "../Product/Product";
-// import { productsData } from "../../data/productsData";
 import ProductsData from "../../data/productsData";
-import "./Products.scss";
 import PageTitle from "../PageTitle/PageTitle";
+import { useTranslation } from "react-i18next";
+import "./Products.scss";
 
 const Products = () => {
+    const { t } = useTranslation();
+
     const [search, setSearch] = useState("");
 
     const productsData = ProductsData();
@@ -34,14 +36,14 @@ const Products = () => {
 
     return (
         <>
-            <PageTitle name="Продукція" id={"products"} />
+            <PageTitle name={t("products.title")} id={"products"} />
             <div>
-                <p className="filter-title">Фільтер</p>
+                <p className="filter-title">{t("products.filter")}</p>
                 <div className="search-wrapper">
                     <input
                         className="search-input"
                         type="text"
-                        placeholder="Який продукт ви шукаєте?"
+                        placeholder={t("products.filter_placeholder")}
                         onChange={(e) => setSearch(e.target.value)}
                     />
                     <div className="search-icon">

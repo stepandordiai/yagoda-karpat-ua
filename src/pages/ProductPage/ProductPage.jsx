@@ -1,14 +1,16 @@
 import PageNavTitle from "../../components/PageNavTitle/PageNavTitle";
 import { useParams } from "react-router-dom";
-import "./ProductPage.scss";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 // import { productsData } from "./../../data/productsData";
 import ProductsData from "../../data/productsData";
-
 import Product from "../../components/Product/Product";
+import { useTranslation } from "react-i18next";
+import "./ProductPage.scss";
 
 const ProductPage = () => {
+    const { t } = useTranslation();
+
     const productsData = ProductsData();
 
     const { id } = useParams();
@@ -29,12 +31,11 @@ const ProductPage = () => {
         <>
             <PageNavTitle
                 title={productData[0].name}
-                previousTitle={"Продукція"}
+                previousTitle={t("products.title")}
+                homeTitle={t("footer.home")}
             />
-            <p className="coming-soon">
-                Незабаром тут з'явиться інформація про продукт
-            </p>
-            <p>Схожа продукція</p>
+            <p className="coming-soon">{t("product_page.coming_soon")}</p>
+            <p>{t("product_page.related")}</p>
             {productsData
                 .filter((product) => {
                     return (

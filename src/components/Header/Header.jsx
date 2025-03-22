@@ -1,8 +1,8 @@
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { HashLink } from "react-router-hash-link";
 import logo from "./../../assets/yagoda-karpat-logo.svg";
+import LngSelect from "../LngSelect/LngSelect";
 import "./Header.scss";
-import LangSelect from "../LangSelect/LangSelect";
 
 const Header = () => {
     let lastScrollTop = 0;
@@ -22,7 +22,7 @@ const Header = () => {
                 <img width={30} src={logo} alt="Logo" />
                 <span>Ягода Карпат</span>
             </HashLink>
-            <LangSelect />
+            <LngSelect />
             <a className="header__tel" href="tel:+380968065513">
                 +38 096 806 55 13
             </a>

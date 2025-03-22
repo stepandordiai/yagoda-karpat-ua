@@ -1,16 +1,17 @@
 {
+    "contact_us": "Contact us",
+
     "home": {
-        "home_title": "Wholesale manufacturer of frozen and dried foods",
-        "home_sec_title": "We produce frozen and dried berries, fruits, mushrooms and vegetables",
-        "contacts_us_btn": "Contact us"
+        "title": "Wholesale manufacturer of frozen and dried foods",
+        "sec_title": "We produce frozen and dried berries, fruits, mushrooms and vegetables"
     },
 
     "about_us": {
         "title": "About us",
         "sec_title": "Yagoda Karpat company specializes in the processing and production of frozen and dried berries, fruits, mushrooms and vegetables. All our products are grown and collected exclusively in ecologically clean regions of Ukraine.",
-        "year": "Років досвіду",
-        "product": "Продуктів",
-        "volume": "Об'єм продукції за сезон"
+        "year": "years of experience",
+        "product": "products",
+        "volume": "Amount of products for season"
     },
 
     "products": {
@@ -23,14 +24,14 @@
         "plum": "Plum frozen",
         "plum_half": "Plum frozen (half)",
         "plum_dry": "Plum dried",
-        "prunus": "Чорнослив (pitted)",
+        "prunus": "Prunus (pitted)",
         "elderberry": "Elderberry black frozen",
         "strawberry": "Strawberry frozen",
         "raspberry": "Raspberry frozen",
         "apricot": "Apricot frozen",
         "sweet_pepper": "Sweet pepper frozen (sliced)",
         "boletus": "Boletus frozen",
-        "chanterelle": "Chanterelle сушений",
+        "chanterelle": "Chanterelle dried",
         "sour_cherry": "Sour cherry frozen",
         "honey_fungus": "Honey fungus frozen",
         "blackberry": "Blackberry frozen",
@@ -39,14 +40,29 @@
     },
 
     "contacts": {
-        "title": "Контакти",
-        "address": "вул. Центральна, 34Б, с. Вільхівці, Тячівський р-н, Закарпатська обл., Україна, 90542",
-        "contact_us_title": "Зв'яжіться з нами",
-        "first_name": "Ім'я",
-        "last_nmae": "Прізвище",
-        "tel": "Номер телефону",
-        "message": "Повідомлення",
-        "submit_btn": "Відправити",
-        "map_title": "Де нас знайти"
+        "title": "Contacts",
+        "address": "Central street, 34B, Vilkhivtsi village, Tyachiv district, Transcarpathian region, Ukraine, 90542",
+        "contact_us_title": "Contact us",
+        "first_name": "First name",
+        "last_name": "Last name",
+        "tel": "Phone number",
+        "message": "Message",
+        "submit": "Send",
+        "map_title": "Where to find us"
+    },
+
+    "footer": {
+        "our_certificates": "Our certificates",
+        "navigation": "Navigation",
+        "home": "Home",
+        "berries": "Berries",
+        "fruits": "Fruits",
+        "vegetables": "Vegetables",
+        "mushrooms": "Mushrooms"
+    },
+
+    "product_page": {
+        "coming_soon": "Product information will be available here soon",
+        "related": "Related products"
     }
 }

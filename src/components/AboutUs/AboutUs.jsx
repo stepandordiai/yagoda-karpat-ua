@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import map from "/ukraine.svg";
 import "./AboutUs.scss";
 import PageTitle from "../PageTitle/PageTitle";
+import { useTranslation } from "react-i18next";
 
 const AboutUs = () => {
+    const { t } = useTranslation();
     // useEffect(() => {
     //     addEventListener("scroll", () => {
     //         if (
@@ -93,26 +95,21 @@ const AboutUs = () => {
     // }
     return (
         <div className="about-us">
-            <PageTitle name="Про нас" id={"about-us"} />
-            <p className="about-info">
-                Компанія Ягода Карпат спеціалізується на переробці та
-                виробництві заморожених та сушених ягід, фруктів, грибів та
-                овочів. Вся наша продукція вирощена та зібрана виключно в
-                екологічно чистих регіонах України.
-            </p>
+            <PageTitle name={t("about_us.title")} id={"about-us"} />
+            <p className="about-info">{t("about_us.sec_title")}</p>
             <img className="ukraine-map" loading="lazy" src={map} alt="map" />
             <div className="contacts-grid-container">
                 <div>
                     <span id="years">0</span>
-                    <p>Років досвіду</p>
+                    <p>{t("about_us.year")}</p>
                 </div>
                 <div>
                     <span id="products-js">0</span>
-                    <p>Продуктів</p>
+                    <p>{t("about_us.product")}</p>
                 </div>
                 <div>
                     <span id="amount">0</span>
-                    <p>Об'єм продукції за сезон</p>
+                    <p>{t("about_us.volume")}</p>
                 </div>
             </div>
         </div>
