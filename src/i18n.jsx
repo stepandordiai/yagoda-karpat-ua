@@ -4,6 +4,7 @@ import { initReactI18next } from "react-i18next";
 
 import ua from "./translations/ua/translation.json";
 import en from "./translations/en/translation.json";
+import cz from "./translations/cz/translation.json";
 
 i18n.use(initReactI18next)
     .use(LanguageDetector)
@@ -14,6 +15,9 @@ i18n.use(initReactI18next)
             },
             en: {
                 translation: en,
+            },
+            cz: {
+                translation: cz,
             },
         },
 

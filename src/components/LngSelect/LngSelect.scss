@@ -12,7 +12,10 @@
     padding: 0 10px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    cursor: pointer;
+
+    span {
+        pointer-events: none;
+    }
 }
 
 .lng-select__btn--active {
@@ -41,6 +44,8 @@
 }
 
 .lng-select__option {
+    position: relative;
+    z-index: 0;
     height: 50px;
     min-width: 50px;
     @include flex-center;
@@ -49,12 +54,40 @@
     border-radius: inherit;
     padding: inherit;
     cursor: pointer;
-
-    &:hover {
-        background: var(--accent-clr);
-    }
 }
 
-.lng-select__option--active {
+.lng-select__option::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
     background: var(--accent-clr);
+    width: 0;
+    height: 0;
+    transition: all 0.3s;
+}
+
+.lng-select__option:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.lng-select__option--active::before {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 650px) {
+    .lng-select__btn {
+        span:nth-of-type(2) {
+            display: none;
+        }
+
+        span:nth-of-type(3) {
+            display: none;
+        }
+    }
 }

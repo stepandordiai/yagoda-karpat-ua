@@ -78,16 +78,20 @@ const LngSelect = () => {
                 document.querySelector(".lng-select__btn").innerHTML =
                     lngSelectBtn("EN", "English");
                 break;
+            case "cz":
+                document.querySelector(".lng-select__btn").innerHTML =
+                    lngSelectBtn("CZ", "Čeština");
+                break;
         }
     }, []);
 
     return (
         <div className="lng-select">
-            <div className="lng-select__btn">
+            <button className="lng-select__btn">
                 <span>UA</span>
                 <span>-</span>
                 <span>Українська</span>
-            </div>
+            </button>
             <ul className="lng-select__dd">
                 <li className="lng-select__option" data-value="ua">
                     <span>UA</span>
@@ -99,16 +103,16 @@ const LngSelect = () => {
                     <span>-</span>
                     <span>English</span>
                 </li>
-                {/* <li className="lng-select__option" data-value="cz">
-                        <span>CZ</span>
-                        <span>-</span>
-                        <span>Cesky</span>
-                    </li>
-                    <li className="lng-select__option" data-value="pl">
+                <li className="lng-select__option" data-value="cz">
+                    <span>CZ</span>
+                    <span>-</span>
+                    <span>Čeština</span>
+                </li>
+                {/* <li className="lng-select__option" data-value="pl">
                         <span>PL</span>
                         <span>-</span>
                         <span>Polska</span>
-                    </li> */}
+                    </li>  */}
             </ul>
         </div>
     );
