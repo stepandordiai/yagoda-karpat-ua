@@ -87,7 +87,7 @@ const Product = ({ product }) => {
                 )}
             </div>
             <div className="product__info-container">
-                <p className="product-name">{name}</p>
+                <h4 className="product-name">{name}</h4>
                 <NavLink
                     to={`/product-page/${id}`}
                     className="product__info-btn"

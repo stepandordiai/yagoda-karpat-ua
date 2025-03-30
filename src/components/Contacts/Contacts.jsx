@@ -34,13 +34,13 @@ const Contacts = () => {
             <div className="form-map-container">
                 <form
                     className="form"
-                    action="mailto:dordyaysberries@gmail.com"
+                    action="mailto:info@yagodakarpat.com"
                     method="post"
                     encType="text/plain"
                 >
-                    <p className="form__title">
+                    <h2 className="form__title">
                         {t("contacts.contact_us_title")}
-                    </p>
+                    </h2>
                     <div className="input-container">
                         <label htmlFor="first-name">
                             {t("contacts.first_name")}
@@ -83,9 +83,9 @@ const Contacts = () => {
                     </button>
                 </form>
                 <div className="google-map__wrapper">
-                    <p className="google-map__title">
+                    <h2 className="google-map__title">
                         {t("contacts.map_title")}
-                    </p>
+                    </h2>
                     <iframe
                         className="location-map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d666.0764004226559!2d23.74658175529479!3d48.10434021444485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47379f8eb1dc7f03%3A0x6e39e1068f4cb4a!2sYagoda%20Karpat%2C%20LLC!5e0!3m2!1sen!2sua!4v1722068818836!5m2!1sen!2sua"

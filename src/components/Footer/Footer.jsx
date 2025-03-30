@@ -63,9 +63,9 @@ const Footer = () => {
                     Ягода Карпат
                 </HashLink>
                 <div>
-                    <p className="certificates-info">
+                    <h3 className="certificates-info">
                         {t("footer.our_certificates")}
-                    </p>
+                    </h3>
                     <div className="certificates">
                         <img
                             width={100}
@@ -73,7 +73,7 @@ const Footer = () => {
                             src={organicImg}
                             alt="Organic Certificate"
                         />
-                        <p style={{ fontSize: "2rem", fontWeight: "700" }}>
+                        <p style={{ fontSize: "2rem", fontWeight: "600" }}>
                             HACCP
                         </p>
                     </div>
@@ -175,14 +175,14 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>{t("footer.vegetables")}</p>
+                            <p>{t("footer.mushrooms")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
                             <ul className="footer-nav__list grid-dropdown">
                                 {productsData
                                     .filter((product) => {
-                                        return product.type === "vegetable";
+                                        return product.type === "mushroom";
                                     })
                                     .map(({ id, name }) => {
                                         return (
@@ -201,14 +201,14 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>{t("footer.mushrooms")}</p>
+                            <p>{t("footer.vegetables")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
                             <ul className="footer-nav__list grid-dropdown">
                                 {productsData
                                     .filter((product) => {
-                                        return product.type === "mushroom";
+                                        return product.type === "vegetable";
                                     })
                                     .map(({ id, name }) => {
                                         return (

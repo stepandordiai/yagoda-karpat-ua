@@ -96,7 +96,7 @@ const AboutUs = () => {
     return (
         <div className="about-us">
             <PageTitle name={t("about_us.title")} id={"about-us"} />
-            <p className="about-info">{t("about_us.sec_title")}</p>
+            <h3 className="about-info">{t("about_us.sec_title")}</h3>
             <img className="ukraine-map" loading="lazy" src={map} alt="map" />
             <div className="contacts-grid-container">
                 <div>

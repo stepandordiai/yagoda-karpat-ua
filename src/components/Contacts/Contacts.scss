@@ -26,10 +26,6 @@
     i {
         font-size: 2rem;
     }
-
-    span {
-        font-weight: 300;
-    }
 }
 
 .icon-container::before {
@@ -72,6 +68,7 @@
 
 .form__title {
     font-size: clamp(20px, 3vw, 30px);
+    font-weight: 500;
 }
 
 .inputs__wrapper {
@@ -151,6 +148,7 @@ textarea {
 
 .google-map__title {
     font-size: clamp(20px, 3vw, 30px);
+    font-weight: 500;
 }
 
 .location-map {
