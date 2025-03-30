@@ -98,18 +98,18 @@ const NavCurtain = () => {
                 <ul className="nav-curtain__list">
                     <li>
                         <a className="link js-link active-link" href="#home">
-                            {t("footer.home")}
+                            {t("home_title")}
                         </a>
                     </li>
                     <li>
                         <a className="link js-link" href="#about-us">
-                            {t("about_us.title")}
+                            {t("about_us_title")}
                         </a>
                     </li>
                     <li>
                         <div className="nav-curtain__products-link">
                             <a className="link js-link" href="#products">
-                                {t("products.title")}
+                                {t("products_title")}
                             </a>
                             <button
                                 className="products-btn"
@@ -153,7 +153,7 @@ const NavCurtain = () => {
                                             {productsData
                                                 .filter(
                                                     (product) =>
-                                                        product.type == "berry"
+                                                        product.type == "fruit"
                                                 )
                                                 .map(({ id, name }) => {
                                                     return (
@@ -177,7 +177,8 @@ const NavCurtain = () => {
                                             {productsData
                                                 .filter(
                                                     (product) =>
-                                                        product.type == "berry"
+                                                        product.type ==
+                                                        "mushroom"
                                                 )
                                                 .map(({ id, name }) => {
                                                     return (
@@ -201,7 +202,8 @@ const NavCurtain = () => {
                                             {productsData
                                                 .filter(
                                                     (product) =>
-                                                        product.type == "berry"
+                                                        product.type ==
+                                                        "vegetable"
                                                 )
                                                 .map(({ id, name }) => {
                                                     return (
@@ -217,26 +219,13 @@ const NavCurtain = () => {
                                                 })}
                                         </ul>
                                     </div>
-
-                                    {/* {productsData.map(({ id, name }) => {
-                                    return (
-                                        <li key={id}>
-                                            <NavLink
-                                                className="js-link"
-                                                to={`/product-page/${id}`}
-                                            >
-                                                {name}
-                                            </NavLink>
-                                        </li>
-                                    );
-                                })} */}
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
                         <a className="link js-link" href="#contacts">
-                            {t("contacts.title")}
+                            {t("contacts_title")}
                         </a>
                     </li>
                 </ul>

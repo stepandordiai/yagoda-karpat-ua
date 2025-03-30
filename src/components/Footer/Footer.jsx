@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-// import { productsData } from "../../data/productsData";
-import ProductsData from "../../data/productsData";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import organicImg from "./../../assets/img/certificates/organic-logo.jpg";
 import { useTranslation } from "react-i18next";
+import ProductsData from "../../data/productsData";
+import organicImg from "./../../assets/img/certificates/organic-logo.jpg";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -92,7 +91,7 @@ const Footer = () => {
                                             className="js-footer__link"
                                             to="/#home"
                                         >
-                                            {t("footer.home")}
+                                            {t("home_title")}
                                         </HashLink>
                                     </li>
                                     <li>
@@ -100,7 +99,7 @@ const Footer = () => {
                                             className="js-footer__link"
                                             to="/#about-us"
                                         >
-                                            {t("about_us.title")}
+                                            {t("about_us_title")}
                                         </HashLink>
                                     </li>
                                     <li>
@@ -108,7 +107,7 @@ const Footer = () => {
                                             className="js-footer__link"
                                             to="/#products"
                                         >
-                                            {t("products.title")}
+                                            {t("products_title")}
                                         </HashLink>
                                     </li>
                                     <li>
@@ -116,7 +115,7 @@ const Footer = () => {
                                             className="js-footer__link"
                                             to="/#contacts"
                                         >
-                                            {t("contacts.title")}
+                                            {t("contacts_title")}
                                         </HashLink>
                                     </li>
                                 </ul>
@@ -125,7 +124,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>{t("footer.berries")}</p>
+                            <p>{t("berries_title")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
@@ -153,7 +152,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>{t("footer.fruits")}</p>
+                            <p>{t("fruits_title")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
@@ -181,7 +180,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>{t("footer.mushrooms")}</p>
+                            <p>{t("mushrooms_title")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
@@ -209,7 +208,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
-                            <p>{t("footer.vegetables")}</p>
+                            <p>{t("vegetables_title")}</p>
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">

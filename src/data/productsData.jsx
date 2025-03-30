@@ -177,7 +177,6 @@ const ProductsData = () => {
             temp: "-21 °C",
             origin: "Україна",
             status: "frozen",
-            // productImages: [apricotImg],
             classSwiper: "my-swiper-1",
             icon: apricotIcon,
         },

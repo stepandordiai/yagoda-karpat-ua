@@ -36,7 +36,7 @@ const Products = () => {
 
     return (
         <>
-            <PageTitle name={t("products.title")} id={"products"} />
+            <PageTitle name={t("products_title")} id={"products"} />
             <div>
                 <p className="filter-title">{t("products.filter")}</p>
                 <div className="search-wrapper">

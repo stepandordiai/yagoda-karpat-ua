@@ -1,14 +1,17 @@
 import PageTitle from "../PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
+import ProductsData from "../../data/productsData";
 import "./Contacts.scss";
 
 const Contacts = () => {
     const { t } = useTranslation();
 
+    const productsData = ProductsData();
+
     return (
         <>
             <div className="contacts-container">
-                <PageTitle name={t("contacts.title")} id={"contacts"} />
+                <PageTitle name={t("contacts_title")} id={"contacts"} />
                 <div className="contacts-icons-container">
                     <a href="tel:+380968065513" className="icon-container">
                         <i className="fa-solid fa-phone"></i>
@@ -42,7 +45,7 @@ const Contacts = () => {
                         {t("contacts.contact_us_title")}
                     </h2>
                     <div className="input-container">
-                        <label htmlFor="first-name">
+                        <label className="contact-label" htmlFor="first-name">
                             {t("contacts.first_name")}
                         </label>
                         <input
@@ -53,7 +56,7 @@ const Contacts = () => {
                         />
                     </div>
                     <div className="input-container">
-                        <label htmlFor="last-name">
+                        <label className="contact-label" htmlFor="last-name">
                             {t("contacts.last_name")}
                         </label>
                         <input
@@ -64,7 +67,7 @@ const Contacts = () => {
                         />
                     </div>
                     <div className="input-container">
-                        <label htmlFor="phone-number">
+                        <label className="contact-label" htmlFor="phone-number">
                             {t("contacts.tel")}
                         </label>
                         <input
@@ -74,8 +77,128 @@ const Contacts = () => {
                             type="tel"
                         />
                     </div>
+                    <div className="checkbox-container">
+                        <p className="checkbox-title">
+                            {t("contacts.checkbox_title")}
+                        </p>
+                        <div>
+                            <p className="checkbox-sec-title">
+                                {t("berries_title")}
+                            </p>
+                            <ul>
+                                {productsData
+                                    .filter(
+                                        (product) => product.type == "berry"
+                                    )
+                                    .map((product) => {
+                                        return (
+                                            <li
+                                                className="checkbox-item"
+                                                key={product.id}
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    name={product.name}
+                                                    id={product.id}
+                                                />
+                                                <label htmlFor={product.id}>
+                                                    {product.name}
+                                                </label>
+                                            </li>
+                                        );
+                                    })}
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="checkbox-sec-title">
+                                {t("fruits_title")}
+                            </p>
+                            <ul>
+                                {productsData
+                                    .filter(
+                                        (product) => product.type == "fruit"
+                                    )
+                                    .map((product) => {
+                                        return (
+                                            <li
+                                                className="checkbox-item"
+                                                key={product.id}
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    name={product.name}
+                                                    id={product.id}
+                                                />
+                                                <label htmlFor={product.id}>
+                                                    {product.name}
+                                                </label>
+                                            </li>
+                                        );
+                                    })}
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="checkbox-sec-title">
+                                {t("mushrooms_title")}
+                            </p>
+                            <ul>
+                                {productsData
+                                    .filter(
+                                        (product) => product.type == "mushroom"
+                                    )
+                                    .map((product) => {
+                                        return (
+                                            <li
+                                                className="checkbox-item"
+                                                key={product.id}
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    name={product.name}
+                                                    id={product.id}
+                                                />
+                                                <label htmlFor={product.id}>
+                                                    {product.name}
+                                                </label>
+                                            </li>
+                                        );
+                                    })}
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="checkbox-sec-title">
+                                {t("vegetables_title")}
+                            </p>
+                            <ul>
+                                {productsData
+                                    .filter(
+                                        (product) => product.type == "vegetable"
+                                    )
+                                    .map((product) => {
+                                        return (
+                                            <li
+                                                className="checkbox-item"
+                                                key={product.id}
+                                            >
+                                                <input
+                                                    type="checkbox"
+                                                    name={product.name}
+                                                    id={product.id}
+                                                />
+                                                <label htmlFor={product.id}>
+                                                    {product.name}
+                                                </label>
+                                            </li>
+                                        );
+                                    })}
+                            </ul>
+                        </div>
+                    </div>
+
                     <div className="input-container">
-                        <label htmlFor="message">{t("contacts.message")}</label>
+                        <label className="contact-label" htmlFor="message">
+                            {t("contacts.message")}
+                        </label>
                         <textarea name="Message" id="message"></textarea>
                     </div>
                     <button className="form-submit-btn" type="submit">

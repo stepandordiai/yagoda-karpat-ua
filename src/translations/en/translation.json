@@ -1,5 +1,13 @@
 {
     "contact_us": "Contact us",
+    "home_title": "Home",
+    "about_us_title": "About us",
+    "products_title": "Products",
+    "contacts_title": "Contacts",
+    "berries_title": "Berries",
+    "fruits_title": "Fruits",
+    "vegetables_title": "Vegetables",
+    "mushrooms_title": "Mushrooms",
 
     "home": {
         "title": "Wholesale manufacturer of frozen and dried foods",
@@ -7,7 +15,6 @@
     },
 
     "about_us": {
-        "title": "About us",
         "sec_title": "Yagoda Karpat company specializes in the processing and production of frozen and dried berries, fruits, mushrooms and vegetables. All our products are grown and collected exclusively in ecologically clean regions of Ukraine.",
         "year": "years of experience",
         "product": "products",
@@ -15,7 +22,6 @@
     },
 
     "products": {
-        "title": "Products",
         "filter": "Filter",
         "filter_placeholder": "Which product are you searching?",
         "bilberry": "Bliberry frozen",
@@ -40,7 +46,6 @@
     },
 
     "contacts": {
-        "title": "Contacts",
         "address": "Central street, 34B, Vilkhivtsi village, Tyachiv district, Transcarpathian region, Ukraine, 90542",
         "contact_us_title": "Contact us",
         "first_name": "First name",
@@ -48,17 +53,13 @@
         "tel": "Phone number",
         "message": "Message",
         "submit": "Send",
-        "map_title": "Where to find us"
+        "map_title": "Where to find us",
+        "checkbox_title": "Select the product or multiple products that interest you"
     },
 
     "footer": {
         "our_certificates": "Our certificates",
-        "navigation": "Navigation",
-        "home": "Home",
-        "berries": "Berries",
-        "fruits": "Fruits",
-        "vegetables": "Vegetables",
-        "mushrooms": "Mushrooms"
+        "navigation": "Navigation"
     },
 
     "product_page": {

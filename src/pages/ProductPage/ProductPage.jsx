@@ -31,8 +31,8 @@ const ProductPage = () => {
         <>
             <PageNavTitle
                 title={productData[0].name}
-                previousTitle={t("products.title")}
-                homeTitle={t("footer.home")}
+                previousTitle={t("products_title")}
+                homeTitle={t("home_title")}
             />
             <p className="coming-soon">{t("product_page.coming_soon")}</p>
             <p>{t("product_page.related")}</p>
