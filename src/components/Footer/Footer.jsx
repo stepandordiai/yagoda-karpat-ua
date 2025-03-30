@@ -85,40 +85,42 @@ const Footer = () => {
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
-                            <ul className="footer-nav__list grid-dropdown">
-                                <li>
-                                    <HashLink
-                                        className="js-footer__link"
-                                        to="/#home"
-                                    >
-                                        {t("footer.home")}
-                                    </HashLink>
-                                </li>
-                                <li>
-                                    <HashLink
-                                        className="js-footer__link"
-                                        to="/#about-us"
-                                    >
-                                        {t("about_us.title")}
-                                    </HashLink>
-                                </li>
-                                <li>
-                                    <HashLink
-                                        className="js-footer__link"
-                                        to="/#products"
-                                    >
-                                        {t("products.title")}
-                                    </HashLink>
-                                </li>
-                                <li>
-                                    <HashLink
-                                        className="js-footer__link"
-                                        to="/#contacts"
-                                    >
-                                        {t("contacts.title")}
-                                    </HashLink>
-                                </li>
-                            </ul>
+                            <div className="grid-dropdown">
+                                <ul className="footer-nav__list">
+                                    <li>
+                                        <HashLink
+                                            className="js-footer__link"
+                                            to="/#home"
+                                        >
+                                            {t("footer.home")}
+                                        </HashLink>
+                                    </li>
+                                    <li>
+                                        <HashLink
+                                            className="js-footer__link"
+                                            to="/#about-us"
+                                        >
+                                            {t("about_us.title")}
+                                        </HashLink>
+                                    </li>
+                                    <li>
+                                        <HashLink
+                                            className="js-footer__link"
+                                            to="/#products"
+                                        >
+                                            {t("products.title")}
+                                        </HashLink>
+                                    </li>
+                                    <li>
+                                        <HashLink
+                                            className="js-footer__link"
+                                            to="/#contacts"
+                                        >
+                                            {t("contacts.title")}
+                                        </HashLink>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -127,24 +129,26 @@ const Footer = () => {
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
-                            <ul className="footer-nav__list grid-dropdown">
-                                {productsData
-                                    .filter((product) => {
-                                        return product.type === "berry";
-                                    })
-                                    .map(({ id, name }) => {
-                                        return (
-                                            <li key={id}>
-                                                <NavLink
-                                                    className="js-footer__link"
-                                                    to={`/product-page/${id}`}
-                                                >
-                                                    {name}
-                                                </NavLink>
-                                            </li>
-                                        );
-                                    })}
-                            </ul>
+                            <div className="grid-dropdown">
+                                <ul className="footer-nav__list">
+                                    {productsData
+                                        .filter((product) => {
+                                            return product.type === "berry";
+                                        })
+                                        .map(({ id, name }) => {
+                                            return (
+                                                <li key={id}>
+                                                    <NavLink
+                                                        className="js-footer__link"
+                                                        to={`/product-page/${id}`}
+                                                    >
+                                                        {name}
+                                                    </NavLink>
+                                                </li>
+                                            );
+                                        })}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -153,24 +157,26 @@ const Footer = () => {
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
-                            <ul className="footer-nav__list grid-dropdown">
-                                {productsData
-                                    .filter((product) => {
-                                        return product.type === "fruit";
-                                    })
-                                    .map(({ id, name }) => {
-                                        return (
-                                            <li key={id}>
-                                                <NavLink
-                                                    className="js-footer__link"
-                                                    to={`/product-page/${id}`}
-                                                >
-                                                    {name}
-                                                </NavLink>
-                                            </li>
-                                        );
-                                    })}
-                            </ul>
+                            <div className="grid-dropdown">
+                                <ul className="footer-nav__list">
+                                    {productsData
+                                        .filter((product) => {
+                                            return product.type === "fruit";
+                                        })
+                                        .map(({ id, name }) => {
+                                            return (
+                                                <li key={id}>
+                                                    <NavLink
+                                                        className="js-footer__link"
+                                                        to={`/product-page/${id}`}
+                                                    >
+                                                        {name}
+                                                    </NavLink>
+                                                </li>
+                                            );
+                                        })}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -179,24 +185,26 @@ const Footer = () => {
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
-                            <ul className="footer-nav__list grid-dropdown">
-                                {productsData
-                                    .filter((product) => {
-                                        return product.type === "mushroom";
-                                    })
-                                    .map(({ id, name }) => {
-                                        return (
-                                            <li key={id}>
-                                                <NavLink
-                                                    className="js-footer__link"
-                                                    to={`/product-page/${id}`}
-                                                >
-                                                    {name}
-                                                </NavLink>
-                                            </li>
-                                        );
-                                    })}
-                            </ul>
+                            <div className="grid-dropdown">
+                                <ul className="footer-nav__list">
+                                    {productsData
+                                        .filter((product) => {
+                                            return product.type === "mushroom";
+                                        })
+                                        .map(({ id, name }) => {
+                                            return (
+                                                <li key={id}>
+                                                    <NavLink
+                                                        className="js-footer__link"
+                                                        to={`/product-page/${id}`}
+                                                    >
+                                                        {name}
+                                                    </NavLink>
+                                                </li>
+                                            );
+                                        })}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -205,24 +213,26 @@ const Footer = () => {
                             <div className="dropdown-btn__icon">+</div>
                         </div>
                         <div className="grid-dropdown__wrapper">
-                            <ul className="footer-nav__list grid-dropdown">
-                                {productsData
-                                    .filter((product) => {
-                                        return product.type === "vegetable";
-                                    })
-                                    .map(({ id, name }) => {
-                                        return (
-                                            <li key={id}>
-                                                <NavLink
-                                                    className="js-footer__link"
-                                                    to={`/product-page/${id}`}
-                                                >
-                                                    {name}
-                                                </NavLink>
-                                            </li>
-                                        );
-                                    })}
-                            </ul>
+                            <div className="grid-dropdown">
+                                <ul className="footer-nav__list">
+                                    {productsData
+                                        .filter((product) => {
+                                            return product.type === "vegetable";
+                                        })
+                                        .map(({ id, name }) => {
+                                            return (
+                                                <li key={id}>
+                                                    <NavLink
+                                                        className="js-footer__link"
+                                                        to={`/product-page/${id}`}
+                                                    >
+                                                        {name}
+                                                    </NavLink>
+                                                </li>
+                                            );
+                                        })}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

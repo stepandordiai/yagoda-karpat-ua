@@ -119,8 +119,106 @@ const NavCurtain = () => {
                             </button>
                         </div>
                         <div className="nav-curtain__grid-dropdown">
-                            <ul className="nav-curtain__dropdown">
-                                {productsData.map(({ id, name }) => {
+                            <div className="nav-curtain__dropdown">
+                                <div className="nav-curtain__inner-dd">
+                                    <div>
+                                        <p className="nav-curtain__sec-title">
+                                            Berries
+                                        </p>
+                                        <ul className="nav-curtain__products-list">
+                                            {productsData
+                                                .filter(
+                                                    (product) =>
+                                                        product.type == "berry"
+                                                )
+                                                .map(({ id, name }) => {
+                                                    return (
+                                                        <li key={id}>
+                                                            <NavLink
+                                                                className="js-link"
+                                                                to={`/product-page/${id}`}
+                                                            >
+                                                                {name}
+                                                            </NavLink>
+                                                        </li>
+                                                    );
+                                                })}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p className="nav-curtain__sec-title">
+                                            Fruits
+                                        </p>
+                                        <ul className="nav-curtain__products-list">
+                                            {productsData
+                                                .filter(
+                                                    (product) =>
+                                                        product.type == "berry"
+                                                )
+                                                .map(({ id, name }) => {
+                                                    return (
+                                                        <li key={id}>
+                                                            <NavLink
+                                                                className="js-link"
+                                                                to={`/product-page/${id}`}
+                                                            >
+                                                                {name}
+                                                            </NavLink>
+                                                        </li>
+                                                    );
+                                                })}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p className="nav-curtain__sec-title">
+                                            Mushrooms
+                                        </p>
+                                        <ul className="nav-curtain__products-list">
+                                            {productsData
+                                                .filter(
+                                                    (product) =>
+                                                        product.type == "berry"
+                                                )
+                                                .map(({ id, name }) => {
+                                                    return (
+                                                        <li key={id}>
+                                                            <NavLink
+                                                                className="js-link"
+                                                                to={`/product-page/${id}`}
+                                                            >
+                                                                {name}
+                                                            </NavLink>
+                                                        </li>
+                                                    );
+                                                })}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p className="nav-curtain__sec-title">
+                                            Vegetables
+                                        </p>
+                                        <ul className="nav-curtain__products-list">
+                                            {productsData
+                                                .filter(
+                                                    (product) =>
+                                                        product.type == "berry"
+                                                )
+                                                .map(({ id, name }) => {
+                                                    return (
+                                                        <li key={id}>
+                                                            <NavLink
+                                                                className="js-link"
+                                                                to={`/product-page/${id}`}
+                                                            >
+                                                                {name}
+                                                            </NavLink>
+                                                        </li>
+                                                    );
+                                                })}
+                                        </ul>
+                                    </div>
+
+                                    {/* {productsData.map(({ id, name }) => {
                                     return (
                                         <li key={id}>
                                             <NavLink
@@ -131,8 +229,9 @@ const NavCurtain = () => {
                                             </NavLink>
                                         </li>
                                     );
-                                })}
-                            </ul>
+                                })} */}
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li>
