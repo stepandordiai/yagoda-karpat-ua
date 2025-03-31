@@ -72,7 +72,7 @@
     transform-origin: top;
 }
 
-.active-link::before {
+.link--active::before {
     content: "";
     position: absolute;
     top: 0;
@@ -173,6 +173,10 @@
             }
         }
     }
+}
+
+.product-link--active {
+    color: var(--accent-clr);
 }
 
 @media (max-width: 900px) {

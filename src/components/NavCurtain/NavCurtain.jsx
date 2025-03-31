@@ -9,46 +9,37 @@ const NavCurtain = () => {
 
     const productsData = ProductsData();
 
-    // FIXME:
-    // addEventListener("scroll", () => {
-    //     const links1 = document.querySelector(".home");
-    //     const links2 = document.querySelector(".about");
-    //     const links3 = document.querySelector(".products");
-    //     const links4 = document.querySelector(".contacts");
-    //     if (
-    //         document.querySelector("#section1").getBoundingClientRect().bottom >
-    //         200
-    //     ) {
-    //         links1.classList.add("active-link");
-    //         links2.classList.remove("active-link");
-    //         links3.classList.remove("active-link");
-    //         links4.classList.remove("active-link");
-    //     } else if (
-    //         document.querySelector("#section2").getBoundingClientRect().bottom >
-    //         200
-    //     ) {
-    //         links1.classList.remove("active-link");
-    //         links2.classList.add("active-link");
-    //         links3.classList.remove("active-link");
-    //         links4.classList.remove("active-link");
-    //     } else if (
-    //         document.querySelector("#section3").getBoundingClientRect().bottom >
-    //         200
-    //     ) {
-    //         links1.classList.remove("active-link");
-    //         links2.classList.remove("active-link");
-    //         links3.classList.add("active-link");
-    //         links4.classList.remove("active-link");
-    //     } else if (
-    //         document.querySelector("#section4").getBoundingClientRect().bottom >
-    //         200
-    //     ) {
-    //         links1.classList.remove("active-link");
-    //         links2.classList.remove("active-link");
-    //         links3.classList.remove("active-link");
-    //         links4.classList.add("active-link");
-    //     }
-    // });
+    useEffect(() => {
+        document.addEventListener("scroll", () => {
+            const links = document.querySelectorAll(".link");
+            const home = document.querySelector(".js-home");
+            const aboutUs = document.querySelector(".js-about-us");
+            const products = document.querySelector(".js-products");
+            const contacts = document.querySelector(".js-contacts");
+            if (home || aboutUs || products || contacts) {
+                const homeRect = home.getBoundingClientRect();
+                const aboutUsRect = aboutUs.getBoundingClientRect();
+                const productsRect = products.getBoundingClientRect();
+                const contactsRect = contacts.getBoundingClientRect();
+                for (let i = 0; i < links.length; i++) {
+                    links[i].classList.remove("link--active");
+
+                    if (homeRect.top <= 0 && homeRect.bottom >= 0) {
+                        links[0].classList.add("link--active");
+                    }
+                    if (aboutUsRect.top <= 0 && aboutUsRect.bottom >= 0) {
+                        links[1].classList.add("link--active");
+                    }
+                    if (productsRect.top <= 0 && productsRect.bottom >= 0) {
+                        links[2].classList.add("link--active");
+                    }
+                    if (contactsRect.top <= 0 && contactsRect.bottom >= 0) {
+                        links[3].classList.add("link--active");
+                    }
+                }
+            }
+        });
+    }, []);
 
     function showProducts() {
         document
@@ -91,13 +82,16 @@ const NavCurtain = () => {
         });
     }, []);
 
+    const inactiveLink = "js-link";
+    const activeLink = "js-link product-link--active";
+
     return (
         <>
             <div className="curtain"></div>
             <div className="nav-curtain">
                 <ul className="nav-curtain__list">
                     <li>
-                        <a className="link js-link active-link" href="#home">
+                        <a className="link js-link" href="#home">
                             {t("home_title")}
                         </a>
                     </li>
@@ -135,7 +129,13 @@ const NavCurtain = () => {
                                                     return (
                                                         <li key={id}>
                                                             <NavLink
-                                                                className="js-link"
+                                                                className={({
+                                                                    isActive,
+                                                                }) =>
+                                                                    isActive
+                                                                        ? activeLink
+                                                                        : inactiveLink
+                                                                }
                                                                 to={`/product-page/${id}`}
                                                             >
                                                                 {name}
@@ -159,7 +159,13 @@ const NavCurtain = () => {
                                                     return (
                                                         <li key={id}>
                                                             <NavLink
-                                                                className="js-link"
+                                                                className={({
+                                                                    isActive,
+                                                                }) =>
+                                                                    isActive
+                                                                        ? activeLink
+                                                                        : inactiveLink
+                                                                }
                                                                 to={`/product-page/${id}`}
                                                             >
                                                                 {name}
@@ -184,7 +190,13 @@ const NavCurtain = () => {
                                                     return (
                                                         <li key={id}>
                                                             <NavLink
-                                                                className="js-link"
+                                                                className={({
+                                                                    isActive,
+                                                                }) =>
+                                                                    isActive
+                                                                        ? activeLink
+                                                                        : inactiveLink
+                                                                }
                                                                 to={`/product-page/${id}`}
                                                             >
                                                                 {name}
@@ -209,7 +221,13 @@ const NavCurtain = () => {
                                                     return (
                                                         <li key={id}>
                                                             <NavLink
-                                                                className="js-link"
+                                                                className={({
+                                                                    isActive,
+                                                                }) =>
+                                                                    isActive
+                                                                        ? activeLink
+                                                                        : inactiveLink
+                                                                }
                                                                 to={`/product-page/${id}`}
                                                             >
                                                                 {name}

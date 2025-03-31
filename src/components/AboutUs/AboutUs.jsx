@@ -94,8 +94,8 @@ const AboutUs = () => {
     //     started2 = true;
     // }
     return (
-        <div className="about-us">
-            <PageTitle name={t("about_us_title")} id={"about-us"} />
+        <div className="about-us js-about-us" id="about-us">
+            <PageTitle name={t("about_us_title")} />
             <h3 className="about-info">{t("about_us.sec_title")}</h3>
             <img className="ukraine-map" loading="lazy" src={map} alt="map" />
             <div className="contacts-grid-container">

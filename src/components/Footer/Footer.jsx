@@ -51,6 +51,9 @@ const Footer = () => {
         });
     }, []);
 
+    const inactiveFooterLink = "js-footer__link";
+    const activeFooterLink = "js-footer__link footer__product-link--active";
+
     return (
         <footer className="footer">
             <div className="footer-top"></div>
@@ -138,7 +141,13 @@ const Footer = () => {
                                             return (
                                                 <li key={id}>
                                                     <NavLink
-                                                        className="js-footer__link"
+                                                        className={({
+                                                            isActive,
+                                                        }) =>
+                                                            isActive
+                                                                ? activeFooterLink
+                                                                : inactiveFooterLink
+                                                        }
                                                         to={`/product-page/${id}`}
                                                     >
                                                         {name}
@@ -166,7 +175,13 @@ const Footer = () => {
                                             return (
                                                 <li key={id}>
                                                     <NavLink
-                                                        className="js-footer__link"
+                                                        className={({
+                                                            isActive,
+                                                        }) =>
+                                                            isActive
+                                                                ? activeFooterLink
+                                                                : inactiveFooterLink
+                                                        }
                                                         to={`/product-page/${id}`}
                                                     >
                                                         {name}
@@ -194,7 +209,13 @@ const Footer = () => {
                                             return (
                                                 <li key={id}>
                                                     <NavLink
-                                                        className="js-footer__link"
+                                                        className={({
+                                                            isActive,
+                                                        }) =>
+                                                            isActive
+                                                                ? activeFooterLink
+                                                                : inactiveFooterLink
+                                                        }
                                                         to={`/product-page/${id}`}
                                                     >
                                                         {name}
@@ -222,7 +243,13 @@ const Footer = () => {
                                             return (
                                                 <li key={id}>
                                                     <NavLink
-                                                        className="js-footer__link"
+                                                        className={({
+                                                            isActive,
+                                                        }) =>
+                                                            isActive
+                                                                ? activeFooterLink
+                                                                : inactiveFooterLink
+                                                        }
                                                         to={`/product-page/${id}`}
                                                     >
                                                         {name}

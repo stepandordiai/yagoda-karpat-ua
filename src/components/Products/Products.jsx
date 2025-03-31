@@ -11,32 +11,10 @@ const Products = () => {
     const [search, setSearch] = useState("");
 
     const productsData = ProductsData();
-    // addEventListener("keyup", () => {
-    //     const slider = document.querySelectorAll(".my-swiper");
-    //     slider.forEach((slide) => {
-    //         slide.classList.add("active");
-    //     });
-    //     const productInfo = document.querySelectorAll(
-    //         ".product-info-container"
-    //     );
-    //     productInfo.forEach((product) => {
-    //         product.classList.add("active");
-    //     });
-    //     const slider1 = document.querySelectorAll(".my-swiper-1");
-    //     slider1.forEach((slide) => {
-    //         slide.classList.add("active");
-    //     });
-    //     const productInfo1 = document.querySelectorAll(
-    //         ".product-info-container-1"
-    //     );
-    //     productInfo1.forEach((product) => {
-    //         product.classList.add("active");
-    //     });
-    // });
 
     return (
-        <>
-            <PageTitle name={t("products_title")} id={"products"} />
+        <section className="js-products" id="products">
+            <PageTitle name={t("products_title")} />
             <div>
                 <p className="filter-title">{t("products.filter")}</p>
                 <div className="search-wrapper">
@@ -64,7 +42,7 @@ const Products = () => {
                         return <Product product={product} key={product.id} />;
                     })}
             </div>
-        </>
+        </section>
     );
 };
 

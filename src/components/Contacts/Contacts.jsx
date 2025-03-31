@@ -9,9 +9,9 @@ const Contacts = () => {
     const productsData = ProductsData();
 
     return (
-        <>
+        <section className="js-contacts" id="contacts">
             <div className="contacts-container">
-                <PageTitle name={t("contacts_title")} id={"contacts"} />
+                <PageTitle name={t("contacts_title")} />
                 <div className="contacts-icons-container">
                     <a href="tel:+380968065513" className="icon-container">
                         <i className="fa-solid fa-phone"></i>
@@ -215,7 +215,7 @@ const Contacts = () => {
                     ></iframe>
                 </div>
             </div>
-        </>
+        </section>
     );
 };
 export default Contacts;

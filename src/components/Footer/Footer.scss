@@ -115,6 +115,10 @@
     }
 }
 
+.footer__product-link--active {
+    color: var(--accent-clr);
+}
+
 .dropdown-btn__icon {
     display: none;
 }
