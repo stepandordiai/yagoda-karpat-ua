@@ -1,36 +1,39 @@
-.about-us {
-    text-align: center;
-}
-
-.about-info {
-    font-family: var(--secondary-font-family);
+.about-us__sec-info {
     text-align: justify;
-    font-size: 16px;
-    padding: 50px 0;
 }
 
-.ukraine-map {
-    width: clamp(300px, 50vw, 600px);
+.about-us__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 25px;
 }
 
-.contacts-grid-container {
-    display: flex;
-    flex-direction: row;
-    padding: 100px 0;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    row-gap: 0;
-}
+.stats-card {
+    padding: 25px;
+    background: var(--accent-clr);
+    border-radius: 10px;
 
-.contacts-grid-container span {
-    font-size: 50px;
-    font-weight: 600;
+    p:nth-child(1) {
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    p:nth-child(2) {
+        text-align: left;
+    }
 }
 
 @media screen and (max-width: 900px) {
-    .contacts-grid-container {
-        flex-direction: column;
-        row-gap: 50px;
+    .about-us__stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-us__stats {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
