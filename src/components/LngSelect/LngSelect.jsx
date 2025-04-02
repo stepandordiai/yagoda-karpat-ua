@@ -4,7 +4,7 @@ import "./LngSelect.scss";
 
 const LngSelect = () => {
     const getStorage = () => {
-        return localStorage.getItem("i18nextLng") || "ua";
+        return localStorage.getItem("i18nextLng") || "uk";
     };
 
     useEffect(() => {
@@ -70,7 +70,7 @@ const LngSelect = () => {
         };
 
         switch (getStorage()) {
-            case "ua":
+            case "uk":
                 document.querySelector(".lng-select__btn").innerHTML =
                     lngSelectBtn("UA", "Українська");
                 break;
@@ -78,7 +78,7 @@ const LngSelect = () => {
                 document.querySelector(".lng-select__btn").innerHTML =
                     lngSelectBtn("EN", "English");
                 break;
-            case "cz":
+            case "cs":
                 document.querySelector(".lng-select__btn").innerHTML =
                     lngSelectBtn("CZ", "Čeština");
                 break;
@@ -93,7 +93,7 @@ const LngSelect = () => {
                 <span>Українська</span>
             </button>
             <ul className="lng-select__dd">
-                <li className="lng-select__option" data-value="ua">
+                <li className="lng-select__option" data-value="uk">
                     <span>UA</span>
                     <span>-</span>
                     <span>Українська</span>
@@ -103,16 +103,11 @@ const LngSelect = () => {
                     <span>-</span>
                     <span>English</span>
                 </li>
-                <li className="lng-select__option" data-value="cz">
+                <li className="lng-select__option" data-value="cs">
                     <span>CZ</span>
                     <span>-</span>
                     <span>Čeština</span>
                 </li>
-                {/* <li className="lng-select__option" data-value="pl">
-                        <span>PL</span>
-                        <span>-</span>
-                        <span>Polska</span>
-                    </li>  */}
             </ul>
         </div>
     );
