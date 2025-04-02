@@ -23,7 +23,7 @@ const ProductPage = () => {
     const { pathname, hash } = useLocation();
 
     useEffect(() => {
-        document.title = productData[0].name;
+        document.title = productData[0].name + " - Ягода Карпат";
         // FIXME:
     }, [id, pathname, hash]);
 
