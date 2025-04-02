@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
 import ProductsData from "../../data/productsData";
-import organicImg from "./../../assets/img/certificates/organic-logo.jpg";
+import organicImg from "/assets/img/certificates/organic-logo.jpg";
 import "./Footer.scss";
 
 const Footer = () => {

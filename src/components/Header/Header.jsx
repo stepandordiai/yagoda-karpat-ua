@@ -1,7 +1,7 @@
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import { HashLink } from "react-router-hash-link";
-import logo from "./../../assets/yagoda-karpat-logo.svg";
 import LngSelect from "../LngSelect/LngSelect";
+import logo from "/assets/yagoda-karpat-logo.svg";
 import "./Header.scss";
 
 const Header = () => {
