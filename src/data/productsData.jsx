@@ -71,7 +71,8 @@ import honeyFungusImg2 from "/products-img/honey-fungus2.jpg";
 // Blackberry
 
 import blackberryImg from "/products-img/blackberry.jpg";
-import blackberryImg2 from "/products-img/blackberry.jpg";
+
+import organicLogo from "/assets/certificates/organic-logo.jpg";
 
 import { useTranslation } from "react-i18next";
 
@@ -88,7 +89,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [bilberryImg, bilberryImg2],
-            classSwiper: "my-swiper",
         },
         {
             id: "lingonberry",
@@ -99,7 +99,7 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [lingonberryImg, lingonberryImg2],
-            classSwiper: "my-swiper-1",
+            certificates: [organicLogo],
         },
         {
             id: "rosehip",
@@ -110,7 +110,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [rosehipImg, rosehipImg2],
-            classSwiper: "my-swiper",
         },
         {
             id: "plum",
@@ -121,7 +120,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [plumImg2],
-            classSwiper: "my-swiper",
         },
         {
             id: "plum-pitted",
@@ -132,7 +130,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [plumImg],
-            classSwiper: "my-swiper",
         },
         {
             id: "plum-dry",
@@ -143,7 +140,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "dry",
             productImages: [plumDryImg],
-            classSwiper: "my-swiper",
         },
         {
             id: "prunus",
@@ -153,7 +149,6 @@ const ProductsData = () => {
             temp: "-21 °C",
             origin: "Україна",
             status: "dry",
-            classSwiper: "my-swiper",
         },
         {
             id: "elderberry",
@@ -164,7 +159,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [elderberryImg, elderberryImg2],
-            classSwiper: "my-swiper-1",
         },
         {
             id: "strawberry",
@@ -175,7 +169,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [strawberryImg, strawberryImg2],
-            classSwiper: "my-swiper",
         },
         {
             id: "raspberry",
@@ -186,7 +179,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [raspberryImg2, raspberryImg, raspberryImg3],
-            classSwiper: "my-swiper-1",
         },
         {
             id: "apricot",
@@ -196,7 +188,6 @@ const ProductsData = () => {
             temp: "-21 °C",
             origin: "Україна",
             status: "frozen",
-            classSwiper: "my-swiper-1",
         },
         {
             id: "sweet-pepper",
@@ -212,7 +203,6 @@ const ProductsData = () => {
                 sweetPepperImg3,
                 sweetPepperImg4,
             ],
-            classSwiper: "my-swiper",
         },
         {
             id: "boletus",
@@ -229,7 +219,6 @@ const ProductsData = () => {
                 boletusImg4,
                 boletusImg5,
             ],
-            classSwiper: "my-swiper-1",
         },
         {
             id: "chanterelle",
@@ -240,7 +229,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "dry",
             productImages: [chanterelleImg, chanterelleImg2],
-            classSwiper: "my-swiper",
         },
         {
             id: "sour-cherry",
@@ -251,7 +239,6 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [sourCherryImg, sourCherryImg2],
-            classSwiper: "my-swiper-1",
         },
         {
             id: "honey-fungus",
@@ -262,18 +249,16 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [honeyFungusImg, honeyFungusImg2],
-            classSwiper: "my-swiper-1",
         },
         {
             id: "blackberry",
             type: "berry",
             name: t("products.blackberry"),
+            origin: "Україна",
             pack: "картонна коробка 10 кг",
             temp: "-21 °C",
-            origin: "Україна",
             status: "frozen",
-            productImages: [blackberryImg, blackberryImg2],
-            classSwiper: "my-swiper-1",
+            productImages: [blackberryImg],
         },
         {
             id: "grape",
@@ -283,7 +268,6 @@ const ProductsData = () => {
             temp: "-21 °C",
             origin: "Україна",
             status: "frozen",
-            classSwiper: "my-swiper-1",
         },
     ];
 

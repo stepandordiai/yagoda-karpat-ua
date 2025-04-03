@@ -1,33 +1,11 @@
 import { NavLink } from "react-router-dom";
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css/bundle";
-
-// import required modules
-import { EffectCreative, Pagination, Navigation } from "swiper/modules";
-import "./Product.scss";
 import { useTranslation } from "react-i18next";
+import "./Product.scss";
 
 const Product = ({ product }) => {
     const { t } = useTranslation();
 
-    const {
-        id,
-        productContainer,
-        name,
-        latName,
-        info,
-        pack,
-        temp,
-        origin,
-        status,
-        productImages,
-        classSwiper,
-        infoContainer,
-    } = product;
+    const { id, name, productImages } = product;
 
     addEventListener("scroll", () => {
         const slider = document.querySelectorAll(".my-swiper");
