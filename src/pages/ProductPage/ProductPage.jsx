@@ -73,7 +73,7 @@ const ProductPage = () => {
                         </ul>
                         <img
                             width={50}
-                            src={productData[0].certificates[0]}
+                            src={productData[0].certificates}
                             alt=""
                         />
                     </div>
