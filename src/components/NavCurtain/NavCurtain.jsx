@@ -24,16 +24,18 @@ const NavCurtain = () => {
                 for (let i = 0; i < links.length; i++) {
                     links[i].classList.remove("link--active");
 
-                    if (homeRect.top <= 0 && homeRect.bottom >= 0) {
+                    // TODO: 40 is a half of a header, it is working properly when i specify like that
+
+                    if (homeRect.top <= 40 && homeRect.bottom >= 40) {
                         links[0].classList.add("link--active");
                     }
-                    if (aboutUsRect.top <= 0 && aboutUsRect.bottom >= 0) {
+                    if (aboutUsRect.top <= 40 && aboutUsRect.bottom >= 40) {
                         links[1].classList.add("link--active");
                     }
-                    if (productsRect.top <= 0 && productsRect.bottom >= 0) {
+                    if (productsRect.top <= 40 && productsRect.bottom >= 40) {
                         links[2].classList.add("link--active");
                     }
-                    if (contactsRect.top <= 0 && contactsRect.bottom >= 0) {
+                    if (contactsRect.top <= 40 && contactsRect.bottom >= 40) {
                         links[3].classList.add("link--active");
                     }
                 }
@@ -67,7 +69,9 @@ const NavCurtain = () => {
                 document
                     .querySelector(".curtain")
                     .classList.remove("curtain--active");
+
                 // hide list of products in menu by clicking menu btn
+
                 document
                     .querySelector(".nav-curtain__grid-dropdown")
                     .classList.remove("nav-curtain__grid-dropdown--active");
@@ -91,7 +95,7 @@ const NavCurtain = () => {
             <div className="nav-curtain">
                 <ul className="nav-curtain__list">
                     <li>
-                        <a className="link js-link" href="#home">
+                        <a className="link js-link link--active" href="#home">
                             {t("home_title")}
                         </a>
                     </li>

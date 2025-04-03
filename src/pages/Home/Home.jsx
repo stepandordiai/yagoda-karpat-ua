@@ -9,8 +9,7 @@ const Home = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        document.title =
-            "Виробник замороженик та сушених продуктів - Ягода Карпат";
+        document.title = t("home.title") + " - Ягода Карпат";
     }, []);
 
     return (
