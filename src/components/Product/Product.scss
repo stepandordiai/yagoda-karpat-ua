@@ -37,6 +37,8 @@
     position: absolute;
     left: 10px;
     bottom: 10px;
+    @include flex-center;
+    column-gap: 2.5px;
     padding: 5px;
     border-radius: 5px;
     font-size: 0.75rem;
@@ -44,6 +46,10 @@
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.2s;
+
+    img {
+        width: 15px;
+    }
 }
 
 .product:hover .img-qty {

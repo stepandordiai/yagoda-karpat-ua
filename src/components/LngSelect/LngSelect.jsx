@@ -66,7 +66,7 @@ const LngSelect = () => {
         });
 
         const lngSelectBtn = (code = "UA", name = "Українська") => {
-            return `<span>${code}</span><span>-</span><span>${name}</span>`;
+            return `<span>${code}</span><span> - </span><span>${name}</span>`;
         };
 
         switch (getStorage()) {
@@ -89,23 +89,23 @@ const LngSelect = () => {
         <div className="lng-select">
             <button className="lng-select__btn">
                 <span>UA</span>
-                <span>-</span>
+                <span> - </span>
                 <span>Українська</span>
             </button>
             <ul className="lng-select__dd">
                 <li className="lng-select__option" data-value="uk">
                     <span>UA</span>
-                    <span>-</span>
+                    <span> - </span>
                     <span>Українська</span>
                 </li>
                 <li className="lng-select__option" data-value="en">
                     <span>EN</span>
-                    <span>-</span>
+                    <span> - </span>
                     <span>English</span>
                 </li>
                 <li className="lng-select__option" data-value="cs">
                     <span>CZ</span>
-                    <span>-</span>
+                    <span> - </span>
                     <span>Čeština</span>
                 </li>
             </ul>

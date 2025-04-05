@@ -3,6 +3,7 @@ import Product from "../Product/Product";
 import ProductsData from "../../data/productsData";
 import PageTitle from "../PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
+import searchIcon from "/assets/icons/search.png";
 import "./Products.scss";
 
 const Products = () => {
@@ -24,9 +25,9 @@ const Products = () => {
                         placeholder={t("products.filter_placeholder")}
                         onChange={(e) => setSearch(e.target.value)}
                     />
-                    <div className="search-icon">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                    </div>
+                    <button className="search-icon">
+                        <img src={searchIcon} alt="" />
+                    </button>
                 </div>
             </div>
             <div className="products-container">

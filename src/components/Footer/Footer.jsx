@@ -4,6 +4,8 @@ import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
 import ProductsData from "../../data/productsData";
 import organicImg from "/assets/certificates/organic-logo.jpg";
+import upArrowIcon from "/assets/icons/up-arrow.png";
+import plusIcon from "/assets/icons/plus.png";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -57,9 +59,9 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-top"></div>
-            <div className="to-top-btn" onClick={scrollToTop}>
-                <i className="fa-solid fa-arrow-up"></i>
-            </div>
+            <button className="to-top-btn" onClick={scrollToTop}>
+                <img src={upArrowIcon} alt="" loading="lazy" />
+            </button>
             <div className="footer-details">
                 <HashLink className="footer-logo" to="/#home">
                     Ягода Карпат
@@ -84,7 +86,13 @@ const Footer = () => {
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>{t("footer.navigation")}</p>
-                            <div className="dropdown-btn__icon">+</div>
+                            {/* <div className="dropdown-btn__icon"></div> */}
+                            <img
+                                className="dropdown-btn__icon"
+                                src={plusIcon}
+                                alt=""
+                                loading="lazy"
+                            />
                         </div>
                         <div className="grid-dropdown__wrapper">
                             <div className="grid-dropdown">
@@ -128,7 +136,12 @@ const Footer = () => {
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>{t("berries_title")}</p>
-                            <div className="dropdown-btn__icon">+</div>
+                            <img
+                                className="dropdown-btn__icon"
+                                src={plusIcon}
+                                alt=""
+                                loading="lazy"
+                            />
                         </div>
                         <div className="grid-dropdown__wrapper">
                             <div className="grid-dropdown">
@@ -162,7 +175,12 @@ const Footer = () => {
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>{t("fruits_title")}</p>
-                            <div className="dropdown-btn__icon">+</div>
+                            <img
+                                className="dropdown-btn__icon"
+                                src={plusIcon}
+                                alt=""
+                                loading="lazy"
+                            />
                         </div>
                         <div className="grid-dropdown__wrapper">
                             <div className="grid-dropdown">
@@ -196,7 +214,12 @@ const Footer = () => {
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>{t("mushrooms_title")}</p>
-                            <div className="dropdown-btn__icon">+</div>
+                            <img
+                                className="dropdown-btn__icon"
+                                src={plusIcon}
+                                alt=""
+                                loading="lazy"
+                            />
                         </div>
                         <div className="grid-dropdown__wrapper">
                             <div className="grid-dropdown">
@@ -230,7 +253,12 @@ const Footer = () => {
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>{t("vegetables_title")}</p>
-                            <div className="dropdown-btn__icon">+</div>
+                            <img
+                                className="dropdown-btn__icon"
+                                src={plusIcon}
+                                alt=""
+                                loading="lazy"
+                            />
                         </div>
                         <div className="grid-dropdown__wrapper">
                             <div className="grid-dropdown">

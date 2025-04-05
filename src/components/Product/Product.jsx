@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import cameraIcon from "/assets/icons/camera.png";
 import "./Product.scss";
 
 const Product = ({ product }) => {
@@ -56,8 +57,12 @@ const Product = ({ product }) => {
                             loading="lazy"
                         />
                         <div className="img-qty">
-                            {productImages.length}{" "}
-                            <i className="fa-solid fa-camera"></i>
+                            {productImages.length}
+                            <img
+                                src={cameraIcon}
+                                alt="Camera icon"
+                                loading="lazy"
+                            />
                         </div>
                     </>
                 ) : (
@@ -72,52 +77,7 @@ const Product = ({ product }) => {
                 >
                     {t("products.show_more")}
                 </NavLink>
-
-                {/* <ul className="product-list-info">
-                        <li className="pack">Пакування: {pack}</li>
-                        <li className="temp">Температура: {temp}</li>
-                        <li className="origin">Походження: {origin}</li>
-                        <li className="status">Статус: {status}</li>
-                    </ul> */}
-                {/* <a className="contact-us-btn product-btn" href="#section4">
-                    Дізнатися про наявність
-                </a> */}
             </div>
-            {/* <Swiper
-                    grabCursor={true}
-                    effect={"creative"}
-                    creativeEffect={{
-                        prev: {
-                            shadow: true,
-                            translate: [0, 0, -400],
-                        },
-                        next: {
-                            translate: ["100%", 0, 0],
-                        },
-                    }}
-                    modules={[EffectCreative, Pagination, Navigation]}
-                    navigation={true}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    //
-                    observer={true}
-                    observeParents={true}
-                    //
-                    className={classSwiper}
-                >
-                    {productImages.map((productImage, index) => {
-                        return (
-                            <SwiperSlide key={index}>
-                                <img
-                                    loading="lazy"
-                                    src={productImage}
-                                    alt={name}
-                                />
-                            </SwiperSlide>
-                        );
-                    })}
-                </Swiper> */}
         </div>
     );
 };

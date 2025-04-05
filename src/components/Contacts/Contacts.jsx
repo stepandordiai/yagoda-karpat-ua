@@ -1,6 +1,9 @@
 import PageTitle from "../PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
 import ProductsData from "../../data/productsData";
+import phoneIcon from "/assets/icons/old-typical-phone.png";
+import mailIcon from "/assets/icons/email.png";
+import pinIcon from "/assets/icons/pin.png";
 import "./Contacts.scss";
 
 const Contacts = () => {
@@ -14,14 +17,14 @@ const Contacts = () => {
                 <PageTitle name={t("contacts_title")} />
                 <div className="contacts-icons-container">
                     <a href="tel:+380968065513" className="icon-container">
-                        <i className="fa-solid fa-phone"></i>
+                        <img src={phoneIcon} alt="" />
                         <span>+38 (096) 806 55 13</span>
                     </a>
                     <a
-                        href="mailto:dordyaysberries@gmail.com"
+                        href="mailto:info@yagodakarpat.com"
                         className="icon-container"
                     >
-                        <i className="fa-solid fa-envelope"></i>
+                        <img src={mailIcon} alt="" />
                         <span>info@yagodakarpat.com</span>
                     </a>
                     <a
@@ -29,7 +32,7 @@ const Contacts = () => {
                         href="https://maps.app.goo.gl/U8hieofkGSuBgP7R9"
                         target="_blank"
                     >
-                        <i className="fa-solid fa-location-dot"></i>
+                        <img src={pinIcon} alt="" />
                         <span>{t("contacts.address")}</span>
                     </a>
                 </div>

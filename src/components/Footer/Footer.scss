@@ -32,15 +32,20 @@
     z-index: 0;
     width: 50px;
     aspect-ratio: 1/1;
-    @include grid-center;
     background: #fff;
     border-radius: 10px;
     cursor: pointer;
+
+    img {
+        width: 25px;
+    }
 }
 
 .to-top-btn::before {
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
     background: var(--accent-clr);
     width: 100%;
@@ -189,7 +194,7 @@
 
     .dropdown-btn__icon {
         display: initial;
-        font-size: 2rem;
+        width: 25px;
         transition: transform 0.3s;
     }
 
