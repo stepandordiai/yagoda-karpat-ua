@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import PageNavTitle from "../../components/PageNavTitle/PageNavTitle";
 import { useParams } from "react-router-dom";
-import ProductsData from "./../../data/ProductsData";
+import ProductsData from "../../data/ProductsData";
 import Product from "../../components/Product/Product";
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
