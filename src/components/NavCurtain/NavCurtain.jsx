@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import ProductsData from "../../data/productsData";
+import ProductsData from "../../data/ProductsData";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./NavCurtain.scss";

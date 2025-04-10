@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /private/
 Allow: /
-Sitemap: https://www.yagodakarpat.com/sitemap.xml
+Sitemap: https://yagodakarpat.com/sitemap.xml

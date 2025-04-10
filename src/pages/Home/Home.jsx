@@ -1,19 +1,19 @@
+import { Helmet } from "react-helmet";
 import Contacts from "./../../components/Contacts/Contacts";
 import Products from "./../../components/Products/Products";
 import AboutUs from "./../../components/AboutUs/AboutUs";
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./Home.scss";
 
 const Home = () => {
     const { t } = useTranslation();
 
-    useEffect(() => {
-        document.title = t("home.title") + " - Ягода Карпат";
-    }, []);
-
     return (
         <>
+            <Helmet>
+                <title>{t("home.title")} - Ягода Карпат</title>
+                <link rel="canonical" href="https://yagodakarpat.com/" />
+            </Helmet>
             <div className="home js-home" id="home">
                 <div className="home-container__wrapper">
                     <div>

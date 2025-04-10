@@ -1,29 +1,23 @@
+import { Helmet } from "react-helmet";
 import PageNavTitle from "../../components/PageNavTitle/PageNavTitle";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-// import { productsData } from "./../../data/productsData";
-import ProductsData from "../../data/productsData";
+import ProductsData from "./../../data/ProductsData";
 import Product from "../../components/Product/Product";
 import { useTranslation } from "react-i18next";
+import { HashLink } from "react-router-hash-link";
+
 import "./ProductPage.scss";
 
-//
-
-import React, { useRef, useState } from "react";
+// Swiper
+import { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import "./styles.css";
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { HashLink } from "react-router-hash-link";
 
 const ProductPage = () => {
     const progressCircle = useRef(null);
@@ -48,15 +42,11 @@ const ProductPage = () => {
         return product.id === id;
     });
 
-    const { pathname, hash } = useLocation();
-
-    useEffect(() => {
-        document.title = productData[0].name + " - Ягода Карпат";
-        // FIXME:
-    }, [id, pathname, hash]);
-
     return (
         <>
+            <Helmet>
+                <title>{productData[0].name} - Ягода Карпат</title>
+            </Helmet>
             <PageNavTitle
                 title={productData[0].name}
                 previousTitle={t("products_title")}
@@ -120,18 +110,8 @@ const ProductPage = () => {
                                 )}
                             </>
                         )}
-
-                        {/* <div className="autoplay-progress" slot="container-end"> */}
-                        {/* <svg viewBox="0 0 48 48" ref={progressCircle}> */}
-                        {/* <circle cx="24" cy="24" r="20"></circle> */}
-                        {/* </svg> */}
-                        {/* <span ref={progressContent}></span> */}
-                        {/* </div> */}
                         <div className="play-progress">
-                            <span
-                                className="play-progress-inner"
-                                // ref={progressContent}
-                            ></span>
+                            <span className="play-progress-inner"></span>
                         </div>
                     </Swiper>
                 </div>

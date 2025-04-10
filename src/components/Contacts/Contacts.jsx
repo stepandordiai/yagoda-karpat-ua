@@ -1,6 +1,6 @@
 import PageTitle from "../PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
-import ProductsData from "../../data/productsData";
+import ProductsData from "../../data/ProductsData";
 import phoneIcon from "/assets/icons/old-typical-phone.png";
 import mailIcon from "/assets/icons/email.png";
 import pinIcon from "/assets/icons/pin.png";
