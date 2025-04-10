@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Product from "../Product/Product";
-import ProductsData from "../../data/ProductsData";
+import ProductsData from "../../data/productsData";
 import PageTitle from "../PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
 import searchIcon from "/assets/icons/search.png";

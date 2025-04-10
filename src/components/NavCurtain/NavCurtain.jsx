@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import ProductsData from "../../data/ProductsData";
+import ProductsData from "../../data/productsData";
 import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
 import "./NavCurtain.scss";
 
@@ -25,7 +26,6 @@ const NavCurtain = () => {
                     links[i].classList.remove("link--active");
 
                     // TODO: 40 is a half of a header, it is working properly when i specify like that
-
                     if (homeRect.top <= 40 && homeRect.bottom >= 40) {
                         links[0].classList.add("link--active");
                     }
@@ -71,7 +71,6 @@ const NavCurtain = () => {
                     .classList.remove("curtain--active");
 
                 // hide list of products in menu by clicking menu btn
-
                 document
                     .querySelector(".nav-curtain__grid-dropdown")
                     .classList.remove("nav-curtain__grid-dropdown--active");
@@ -95,14 +94,17 @@ const NavCurtain = () => {
             <div className="nav-curtain">
                 <ul className="nav-curtain__list">
                     <li>
-                        <a className="link js-link link--active" href="#home">
+                        <HashLink
+                            className="link js-link link--active"
+                            to={"/#home"}
+                        >
                             {t("home_title")}
-                        </a>
+                        </HashLink>
                     </li>
                     <li>
-                        <a className="link js-link" href="#about-us">
+                        <HashLink className="link js-link" to={"/#about-us"}>
                             {t("about_us_title")}
-                        </a>
+                        </HashLink>
                     </li>
                     <li>
                         <div className="nav-curtain__products-link">
@@ -246,9 +248,9 @@ const NavCurtain = () => {
                         </div>
                     </li>
                     <li>
-                        <a className="link js-link" href="#contacts">
+                        <HashLink className="link js-link" to={"/#contacts"}>
                             {t("contacts_title")}
-                        </a>
+                        </HashLink>
                     </li>
                 </ul>
             </div>

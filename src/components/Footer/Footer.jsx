@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
-import ProductsData from "../../data/ProductsData";
+import ProductsData from "../../data/productsData";
 import organicImg from "/assets/certificates/organic-logo.jpg";
 import upArrowIcon from "/assets/icons/up-arrow.png";
 import plusIcon from "/assets/icons/plus.png";
