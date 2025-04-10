@@ -108,9 +108,12 @@ const NavCurtain = () => {
                     </li>
                     <li>
                         <div className="nav-curtain__products-link">
-                            <a className="link js-link" href="#products">
+                            <HashLink
+                                className="link js-link"
+                                to={"/#products"}
+                            >
                                 {t("products_title")}
-                            </a>
+                            </HashLink>
                             <button
                                 className="products-btn"
                                 onClick={showProducts}
