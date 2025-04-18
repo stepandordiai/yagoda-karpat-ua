@@ -71,6 +71,10 @@
 .footer-logo {
     align-self: center;
     font-size: clamp(26px, 3vw, 36px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .certificates-info {

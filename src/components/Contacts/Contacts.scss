@@ -174,10 +174,16 @@ textarea {
 
 .location-map {
     border-radius: inherit;
-    height: 1000px;
+    aspect-ratio: 1/1;
 }
 
-@media screen and (max-width: 900px) {
+.contacts-container {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+@media screen and (max-width: 895px) {
     .form-map-container {
         flex-direction: column;
     }
@@ -202,6 +208,13 @@ textarea {
 
     .location-map {
         height: 500px;
+    }
+
+    .contacts-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 25px;
     }
 }
 

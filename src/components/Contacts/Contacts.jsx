@@ -1,19 +1,17 @@
 import PageTitle from "../PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
-import ProductsData from "../../data/productsData";
 import phoneIcon from "/assets/icons/old-typical-phone.png";
 import mailIcon from "/assets/icons/email.png";
 import pinIcon from "/assets/icons/pin.png";
 import "./Contacts.scss";
+import OurCertificates from "../OurCertificates/OurCertificates";
+import BusinessHours from "../BusinessHours/BusinessHours";
 
 const Contacts = () => {
     const { t } = useTranslation();
 
-    const productsData = ProductsData();
-
     return (
         <section className="js-contacts" id="contacts">
-            <div className="contacts-container">
                 <PageTitle name={t("contacts_title")} />
                 <div className="contacts-icons-container">
                     <a href="tel:+380968065513" className="icon-container">
@@ -35,7 +33,6 @@ const Contacts = () => {
                         <img src={pinIcon} alt="" />
                         <span>{t("contacts.address")}</span>
                     </a>
-                </div>
             </div>
             <div className="form-map-container">
                 <form
@@ -80,124 +77,6 @@ const Contacts = () => {
                             type="tel"
                         />
                     </div>
-                    <div className="checkbox-container">
-                        <p className="checkbox-title">
-                            {t("contacts.checkbox_title")}
-                        </p>
-                        <div>
-                            <p className="checkbox-sec-title">
-                                {t("berries_title")}
-                            </p>
-                            <ul>
-                                {productsData
-                                    .filter(
-                                        (product) => product.type == "berry"
-                                    )
-                                    .map((product) => {
-                                        return (
-                                            <li
-                                                className="checkbox-item"
-                                                key={product.id}
-                                            >
-                                                <input
-                                                    type="checkbox"
-                                                    name={product.name}
-                                                    id={product.id}
-                                                />
-                                                <label htmlFor={product.id}>
-                                                    {product.name}
-                                                </label>
-                                            </li>
-                                        );
-                                    })}
-                            </ul>
-                        </div>
-                        <div>
-                            <p className="checkbox-sec-title">
-                                {t("fruits_title")}
-                            </p>
-                            <ul>
-                                {productsData
-                                    .filter(
-                                        (product) => product.type == "fruit"
-                                    )
-                                    .map((product) => {
-                                        return (
-                                            <li
-                                                className="checkbox-item"
-                                                key={product.id}
-                                            >
-                                                <input
-                                                    type="checkbox"
-                                                    name={product.name}
-                                                    id={product.id}
-                                                />
-                                                <label htmlFor={product.id}>
-                                                    {product.name}
-                                                </label>
-                                            </li>
-                                        );
-                                    })}
-                            </ul>
-                        </div>
-                        <div>
-                            <p className="checkbox-sec-title">
-                                {t("mushrooms_title")}
-                            </p>
-                            <ul>
-                                {productsData
-                                    .filter(
-                                        (product) => product.type == "mushroom"
-                                    )
-                                    .map((product) => {
-                                        return (
-                                            <li
-                                                className="checkbox-item"
-                                                key={product.id}
-                                            >
-                                                <input
-                                                    type="checkbox"
-                                                    name={product.name}
-                                                    id={product.id}
-                                                />
-                                                <label htmlFor={product.id}>
-                                                    {product.name}
-                                                </label>
-                                            </li>
-                                        );
-                                    })}
-                            </ul>
-                        </div>
-                        <div>
-                            <p className="checkbox-sec-title">
-                                {t("vegetables_title")}
-                            </p>
-                            <ul>
-                                {productsData
-                                    .filter(
-                                        (product) => product.type == "vegetable"
-                                    )
-                                    .map((product) => {
-                                        return (
-                                            <li
-                                                className="checkbox-item"
-                                                key={product.id}
-                                            >
-                                                <input
-                                                    type="checkbox"
-                                                    name={product.name}
-                                                    id={product.id}
-                                                />
-                                                <label htmlFor={product.id}>
-                                                    {product.name}
-                                                </label>
-                                            </li>
-                                        );
-                                    })}
-                            </ul>
-                        </div>
-                    </div>
-
                     <div className="input-container">
                         <label className="contact-label" htmlFor="message">
                             {t("contacts.message")}
@@ -217,6 +96,10 @@ const Contacts = () => {
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d666.0764004226559!2d23.74658175529479!3d48.10434021444485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47379f8eb1dc7f03%3A0x6e39e1068f4cb4a!2sYagoda%20Karpat%2C%20LLC!5e0!3m2!1sen!2sua!4v1722068818836!5m2!1sen!2sua"
                     ></iframe>
                 </div>
+            </div>
+            <div className="contacts-container">
+                <OurCertificates />
+                <BusinessHours />
             </div>
         </section>
     );

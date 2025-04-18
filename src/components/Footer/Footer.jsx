@@ -3,9 +3,10 @@ import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
 import ProductsData from "../../data/productsData";
-import organicImg from "/assets/certificates/organic-logo.jpg";
+// import organicImg from "/assets/certificates/organic-logo.jpg";
 import upArrowIcon from "/assets/icons/up-arrow.png";
 import plusIcon from "/assets/icons/plus.png";
+import logo from "/assets/yagoda-karpat-logo.svg";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -64,9 +65,10 @@ const Footer = () => {
             </button>
             <div className="footer-details">
                 <HashLink className="footer-logo" to="/#home">
-                    Ягода Карпат
+                    <img src={logo} width={50} alt="" />
+                    <span>Ягода Карпат</span>
                 </HashLink>
-                <div>
+                {/* <div>
                     <h3 className="certificates-info">
                         {t("footer.our_certificates")}
                     </h3>
@@ -81,12 +83,11 @@ const Footer = () => {
                             HACCP
                         </p>
                     </div>
-                </div>
+                </div> */}
                 <div className="footer-nav">
                     <div>
                         <div className="footer-nav__title dropdown-btn js-dropdown-btn">
                             <p>{t("footer.navigation")}</p>
-                            {/* <div className="dropdown-btn__icon"></div> */}
                             <img
                                 className="dropdown-btn__icon"
                                 src={plusIcon}

@@ -72,7 +72,7 @@ import honeyFungusImg2 from "/products-img/honey-fungus2.jpg";
 
 import blackberryImg from "/products-img/blackberry.jpg";
 
-import organicLogo from "/assets/certificates/organic-logo.jpg";
+// import organicLogo from "/assets/certificates/organic-logo.jpg";
 
 import { useTranslation } from "react-i18next";
 
@@ -99,7 +99,7 @@ const ProductsData = () => {
             origin: "Україна",
             status: "frozen",
             productImages: [lingonberryImg, lingonberryImg2],
-            certificates: [organicLogo],
+            // certificates: [organicLogo],
         },
         {
             id: "rosehip",
