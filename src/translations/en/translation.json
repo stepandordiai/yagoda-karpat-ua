@@ -1,69 +1,67 @@
 {
-    "contact_us": "Contact us",
-    "home_title": "Home",
-    "about_us_title": "About us",
-    "products_title": "Products",
-    "contacts_title": "Contacts",
-    "berries_title": "Berries",
-    "fruits_title": "Fruits",
-    "vegetables_title": "Vegetables",
-    "mushrooms_title": "Mushrooms",
+	"contact_us": "Contact us",
+	"home_title": "Home",
+	"about_us_title": "About us",
+	"products_title": "Products",
+	"contacts_title": "Contacts",
+	"berries_title": "Berries",
+	"fruits_title": "Fruits",
+	"vegetables_title": "Vegetables",
+	"mushrooms_title": "Mushrooms",
 
-    "home": {
-        "title": "Manufacturer of frozen and dried foods",
-        "sec_title": "We produce frozen and dried berries, fruits, mushrooms and vegetables"
-    },
+	"home": {
+		"title": "Manufacturer of frozen and dried foods",
+		"sec_title": "We produce frozen and dried berries, fruits, mushrooms and vegetables"
+	},
 
-    "about_us": {
-        "sec_title": "We specialize in the processing and production of frozen and dried berries, fruits, mushrooms and vegetables. All our products are grown and collected exclusively in ecologically clean regions of Ukraine.",
-        "year": "years of experience",
-        "product": "products",
-        "volume": "employees"
-    },
+	"about_us": {
+		"sec_title": "We specialize in the processing and production of frozen and dried berries, fruits, mushrooms and vegetables. All our products are grown and collected exclusively in ecologically clean regions of Ukraine.",
+		"year": "years of experience",
+		"product": "products",
+		"volume": "employees"
+	},
 
-    "products": {
-        "filter": "Filter",
-        "filter_placeholder": "Which product are you searching?",
-        "bilberry": "Bliberry frozen",
-        "lingonberry": "Lingonberry frozen",
-        "rosehip": "Rosehip frozen",
-        "plum": "Plum frozen",
-        "plum_half": "Plum frozen (half)",
-        "plum_dry": "Plum dried",
-        "prunus": "Prunus (pitted)",
-        "elderberry": "Elderberry black frozen",
-        "strawberry": "Strawberry frozen",
-        "raspberry": "Raspberry frozen",
-        "apricot": "Apricot frozen",
-        "sweet_pepper": "Sweet pepper frozen (sliced)",
-        "boletus": "Boletus frozen",
-        "chanterelle": "Chanterelle dried",
-        "sour_cherry": "Sour cherry frozen",
-        "honey_fungus": "Honey fungus frozen",
-        "blackberry": "Blackberry frozen",
-        "grape": "Grape frozen",
-        "show_more": "Show more"
-    },
+	"products": {
+		"filter": "Filter",
+		"filter_placeholder": "Which product are you searching?",
+		"bilberry": "Bliberry frozen",
+		"lingonberry": "Lingonberry frozen",
+		"rosehip": "Rosehip frozen",
+		"plum": "Plum frozen",
+		"plum_half": "Plum frozen (half)",
+		"plum_dry": "Plum dried",
+		"prunus": "Prunus (pitted)",
+		"elderberry": "Elderberry black frozen",
+		"strawberry": "Strawberry frozen",
+		"raspberry": "Raspberry frozen",
+		"apricot": "Apricot frozen",
+		"sweet_pepper": "Sweet pepper frozen (sliced)",
+		"boletus": "Boletus frozen",
+		"chanterelle": "Chanterelle dried",
+		"sour_cherry": "Sour cherry frozen",
+		"honey_fungus": "Honey fungus frozen",
+		"blackberry": "Blackberry frozen",
+		"grape": "Grape frozen",
+		"show_more": "Show more"
+	},
 
-    "contacts": {
-        "address": "Central street, 34B, Vilkhivtsi village, Tyachiv district, Transcarpathian region, Ukraine, 90542",
-        "contact_us_title": "Contact us",
-        "first_name": "First name",
-        "last_name": "Last name",
-        "tel": "Phone number",
-        "message": "Message",
-        "submit": "Send",
-        "map_title": "Where to find us",
-        "checkbox_title": "Select the product or multiple products that interest you"
-    },
+	"contacts": {
+		"address": "Central street, 34B, Vilkhivtsi village, Tyachiv district, Transcarpathian region, Ukraine, 90542",
+		"contact_us_title": "Contact us",
+		"first_name": "First name",
+		"last_name": "Last name",
+		"tel": "Phone number",
+		"message": "Message",
+		"submit": "Send",
+		"map_title": "Where to find us"
+	},
 
-    "footer": {
-        "our_certificates": "Our certificates",
-        "navigation": "Navigation"
-    },
+	"footer": {
+		"navigation": "Navigation"
+	},
 
-    "product_page": {
-        "coming_soon": "Product information will be available here soon",
-        "related": "Related products"
-    }
+	"product_page": {
+		"coming_soon": "Product information will be available here soon",
+		"related": "Related products"
+	}
 }

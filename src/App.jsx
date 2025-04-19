@@ -9,21 +9,30 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import ScrollToTop from "./utils/ScrollToTop";
 import "./i18n";
 import "./App.scss";
+import Loading from "./components/Loading/Loading";
+import { useEffect } from "react";
 
 function App() {
-    return (
-        <Router>
-            <ScrollToTop />
-            <Header />
-            <NavCurtain />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/product-page/:id" element={<ProductPage />} />
-            </Routes>
+	useEffect(() => {
+		document.body.classList.add("body--hidden");
+		setTimeout(() => {
+			document.body.classList.remove("body--hidden");
+		}, 2250);
+	}, []);
+	return (
+		<Router>
+			<Loading />
+			<ScrollToTop />
+			<Header />
+			<NavCurtain />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/product-page/:id" element={<ProductPage />} />
+			</Routes>
 
-            <Footer />
-        </Router>
-    );
+			<Footer />
+		</Router>
+	);
 }
 
 export default App;

@@ -1,69 +1,67 @@
 {
-    "contact_us": "Kontaktujte nás",
-    "home_title": "úvod",
-    "about_us_title": "O nás",
-    "products_title": "Produkty",
-    "contacts_title": "Kontakty",
-    "berries_title": "Bobule",
-    "fruits_title": "Ovoce",
-    "vegetables_title": "Zelenina",
-    "mushrooms_title": "Houby",
+	"contact_us": "Kontaktujte nás",
+	"home_title": "úvod",
+	"about_us_title": "O nás",
+	"products_title": "Produkty",
+	"contacts_title": "Kontakty",
+	"berries_title": "Bobule",
+	"fruits_title": "Ovoce",
+	"vegetables_title": "Zelenina",
+	"mushrooms_title": "Houby",
 
-    "home": {
-        "title": "Výrobce mražených a sušených potravin",
-        "sec_title": "Vyrábíme mražené a sušené bobuloviny, ovoce, houby a zeleninu"
-    },
+	"home": {
+		"title": "Výrobce mražených a sušených potravin",
+		"sec_title": "Vyrábíme mražené a sušené bobuloviny, ovoce, houby a zeleninu"
+	},
 
-    "about_us": {
-        "sec_title": "Specializujeme se na zpracování a výrobu mražených a sušených bobulí, ovoce, hub a zeleniny. Všechny naše produkty jsou pěstovány a sbírány výhradně v ekologicky čistých oblastech Ukrajiny.",
-        "year": "let zkušeností",
-        "product": "produkty",
-        "volume": "zaměstnanci"
-    },
+	"about_us": {
+		"sec_title": "Specializujeme se na zpracování a výrobu mražených a sušených bobulí, ovoce, hub a zeleniny. Všechny naše produkty jsou pěstovány a sbírány výhradně v ekologicky čistých oblastech Ukrajiny.",
+		"year": "let zkušeností",
+		"product": "produkty",
+		"volume": "zaměstnanci"
+	},
 
-    "products": {
-        "filter": "Filtr",
-        "filter_placeholder": "Který produkt hledáte?",
-        "bilberry": "Borůvka zmrazená",
-        "lingonberry": "Brusinky zmrazené",
-        "rosehip": "Šípkový mražený",
-        "plum": "Švestka mražená",
-        "plum_half": "Švestka mražená (půlka)",
-        "plum_dry": "Švestka sušená",
-        "prunus": "Prunus (vypeckovaný)",
-        "elderberry": "Černý bezinkový mražený",
-        "strawberry": "Jahoda zmrazená",
-        "raspberry": "Malina zmrazená",
-        "apricot": "Meruňka zmrazená",
-        "sweet_pepper": "Sladká paprika mražená (nakrájená)",
-        "boletus": "Hřib zmrzlý",
-        "chanterelle": "Liška sušená",
-        "sour_cherry": "Višeň zmrazená",
-        "honey_fungus": "Medová houba zmrazená",
-        "blackberry": "Blackberry zmrazené",
-        "grape": "Hrozny zmrazené",
-        "show_more": "Zobrazit více"
-    },
+	"products": {
+		"filter": "Filtr",
+		"filter_placeholder": "Který produkt hledáte?",
+		"bilberry": "Borůvka zmrazená",
+		"lingonberry": "Brusinky zmrazené",
+		"rosehip": "Šípkový mražený",
+		"plum": "Švestka mražená",
+		"plum_half": "Švestka mražená (půlka)",
+		"plum_dry": "Švestka sušená",
+		"prunus": "Prunus (vypeckovaný)",
+		"elderberry": "Černý bezinkový mražený",
+		"strawberry": "Jahoda zmrazená",
+		"raspberry": "Malina zmrazená",
+		"apricot": "Meruňka zmrazená",
+		"sweet_pepper": "Sladká paprika mražená (nakrájená)",
+		"boletus": "Hřib zmrzlý",
+		"chanterelle": "Liška sušená",
+		"sour_cherry": "Višeň zmrazená",
+		"honey_fungus": "Medová houba zmrazená",
+		"blackberry": "Blackberry zmrazené",
+		"grape": "Hrozny zmrazené",
+		"show_more": "Zobrazit více"
+	},
 
-    "contacts": {
-        "address": "Centrální ulice, 34B, vesnice Vilkhivtsi, okres Tyachiv, Zakarpatská oblast, Ukrajina, 90542",
-        "contact_us_title": "Kontaktujte nás",
-        "first_name": "Jméno",
-        "last_name": "Příjmení",
-        "tel": "Telefonní číslo",
-        "message": "Zpráva",
-        "submit": "Poslat",
-        "map_title": "Kde nás najdete",
-        "checkbox_title": "Vyberte produkt nebo více produktů, které vás zajímají"
-    },
+	"contacts": {
+		"address": "Centrální ulice, 34B, vesnice Vilkhivtsi, okres Tyachiv, Zakarpatská oblast, Ukrajina, 90542",
+		"contact_us_title": "Kontaktujte nás",
+		"first_name": "Jméno",
+		"last_name": "Příjmení",
+		"tel": "Telefonní číslo",
+		"message": "Zpráva",
+		"submit": "Poslat",
+		"map_title": "Kde nás najdete"
+	},
 
-    "footer": {
-        "our_certificates": "Naše certifikáty",
-        "navigation": "Navigace"
-    },
+	"footer": {
+		"navigation": "Navigace"
+	},
 
-    "product_page": {
-        "coming_soon": "Informace o produktech zde budou brzy k dispozici.",
-        "related": "Související produkty"
-    }
+	"product_page": {
+		"coming_soon": "Informace o produktech zde budou brzy k dispozici.",
+		"related": "Související produkty"
+	}
 }
