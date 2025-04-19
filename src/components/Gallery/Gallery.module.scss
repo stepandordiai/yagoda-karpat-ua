@@ -1,0 +1,22 @@
+.gallery {
+	background: #fff;
+	padding: 25px;
+	margin-top: 25px;
+	border-radius: 10px;
+}
+
+.gallery__title {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.mySwiper {
+	height: calc(100% - 30px) !important;
+}
+
+@media screen and (max-width: 900px) {
+	.gallery {
+		padding: 10px;
+	}
+}
