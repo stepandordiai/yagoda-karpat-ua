@@ -21,13 +21,7 @@ const Gallery = () => {
 		<div className={styles["gallery"]}>
 			<h2 className={styles["gallery__title"]}>Gallery</h2>
 			<Swiper
-				// centeredSlides={true}
 				breakpoints={{
-					// 1200: {
-					// slidesPerView: 3,
-					// spaceBetween: 40,
-					// },
-
 					900: {
 						slidesPerView: 4,
 						spaceBetween: 25,
@@ -40,20 +34,21 @@ const Gallery = () => {
 					disableOnInteraction: false,
 				}}
 				speed={1000}
+				loop={true}
 				modules={[Autoplay]}
 				className={styles["mySwiper"]}
 			>
-				<SwiperSlide className={"swiper-card"}>
-					<img className={"swiper-img"} src={img1} alt="" />
+				<SwiperSlide className={styles["swiper-card"]}>
+					<img className={styles["swiper-img"]} src={img1} alt="" />
 				</SwiperSlide>
-				<SwiperSlide className={"swiper-card"}>
-					<img className={"swiper-img"} src={img2} alt="" />
+				<SwiperSlide className={styles["swiper-card"]}>
+					<img className={styles["swiper-img"]} src={img2} alt="" />
 				</SwiperSlide>
-				<SwiperSlide className={"swiper-card"}>
-					<img className={"swiper-img"} src={img3} alt="" />
+				<SwiperSlide className={styles["swiper-card"]}>
+					<img className={styles["swiper-img"]} src={img3} alt="" />
 				</SwiperSlide>
-				<SwiperSlide className={"swiper-card"}>
-					<img className={"swiper-img"} src={img4} alt="" />
+				<SwiperSlide className={styles["swiper-card"]}>
+					<img className={styles["swiper-img"]} src={img4} alt="" />
 				</SwiperSlide>
 			</Swiper>
 		</div>

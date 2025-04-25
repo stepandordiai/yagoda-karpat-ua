@@ -11,6 +11,18 @@
 	margin-bottom: 10px;
 }
 
+.swiper-card {
+	cursor: grab;
+
+	&:active {
+		cursor: grabbing;
+	}
+}
+
+.swiper-img {
+	border-radius: 10px;
+}
+
 .mySwiper {
 	height: calc(100% - 30px) !important;
 }

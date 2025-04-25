@@ -6,7 +6,9 @@ import "./Product.scss";
 const Product = ({ product }) => {
 	const { t } = useTranslation();
 
-	const { id, name, productImages } = product;
+	const { id, name, productImages, raw } = product;
+
+	console.log(productImages);
 
 	addEventListener("scroll", () => {
 		const slider = document.querySelectorAll(".my-swiper");
@@ -40,16 +42,36 @@ const Product = ({ product }) => {
 			<div className="product__img-wrapper">
 				{productImages ? (
 					<>
-						<img
-							className="product-img"
-							src={productImages[0]}
-							alt={name}
-							loading="lazy"
-						/>
-						<div className="img-qty">
-							<img src={cameraIcon} alt="Camera icon" loading="lazy" />
-							<span>{productImages.length}</span>
-						</div>
+						{raw ? (
+							<>
+								<img
+									className="product-img"
+									src={productImages.pitted[0]}
+									alt={name}
+									loading="lazy"
+								/>
+								<div className="img-qty">
+									<img src={cameraIcon} alt="Camera icon" loading="lazy" />
+									<span>
+										{productImages.pitted.length +
+											productImages["with-stone"].length}
+									</span>
+								</div>
+							</>
+						) : (
+							<>
+								<img
+									className="product-img"
+									src={productImages[0]}
+									alt={name}
+									loading="lazy"
+								/>
+								<div className="img-qty">
+									<img src={cameraIcon} alt="Camera icon" loading="lazy" />
+									<span>{productImages.length}</span>
+								</div>
+							</>
+						)}
 					</>
 				) : (
 					<div className="no-img"></div>

@@ -62,6 +62,7 @@ import chanterelleImg2 from "/products-img/chanterelle2.jpg";
 
 import sourCherryImg from "/products-img/sour-cherry.jpg";
 import sourCherryImg2 from "/products-img/sour-cherry2.jpg";
+import sourCherryImg3 from "/products-img/sour-cherry3.jpg";
 
 // Honey fungus
 
@@ -238,7 +239,12 @@ const ProductsData = () => {
 			temp: "-21 °C",
 			origin: "Україна",
 			status: "frozen",
-			productImages: [sourCherryImg, sourCherryImg2],
+			productImages: {
+				pitted: [sourCherryImg, sourCherryImg2],
+				"with-stone": [sourCherryImg3],
+			},
+
+			raw: ["with-stone", "pitted"],
 		},
 		{
 			id: "honey-fungus",
