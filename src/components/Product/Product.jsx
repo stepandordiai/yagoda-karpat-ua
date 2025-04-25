@@ -8,8 +8,6 @@ const Product = ({ product }) => {
 
 	const { id, name, productImages, raw } = product;
 
-	console.log(productImages);
-
 	addEventListener("scroll", () => {
 		const slider = document.querySelectorAll(".my-swiper");
 		slider.forEach((slide) => {
