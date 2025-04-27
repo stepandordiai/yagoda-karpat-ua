@@ -22,19 +22,29 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const ProductPage = () => {
 	const { t } = useTranslation();
 
-	const productsData = ProductsData();
-
 	const { id } = useParams();
 
-	const [production, setProduction] = useState("pitted");
-
-	function getOption(props) {
-		setProduction((prev) => (prev = props));
-	}
+	const productsData = ProductsData();
 
 	const productData = productsData.filter((product) => {
 		return product.id === id;
 	});
+
+	const [activeVariantState, setActiveVariantState] = useState(
+		productData[0].variants[0].state
+	);
+
+	function handleActiveVariantState(props) {
+		setActiveVariantState(props);
+	}
+
+	const product = productData[0].variants.filter((variant) => {
+		if (variant.state == activeVariantState) {
+			return variant;
+		}
+	});
+
+	console.log(product[0]);
 
 	return (
 		<>
@@ -50,34 +60,33 @@ const ProductPage = () => {
 				<div className="product-page__details">
 					<div>
 						<p className="product-page__details-title">
-							{productData[0].name} (
-							{production == "pitted" ? "без кістки" : "з кісткою"})
+							{`${productData[0].name} ${
+								product[0].state ? " (" + product[0].state + ")" : ""
+							}`}
 						</p>
 						<ul>
 							<li>Походження: {productData[0].origin}</li>
 							<li>Пакування: {productData[0].pack}</li>
 							<li>Температура: {productData[0].temp}</li>
 						</ul>
-						{productData[0].raw && (
-							<>
-								<button
-									className={`choose-btn ${
-										production == "pitted" && "choose-btn--active"
-									}`}
-									onClick={() => getOption("pitted")}
-								>
-									без кістки
-								</button>{" "}
-								<button
-									className={`choose-btn ${
-										production == "with-stone" && "choose-btn--active"
-									}`}
-									onClick={() => getOption("with-stone")}
-								>
-									з кісткою
-								</button>
-							</>
-						)}
+						{productData[0].variants &&
+							productData[0].variants.map((variant, index) => {
+								if (variant.state) {
+									return (
+										<button
+											key={index}
+											onClick={() => handleActiveVariantState(variant.state)}
+											className={
+												variant.state === activeVariantState
+													? "choose-btn choose-btn--active"
+													: "choose-btn"
+											}
+										>
+											{variant.state}
+										</button>
+									);
+								}
+							})}
 					</div>
 
 					<HashLink to={"/#contacts"} className={"product-page__details-link"}>
@@ -99,31 +108,15 @@ const ProductPage = () => {
 						modules={[Autoplay, Pagination, Navigation]}
 						className="mySwiper"
 					>
-						{productData[0].productImages && (
+						{product[0].images && (
 							<>
-								{productData[0].raw ? (
-									<>
-										{productData[0].productImages[production].map(
-											(img, index) => {
-												return (
-													<SwiperSlide key={index}>
-														<img className="swiper-img" src={img} alt="" />
-													</SwiperSlide>
-												);
-											}
-										)}
-									</>
-								) : (
-									<>
-										{productData[0].productImages.map((img, index) => {
-											return (
-												<SwiperSlide key={index}>
-													<img className="swiper-img" src={img} alt="" />
-												</SwiperSlide>
-											);
-										})}
-									</>
-								)}
+								{product[0].images.map((img, index) => {
+									return (
+										<SwiperSlide key={index}>
+											<img className="swiper-img" src={img} alt="" />
+										</SwiperSlide>
+									);
+								})}
 							</>
 						)}
 						<div className="play-progress">
@@ -134,7 +127,7 @@ const ProductPage = () => {
 			</div>
 
 			<p>{t("product_page.related")}</p>
-			{productsData
+			{/* {productsData
 				.filter((product) => {
 					return (
 						product.status === productData[0].status &&
@@ -144,7 +137,7 @@ const ProductPage = () => {
 				})
 				.map((product) => {
 					return <Product product={product} key={product.id} />;
-				})}
+				})} */}
 		</>
 	);
 };

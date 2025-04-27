@@ -1,75 +1,32 @@
-import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 import cameraIcon from "/assets/icons/camera.png";
 import "./Product.scss";
 
 const Product = ({ product }) => {
 	const { t } = useTranslation();
 
-	const { id, name, productImages, raw } = product;
+	const { id, name, variants } = product;
 
-	addEventListener("scroll", () => {
-		const slider = document.querySelectorAll(".my-swiper");
-		slider.forEach((slide) => {
-			if (window.innerHeight > slide.getBoundingClientRect().top + 200) {
-				slide.classList.add("active");
-			}
-		});
-		const productInfo = document.querySelectorAll(".product-info-container");
-		productInfo.forEach((product) => {
-			if (window.innerHeight > product.getBoundingClientRect().top + 200) {
-				product.classList.add("active");
-			}
-		});
-		const slider1 = document.querySelectorAll(".my-swiper-1");
-		slider1.forEach((slide) => {
-			if (window.innerHeight > slide.getBoundingClientRect().top + 200) {
-				slide.classList.add("active");
-			}
-		});
-		const productInfo1 = document.querySelectorAll(".product-info-container-1");
-		productInfo1.forEach((product) => {
-			if (window.innerHeight > product.getBoundingClientRect().top + 200) {
-				product.classList.add("active");
-			}
-		});
-	});
+	const allImages = variants.flatMap((variant) =>
+		variant.images ? variant.images : []
+	);
 
 	return (
 		<div className="product">
 			<div className="product__img-wrapper">
-				{productImages ? (
+				{allImages.length ? (
 					<>
-						{raw ? (
-							<>
-								<img
-									className="product-img"
-									src={productImages.pitted[0]}
-									alt={name}
-									loading="lazy"
-								/>
-								<div className="img-qty">
-									<img src={cameraIcon} alt="Camera icon" loading="lazy" />
-									<span>
-										{productImages.pitted.length +
-											productImages["with-stone"].length}
-									</span>
-								</div>
-							</>
-						) : (
-							<>
-								<img
-									className="product-img"
-									src={productImages[0]}
-									alt={name}
-									loading="lazy"
-								/>
-								<div className="img-qty">
-									<img src={cameraIcon} alt="Camera icon" loading="lazy" />
-									<span>{productImages.length}</span>
-								</div>
-							</>
-						)}
+						<img
+							className="product-img"
+							src={allImages[0]}
+							alt=""
+							loading="lazy"
+						/>
+						<div className="img-qty">
+							<img src={cameraIcon} alt="" loading="lazy" />
+							<span>{allImages.length}</span>
+						</div>
 					</>
 				) : (
 					<div className="no-img"></div>
