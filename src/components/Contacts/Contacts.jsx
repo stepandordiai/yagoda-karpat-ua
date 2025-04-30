@@ -34,9 +34,8 @@ const Contacts = () => {
 			<div className="form-map-container">
 				<form
 					className="form"
-					action="mailto:info@yagodakarpat.com"
+					action="https://formsubmit.co/info@yagodakarpat.com"
 					method="post"
-					encType="text/plain"
 				>
 					<h2 className="form__title">{t("contacts.contact_us_title")}</h2>
 					<div className="input-container">
@@ -46,7 +45,8 @@ const Contacts = () => {
 						<input
 							className="form__input"
 							id="first-name"
-							name="First name"
+							name="firstName"
+							autoComplete="given-name"
 							type="text"
 						/>
 					</div>
@@ -57,7 +57,8 @@ const Contacts = () => {
 						<input
 							className="form__input"
 							id="last-name"
-							name="Last name"
+							name="lastName"
+							autoComplete="family-name"
 							type="text"
 						/>
 					</div>
@@ -68,7 +69,8 @@ const Contacts = () => {
 						<input
 							className="form__input"
 							id="phone-number"
-							name="Phone number"
+							name="tel"
+							autoComplete="tel"
 							type="tel"
 						/>
 					</div>
@@ -76,7 +78,7 @@ const Contacts = () => {
 						<label className="contact-label" htmlFor="message">
 							{t("contacts.message")}
 						</label>
-						<textarea name="Message" id="message"></textarea>
+						<textarea name="message" autoComplete="on" id="message"></textarea>
 					</div>
 					<button className="form-submit-btn" type="submit">
 						{t("contacts.submit")}
@@ -92,10 +94,7 @@ const Contacts = () => {
 			</div>
 			<div className="contacts-container">
 				<OurCertificates />
-				{/* <div className="column-container"> */}
 				<BusinessHours />
-				{/* <div className="empty-section"></div> */}
-				{/* </div> */}
 			</div>
 		</section>
 	);
