@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 import PageNavTitle from "../../components/PageNavTitle/PageNavTitle";
 import { useParams } from "react-router-dom";
-import ProductsData from "../../data/productsData";
+import ProductsData from "../../data/ProductsData";
 import Product from "../../components/Product/Product";
 import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
@@ -64,11 +64,6 @@ const ProductPage = () => {
 								product[0].state ? " (" + product[0].state + ")" : ""
 							}`}
 						</p>
-						<ul>
-							<li>Походження: {productData[0].origin}</li>
-							<li>Пакування: {productData[0].pack}</li>
-							<li>Температура: {productData[0].temp}</li>
-						</ul>
 						{productData[0].variants &&
 							productData[0].variants.map((variant, index) => {
 								if (variant.state) {
@@ -87,6 +82,13 @@ const ProductPage = () => {
 									);
 								}
 							})}
+						<ul>
+							<li>Походження: {productData[0].origin}</li>
+							<li>Пакування: {productData[0].pack}</li>
+							<li>Температура: {productData[0].temp}</li>
+						</ul>
+
+						<p>Опис: {productData[0].desc && productData[0].desc}</p>
 					</div>
 
 					<HashLink to={"/#contacts"} className={"product-page__details-link"}>
