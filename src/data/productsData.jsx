@@ -77,7 +77,7 @@ import blackberryImg from "/products-img/blackberry.jpg";
 
 import { useTranslation } from "react-i18next";
 
-const ProductsData = () => {
+const productsData = () => {
 	const { t } = useTranslation();
 
 	const productsData = [
@@ -429,4 +429,4 @@ const ProductsData = () => {
 	return productsData;
 };
 
-export default ProductsData;
+export default productsData;
