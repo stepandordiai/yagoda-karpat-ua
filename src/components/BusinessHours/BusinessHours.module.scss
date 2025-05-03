@@ -4,13 +4,9 @@
 	row-gap: 10px;
 	width: 50%;
 	position: relative;
-	// aspect-ratio: 1/1;
-	// height: 100%;
 	background: #fff;
 	border-radius: 10px;
 	padding: 25px;
-	// height: 100%;
-	// flex-grow: 1;
 }
 
 .business-hours__title {
@@ -28,18 +24,19 @@
 	li {
 		display: flex;
 		justify-content: space-between;
-		border: 1px solid rgba(0, 0, 0, 0.1);
+		border: 1px solid var(--accent-clr);
 		padding: 10px;
 		border-radius: 10px;
 	}
 }
 
 .day--active {
-	border: 1px solid var(--accent-clr) !important;
+	background: var(--accent-clr);
 }
 
 @media screen and (max-width: 900px) {
 	.business-hours {
 		width: 100%;
+		padding: 10px;
 	}
 }
