@@ -44,8 +44,6 @@ const ProductPage = () => {
 		}
 	});
 
-	console.log(product[0]);
-
 	return (
 		<>
 			<Helmet>
@@ -58,40 +56,53 @@ const ProductPage = () => {
 			/>
 			<div className="product-page">
 				<div className="product-page__details">
-					<div>
-						<p className="product-page__details-title">
-							{`${productData[0].name} ${
-								product[0].state ? " (" + product[0].state + ")" : ""
-							}`}
-						</p>
-						{productData[0].variants &&
-							productData[0].variants.map((variant, index) => {
-								if (variant.state) {
-									return (
-										<button
-											key={index}
-											onClick={() => handleActiveVariantState(variant.state)}
-											className={
-												variant.state === activeVariantState
-													? "choose-btn choose-btn--active"
-													: "choose-btn"
-											}
-										>
-											{variant.state}
-										</button>
-									);
-								}
-							})}
-						<ul>
-							<li>Походження: {productData[0].origin}</li>
-							<li>Пакування: {productData[0].pack}</li>
-							<li>Температура: {productData[0].temp}</li>
-						</ul>
-
-						<p>Опис: {productData[0].desc && productData[0].desc}</p>
+					<div className="product-page__details-inner">
+						<div>
+							<p className="product-page__lat-name">{productData[0].latName}</p>
+							<p className="product-page__name">
+								{`${productData[0].name} ${
+									product[0].state ? " (" + product[0].state + ")" : ""
+								}`}
+							</p>
+						</div>
+						<div className="product-page__variants">
+							{productData[0].variants &&
+								productData[0].variants.map((variant, index) => {
+									if (variant.state) {
+										return (
+											<button
+												key={index}
+												onClick={() => handleActiveVariantState(variant.state)}
+												className={
+													variant.state === activeVariantState
+														? "choose-btn choose-btn--active"
+														: "choose-btn"
+												}
+											>
+												{variant.state}
+											</button>
+										);
+									}
+								})}
+						</div>
+						<div>
+							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>Походження</p>
+							<p>{productData[0].origin}</p>
+						</div>
+						<div>
+							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>Пакування</p>
+							<p>{productData[0].pack}</p>
+						</div>
+						<div>
+							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>Температура</p>
+							<p>{productData[0].temp}</p>
+						</div>
+						<div>
+							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>Опис</p>
+							<p>{productData[0].desc && productData[0].desc}</p>
+						</div>
 					</div>
-
-					<HashLink to={"/#contacts"} className={"product-page__details-link"}>
+					<HashLink to={"/#contacts"} className={"product-page__link"}>
 						Дізнатися про наявність
 					</HashLink>
 				</div>
@@ -128,8 +139,8 @@ const ProductPage = () => {
 				</div>
 			</div>
 
-			<p>{t("product_page.related")}</p>
-			{/* {productsData
+			<p className="related-products__title">{t("product_page.related")}</p>
+			{productsData
 				.filter((product) => {
 					return (
 						product.status === productData[0].status &&
@@ -139,7 +150,7 @@ const ProductPage = () => {
 				})
 				.map((product) => {
 					return <Product product={product} key={product.id} />;
-				})} */}
+				})}
 		</>
 	);
 };

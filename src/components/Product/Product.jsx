@@ -6,8 +6,9 @@ import "./Product.scss";
 const Product = ({ product }) => {
 	const { t } = useTranslation();
 
-	const { id, name, variants } = product;
+	const { id, name, variants, latName } = product;
 
+	// Getting all images from variants
 	const allImages = variants.flatMap((variant) =>
 		variant.images ? variant.images : []
 	);
@@ -33,7 +34,10 @@ const Product = ({ product }) => {
 				)}
 			</div>
 			<div className="product__info-container">
-				<h4 className="product-name">{name}</h4>
+				<div>
+					<p className="product__lat-name">{latName}</p>
+					<h4 className="product-name">{name}</h4>
+				</div>
 				<NavLink to={`/product-page/${id}`} className="product__info-btn">
 					{t("products.show_more")}
 				</NavLink>

@@ -83,8 +83,10 @@ const ProductsData = () => {
 	const productsData = [
 		{
 			id: "bilberry",
-			name: t("products.bilberry"),
 			type: "berry",
+			status: "frozen",
+			latName: "Vaccinium myrtillus",
+			name: t("products.bilberry"),
 			pack: "паперовий мішок 25 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -98,8 +100,10 @@ const ProductsData = () => {
 		},
 		{
 			id: "lingonberry",
-			name: t("products.lingonberry"),
 			type: "berry",
+			status: "frozen",
+			latName: "Vaccinium vitis-idaea",
+			name: t("products.lingonberry"),
 			pack: "паперовий мішок 25 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -113,8 +117,10 @@ const ProductsData = () => {
 		},
 		{
 			id: "rosehip",
-			name: t("products.rosehip"),
 			type: "berry",
+			status: "frozen",
+			latName: "Rosa canina",
+			name: t("products.rosehip"),
 			pack: "паперовий мішок 25 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -128,8 +134,10 @@ const ProductsData = () => {
 		},
 		{
 			id: "plum-frozen",
-			name: t("products.plum"),
 			type: "fruit",
+			status: "frozen",
+			latName: "Prunus domestica",
+			name: t("products.plum"),
 			pack: "паперовий мішок 25 кг, картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -148,16 +156,18 @@ const ProductsData = () => {
 			],
 		},
 		{
-			id: "plum-dry",
-			name: t("products.plum_dry"),
+			id: "plum-dried",
 			type: "fruit",
+			status: "dried",
+			latName: "Prunus domestica",
+			name: t("products.plum_dry"),
 			pack: "паперовий мішок 25 кг, картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Зібрана у розпал літа й висушена повільно, з любов’ю — щоб не зник жоден натяк на карамельний післясмак. У кожному плоді — тепло сонця, глибина смаку та легка димна нотка, ніби згадка про бабусину піч. Це не просто солодощі — це інгредієнт зі змістом: для вишуканих м’ясних страв, домашніх десертів або ранкової енергії в каші. Натуральна, насичена, справжня — слива, яка говорить без слів.",
 			variants: [
 				{
-					id: "plum-dry-with-stone",
+					id: "plum-dried-with-stone",
 					state: "з кісткою",
 					images: [plumDryImg],
 				},
@@ -165,8 +175,10 @@ const ProductsData = () => {
 		},
 		{
 			id: "prunus",
-			name: t("products.prunus"),
 			type: "fruit",
+			status: "dried",
+			latName: "Prunus domestica",
+			name: t("products.prunus"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -180,8 +192,10 @@ const ProductsData = () => {
 		},
 		{
 			id: "elderberry",
-			name: t("products.elderberry"),
 			type: "berry",
+			status: "frozen",
+			latName: "Sambucus nigra",
+			name: t("products.elderberry"),
 			pack: "паперовий мішок 25 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -195,8 +209,10 @@ const ProductsData = () => {
 		},
 		{
 			id: "strawberry",
-			name: t("products.strawberry"),
 			type: "berry",
+			status: "frozen",
+			latName: "Fragaria",
+			name: t("products.strawberry"),
 			pack: "паперовий мішок 25 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -210,8 +226,10 @@ const ProductsData = () => {
 		},
 		{
 			id: "raspberry",
-			name: t("products.raspberry"),
 			type: "berry",
+			status: "frozen",
+			latName: "Rubus idaeus",
+			name: t("products.raspberry"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -225,8 +243,10 @@ const ProductsData = () => {
 		},
 		{
 			id: "apricot",
-			name: t("products.apricot"),
 			type: "fruit",
+			status: "frozen",
+			latName: "Prunus armeniaca",
+			name: t("products.apricot"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
@@ -239,48 +259,53 @@ const ProductsData = () => {
 		},
 		{
 			id: "sweet-pepper-red",
-			name: t("products.sweet_pepper_red"),
 			type: "vegetable",
+			status: "frozen",
+			latName: "Capsicum annuum",
+			name: t("products.sweet_pepper_red"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Зібраний на піку стиглості, цей перець набуває неповторної солодкості, яка ідеально поєднується з його м'якою, соковитою текстурою. Завдяки миттєвій заморожуванні, ми зберігаємо всі корисні вітаміни та натуральний аромат, що переносить у світ сонячних літніх днів. Цей перець — не просто інгредієнт, а справжній герой ваших страв: від салатів і супів до запечених овочів або гарячих страв. Він додає не лише яскравого кольору, але й глибокого, солодкого смаку, що дарує енергію та природний аромат кожному рецепту.",
 			variants: [
 				{
-					id: "sweet-pepper-frozen-red-sol",
+					id: "sweet-pepper-red-frozen-sol",
 					state: "соломка",
 					images: [sweetPepperImg, sweetPepperImg2],
 				},
 			],
 		},
 		{
-			id: "sweet-peppe-frozen-green",
-			name: t("products.sweet_pepper_green"),
+			id: "sweet-pepper-green",
 			type: "vegetable",
+			status: "frozen",
+			latName: "Capsicum annuum",
+			name: t("products.sweet_pepper_green"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Зібраний, коли перець досягає своєї молодої зрілості, він дарує приємну хрусткість і легку солодкість, що робить його ідеальним доповненням до будь-якої страви. Миттєва заморозка дозволяє зберегти не лише його насичений смак, а й усі корисні властивості, даруючи вам справжню зелень у будь-яку пору року. Цей перець додає барвистого акценту в супи, рагу, салати та гарячі страви. Його легка, але насичена смаковою палітрою текстура робить його чудовим компонентом як для легких закусок, так і для більш складних кулінарних творів. Перець, який оживляє будь-яку страву і приносить із собою свіжість зелених полів.",
 			variants: [
 				{
-					id: "sweet-pepper-frozen-green-sol",
+					id: "sweet-pepper-green-frozen-sol",
 					state: "соломка",
 					images: [sweetPepperImg3],
 				},
 			],
 		},
 		{
-			id: "sweet-pepper-frozen-yellow",
-			name: t("products.sweet_pepper_yellow"),
+			id: "sweet-pepper-yellow",
 			type: "vegetable",
+			status: "frozen",
+			latName: "Capsicum annuum",
+			name: t("products.sweet_pepper_yellow"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Зібраний в момент повної зрілості, коли перець набуває своєї неперевершеної солодкості та яскравого кольору, він дарує справжній аромат сонячного тепла. Миттєва заморозка зберігає не лише смак, але й усю його природну користь, дозволяючи насолоджуватися свіжістю навіть у холодну пору року. Цей перець ідеально підходить для салатів, соусів, гарячих страв або запечених овочів. Його солодкий смак і соковитість додадуть кольору та глибини будь-якому рецепту, а легка хрустка текстура подарує відчуття свіжості та легкості.",
-
 			variants: [
 				{
-					id: "sweet-pepper-frozen-yellow-sol",
+					id: "sweet-pepper-yellow-frozen-sol",
 					state: "соломка",
 					images: [sweetPepperImg4],
 				},
@@ -288,14 +313,14 @@ const ProductsData = () => {
 		},
 		{
 			id: "boletus",
-			name: t("products.boletus"),
 			type: "mushroom",
+			status: "frozen",
+			latName: "Boletus edulis",
+			name: t("products.boletus"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
-			status: "frozen",
 			desc: "Зібраний в тіні старих дерев, білий гриб приносить з собою справжній лісовий аромат, що дарує відчуття спокою та гармонії з природою. Миттєва заморозка дозволяє зберегти його неповторний смак, а також всі корисні властивості, даруючи вам частинку дикої природи в будь-який час року. Цей гриб додає стравам глибину смаку, роблячи їх більш насиченими та ароматними. Від кремових супів і соусів до рагу та піци — білий гриб підкорює своєю елегантною текстурою та вишуканим смаком, що нагадує про літо, проведене в лісі, і спокій лісових прогулянок.",
-
 			variants: [
 				{
 					id: "boletus-frozen-whole",
@@ -316,16 +341,17 @@ const ProductsData = () => {
 		},
 		{
 			id: "chanterelle",
-			name: t("products.chanterelle"),
 			type: "mushroom",
+			status: "dried",
+			latName: "Cantharellus cibarius",
+			name: t("products.chanterelle"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Ці маленькі лісові скарби, зібрані вручну в чистих лісах, зберігають не лише свій характерний вигляд, а й особливий, ніжний смак, який додає стравам природної елегантності. Миттєва заморозка дозволяє зберегти їхню соковитість і легку, майже хрустку текстуру, а також усі корисні властивості, які дарує природа. Лисички — це гриби з характером. Вони вишукано поєднуються з кремовими соусами, пастою або м'ясними стравами, додаючи їм глибини та вишуканості. Їхній аромат оживляє будь-яку страву, перетворюючи прості рецепти на гастрономічні шедеври.",
-
 			variants: [
 				{
-					id: "chanterelle-dry",
+					id: "chanterelle-dried",
 					state: "сушений",
 					images: [chanterelleImg, chanterelleImg2],
 				},
@@ -333,21 +359,22 @@ const ProductsData = () => {
 		},
 		{
 			id: "sour-cherry",
-			name: t("products.sour_cherry"),
 			type: "berry",
+			status: "frozen",
+			latName: "Prunus cerasus",
+			name: t("products.sour_cherry"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Вишня, зібрана в момент своєї повної стиглості, дарує поєднання яскравої кислинки та природної солодкості, що пробуджує спогади про теплі дні. Миттєва заморозка дозволяє зберегти всі смакові відтінки та аромати, які роблять цю ягоду справжнім делікатесом у будь-який сезон. Ця вишня — не просто інгредієнт, а справжня частинка літа. Вона додає яскравості десертам, смузі, випічці або освіжаючим напоям, даруючи відчуття свіжості та легкості в кожному укусу. Літній смак, що живе цілий рік.",
-
 			variants: [
 				{
-					id: "sour-cherry-with-stone",
+					id: "sour-cherry-fozen-pitted",
 					state: "з кісткою",
 					images: [sourCherryImg, sourCherryImg2],
 				},
 				{
-					id: "sour-cherry-pitted",
+					id: "sour-cherry-frozen-with-stone",
 					state: "без кістки",
 					images: [sourCherryImg3],
 				},
@@ -355,13 +382,14 @@ const ProductsData = () => {
 		},
 		{
 			id: "honey-fungus",
-			name: t("products.honey_fungus"),
 			type: "mushroom",
+			status: "frozen",
+			latName: "Armillaria mellea",
+			name: t("products.honey_fungus"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Зібрані з лісових галявин, де вони вбирають в себе запах хвойних дерев і свіжість землі, опеньки дарують стравам неповторний аромат дикої природи. Миттєва заморозка дозволяє зберегти їхню соковитість, м’якість та природну текстуру, щоб ви могли насолоджуватися цим смаком у будь-яку пору року. Опеньки ідеально підходять для супів, рагу, запіканок чи соусів, додаючи їм глибину та елегантність. Їхній характерний смак з легкою грибною ноткою перетворює будь-яку страву на справжній кулінарний шедевр, який зберігає душу лісу в кожному кусочку.",
-
 			variants: [
 				{
 					id: "honey-fungus-frozen",
@@ -371,13 +399,14 @@ const ProductsData = () => {
 		},
 		{
 			id: "blackberry",
-			name: t("products.blackberry"),
 			type: "berry",
+			status: "frozen",
+			latName: "Rubus fruticosus",
+			name: t("products.blackberry"),
 			origin: "Україна",
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			desc: "Зібрана в розпал літа, коли її смак досягає максимальної глибини, ожина дарує поєднання солодкої терпкості і лісового аромату, який пробуджує спогади про тихі прогулянки серед дикої природи. Шокова заморозка зберігає всі її корисні властивості, надаючи можливість насолоджуватися свіжістю ягід навіть у холодну пору року. Ця ожина стане чудовим доповненням до десертів, смузі, йогуртів, або просто як освіжаючий перекус. Її глибокий смак і яскравий колір додають кожному рецепту вишуканості і природної насолоди.",
-
 			variants: [
 				{
 					id: "blackberry-frozen",
@@ -387,13 +416,14 @@ const ProductsData = () => {
 		},
 		{
 			id: "grape",
-			name: t("products.grape"),
 			type: "berry",
+			status: "frozen",
+			latName: "Vitis vinifera",
+			name: t("products.grape"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Зібраний у момент повної стиглості, коли кожна ягода набуває свого найкращого смаку та аромату, виноград миттєво заморожується, щоб зберегти всі свої природні соки, яскравий колір і терпкий солодкий смак. Цей виноград — справжнє задоволення для тих, хто цінує неповторну свіжість і натуральний смак ягід. Цей виноград чудово підходить для освіжаючих смузі, десертів або як легкий перекус в спекотні дні. Легкий, соковитий та неймовірно освіжаючий, він дарує відчуття літа і надає стравам особливої легкості та енергії.",
-
 			variants: [
 				{
 					id: "grape-frozen",
@@ -402,13 +432,14 @@ const ProductsData = () => {
 		},
 		{
 			id: "corn",
-			name: t("products.corn"),
 			type: "vegetable",
+			status: "frozen",
+			latName: "Zea mays",
+			name: t("products.corn"),
 			pack: "картонна коробка 10 кг",
 			temp: "-21 °C",
 			origin: "Україна",
 			desc: "Зібрана на піку своєї зрілості, коли зерна стають соковитими й солодкими, кукурудза миттєво заморожується, щоб зберегти усі природні аромати і смакові відтінки. Її солодкий смак і ніжна текстура дарують справжнє відчуття літа, навіть у найхолодніші місяці. Ця кукурудза — універсальний інгредієнт для супів, салатів, запечених страв чи гарнірів. Її золотистий колір і природна солодкість роблять її чудовим доповненням до будь-якої страви, наповнюючи її яскравими фарбами і смачними нотками природи.",
-
 			variants: [
 				{
 					id: "corn-frozen",

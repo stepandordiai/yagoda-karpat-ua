@@ -95,6 +95,10 @@
 	transform-origin: bottom left;
 }
 
+.product__lat-name {
+	color: rgba(0, 0, 0, 0.5);
+}
+
 .product-name {
 	font-size: clamp(1rem, 2vw, 1.5rem);
 	font-weight: 500;
