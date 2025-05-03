@@ -1,6 +1,4 @@
-Update Footer and NavCurtain (links don't work properly)
 Update translations info
 Update BusinessHours
 Update Gallery
-Update similar products
 Update titles with /

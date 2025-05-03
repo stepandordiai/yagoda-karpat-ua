@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+
 import PageNavTitle from "../../components/PageNavTitle/PageNavTitle";
 import { useParams } from "react-router-dom";
 import ProductsData from "../../data/ProductsData";
 import Product from "../../components/Product/Product";
-import { useTranslation } from "react-i18next";
 import { HashLink } from "react-router-hash-link";
 
 import "./ProductPage.scss";
@@ -31,16 +32,21 @@ const ProductPage = () => {
 	});
 
 	const [activeVariantState, setActiveVariantState] = useState(
-		productData[0].variants[0].state
+		productData[0].variants[0].state || ""
 	);
 
-	function handleActiveVariantState(props) {
+	function handleVariantState(props) {
 		setActiveVariantState(props);
 	}
 
-	const product = productData[0].variants.filter((variant) => {
-		if (variant.state == activeVariantState) {
-			return variant;
+	// This variable returns variant on current state
+	const productVariant = productData[0].variants.filter((variant) => {
+		if (variant.state) {
+			if (variant.state === activeVariantState) {
+				return variant;
+			}
+		} else {
+			return productData[0].variants[0];
 		}
 	});
 
@@ -59,11 +65,9 @@ const ProductPage = () => {
 					<div className="product-page__details-inner">
 						<div>
 							<p className="product-page__lat-name">{productData[0].latName}</p>
-							<p className="product-page__name">
-								{`${productData[0].name} ${
-									product[0].state ? " (" + product[0].state + ")" : ""
-								}`}
-							</p>
+							<p className="product-page__name">{`${productData[0].name} ${
+								productVariant[0].state ? productVariant[0].state : ""
+							}`}</p>
 						</div>
 						<div className="product-page__variants">
 							{productData[0].variants &&
@@ -72,7 +76,7 @@ const ProductPage = () => {
 										return (
 											<button
 												key={index}
-												onClick={() => handleActiveVariantState(variant.state)}
+												onClick={() => handleVariantState(variant.state)}
 												className={
 													variant.state === activeVariantState
 														? "choose-btn choose-btn--active"
@@ -107,35 +111,36 @@ const ProductPage = () => {
 					</HashLink>
 				</div>
 				<div className="swiper-wrapper">
-					<Swiper
-						spaceBetween={30}
-						centeredSlides={true}
-						autoplay={{
-							delay: 5000,
-							disableOnInteraction: false,
-						}}
-						pagination={{
-							clickable: true,
-						}}
-						navigation={true}
-						modules={[Autoplay, Pagination, Navigation]}
-						className="mySwiper"
-					>
-						{product[0].images && (
-							<>
-								{product[0].images.map((img, index) => {
+					{productVariant[0].images && (
+						<>
+							<Swiper
+								spaceBetween={30}
+								centeredSlides={true}
+								autoplay={{
+									delay: 5000,
+									disableOnInteraction: false,
+								}}
+								pagination={{
+									clickable: true,
+								}}
+								navigation={true}
+								modules={[Autoplay, Pagination, Navigation]}
+								className="mySwiper"
+							>
+								{productVariant[0].images.map((img, index) => {
 									return (
 										<SwiperSlide key={index}>
 											<img className="swiper-img" src={img} alt="" />
 										</SwiperSlide>
 									);
 								})}
-							</>
-						)}
-						<div className="play-progress">
-							<span className="play-progress-inner"></span>
-						</div>
-					</Swiper>
+
+								<div className="play-progress">
+									<span className="play-progress-inner"></span>
+								</div>
+							</Swiper>
+						</>
+					)}
 				</div>
 			</div>
 
