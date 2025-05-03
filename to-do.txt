@@ -1,4 +1,3 @@
-Update translations info
 Update BusinessHours
 Update Gallery
 Update titles with /

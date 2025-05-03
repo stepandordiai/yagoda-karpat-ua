@@ -8,6 +8,17 @@
 	"fruits_title": "Ovoce",
 	"vegetables_title": "Zelenina",
 	"mushrooms_title": "Houby",
+	"certificates_title": "Naše certifikáty",
+	"business_hours_title": "Provozní doba",
+	"mon": "Pondělí",
+	"tue": "Úterý",
+	"wed": "Středa",
+	"thu": "Čtvrtek",
+	"fri": "Pátek",
+	"sat": "Sobota",
+	"sun": "Neděle",
+	"closed": "Zavřeno",
+	"gallery_title": "Galerie",
 
 	"home": {
 		"title": "Výrobce mražených a sušených potravin",
@@ -64,7 +75,16 @@
 	},
 
 	"product_page": {
-		"coming_soon": "Informace o produktech zde budou brzy k dispozici.",
+		"origin_title": "Původ",
+		"packaging_title": "Obal",
+		"desc_title": "Popis",
+		"state_1": "celý",
+		"state_2": "nakrájený",
+		"state_3": "krychlový",
+		"state_4": "slámový",
+		"state_5": "s kamenem",
+		"state_6": "vypeckovaný",
+		"aviability_link": "Zjistěte si dostupnost",
 		"related": "Související produkty"
 	}
 }

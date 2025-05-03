@@ -8,6 +8,17 @@
 	"fruits_title": "Fruits",
 	"vegetables_title": "Vegetables",
 	"mushrooms_title": "Mushrooms",
+	"certificates_title": "Our certificates",
+	"business_hours_title": "Business hours",
+	"mon": "Monday",
+	"tue": "Tuesday",
+	"wed": "Wednesday",
+	"thu": "Thursday",
+	"fri": "Friday",
+	"sat": "Saturday",
+	"sun": "Sunday",
+	"closed": "Closed",
+	"gallery_title": "Gallery",
 
 	"home": {
 		"title": "Manufacturer of frozen and dried foods",
@@ -64,7 +75,16 @@
 	},
 
 	"product_page": {
-		"coming_soon": "Product information will be available here soon",
+		"origin_title": "Origin",
+		"packaging_title": "Packaging",
+		"desc_title": "Description",
+		"state_1": "whole",
+		"state_2": "sliced",
+		"state_3": "cubic",
+		"state_4": "strawed",
+		"state_5": "with stone",
+		"state_6": "pitted",
+		"aviability_link": "Find out about availability",
 		"related": "Related products"
 	}
 }

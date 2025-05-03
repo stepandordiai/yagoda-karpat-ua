@@ -31,18 +31,18 @@ const ProductPage = () => {
 		return product.id === id;
 	});
 
-	const [activeVariantState, setActiveVariantState] = useState(
-		productData[0].variants[0].state || ""
+	const [activeVariantId, setActiveVariantId] = useState(
+		productData[0].variants[0].id || ""
 	);
 
-	function handleVariantState(props) {
-		setActiveVariantState(props);
+	function handleVariantId(props) {
+		setActiveVariantId(props);
 	}
 
 	// This variable returns variant on current state
 	const productVariant = productData[0].variants.filter((variant) => {
 		if (variant.state) {
-			if (variant.state === activeVariantState) {
+			if (variant.id === activeVariantId) {
 				return variant;
 			}
 		} else {
@@ -76,9 +76,9 @@ const ProductPage = () => {
 										return (
 											<button
 												key={index}
-												onClick={() => handleVariantState(variant.state)}
+												onClick={() => handleVariantId(variant.id)}
 												className={
-													variant.state === activeVariantState
+													variant.id === activeVariantId
 														? "choose-btn choose-btn--active"
 														: "choose-btn"
 												}
@@ -90,24 +90,26 @@ const ProductPage = () => {
 								})}
 						</div>
 						<div>
-							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>Походження</p>
+							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+								{t("product_page.origin_title")}
+							</p>
 							<p>{productData[0].origin}</p>
 						</div>
 						<div>
-							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>Пакування</p>
+							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+								{t("product_page.packaging_title")}
+							</p>
 							<p>{productData[0].pack}</p>
 						</div>
 						<div>
-							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>Температура</p>
-							<p>{productData[0].temp}</p>
-						</div>
-						<div>
-							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>Опис</p>
+							<p style={{ color: "rgba(0, 0, 0, 0.5)" }}>
+								{t("product_page.desc_title")}
+							</p>
 							<p>{productData[0].desc && productData[0].desc}</p>
 						</div>
 					</div>
 					<HashLink to={"/#contacts"} className={"product-page__link"}>
-						Дізнатися про наявність
+						{t("product_page.aviability_link")}
 					</HashLink>
 				</div>
 				<div className="swiper-wrapper">

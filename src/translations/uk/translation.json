@@ -8,6 +8,17 @@
 	"fruits_title": "Фрукти",
 	"vegetables_title": "Овочі",
 	"mushrooms_title": "Гриби",
+	"certificates_title": "Наші сертифікати",
+	"business_hours_title": "Робочі години",
+	"mon": "Понеділок",
+	"tue": "Вівторок",
+	"wed": "Середа",
+	"thu": "Четвер",
+	"fri": "П'ятниця",
+	"sat": "Субота",
+	"sun": "Неділя",
+	"closed": "Зачинено",
+	"gallery_title": "Галерея",
 
 	"home": {
 		"title": "Виробник замороженик та сушених продуктів",
@@ -24,7 +35,6 @@
 	"products": {
 		"filter": "Фільтер",
 		"filter_placeholder": "Який продукт ви шукаєте?",
-
 		"bilberry": "Чорниця заморожена",
 		"lingonberry": "Брусниця заморожена",
 		"rosehip": "Шипшина заморожена",
@@ -66,7 +76,16 @@
 	},
 
 	"product_page": {
-		"coming_soon": "Незабаром тут з'явиться інформація про продукт",
+		"origin_title": "Походження",
+		"packaging_title": "Пакування",
+		"desc_title": "Опис",
+		"state_1": "цілий",
+		"state_2": "полоска",
+		"state_3": "кубик",
+		"state_4": "соломка",
+		"state_5": "з кісткою",
+		"state_6": "без кістки",
+		"aviability_link": "Дізнатися про наявність",
 		"related": "Схожа продукція"
 	}
 }

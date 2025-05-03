@@ -1,4 +1,5 @@
 import styles from "./Gallery.module.scss";
+import { useTranslation } from "react-i18next";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,9 +18,11 @@ import img3 from "/gallery/03.jpg";
 import img4 from "/gallery/04.jpg";
 
 const Gallery = () => {
+	const { t } = useTranslation();
+
 	return (
 		<div className={styles["gallery"]}>
-			<h2 className={styles["gallery__title"]}>Gallery</h2>
+			<h2 className={styles["gallery__title"]}>{t("gallery_title")}</h2>
 			<Swiper
 				breakpoints={{
 					900: {
