@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet";
-import Contacts from "./../../components/Contacts/Contacts";
-import Products from "./../../components/Products/Products";
-import AboutUs from "./../../components/AboutUs/AboutUs";
 import { useTranslation } from "react-i18next";
-import "./Home.scss";
+import AboutUs from "./../../components/AboutUs/AboutUs";
+import Products from "./../../components/Products/Products";
+import Contacts from "./../../components/Contacts/Contacts";
 import Gallery from "../../components/Gallery/Gallery";
+import "./Home.scss";
 
 const Home = () => {
 	const { t } = useTranslation();
@@ -12,7 +12,7 @@ const Home = () => {
 	return (
 		<>
 			<Helmet>
-				<title>{t("home.title")} - Ягода Карпат</title>
+				<title>{t("home.title")} / Ягода Карпат</title>
 				<link rel="canonical" href="https://yagodakarpat.com/" />
 			</Helmet>
 			<div className="home js-home" id="home">
