@@ -157,7 +157,7 @@ textarea {
 	transform-origin: bottom left;
 }
 
-.google-map__wrapper {
+.contacts__map-wrapper {
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;
@@ -167,12 +167,12 @@ textarea {
 	border-radius: 10px;
 }
 
-.google-map__title {
+.contacts__map-title {
 	font-size: clamp(20px, 3vw, 30px);
 	font-weight: 500;
 }
 
-.location-map {
+.contacts__map {
 	border-radius: inherit;
 	height: 100%;
 }
@@ -208,11 +208,11 @@ textarea {
 		margin-top: 10px;
 	}
 
-	.google-map__wrapper {
+	.contacts__map-wrapper {
 		padding: 10px;
 	}
 
-	.location-map {
+	.contacts__map {
 		height: 500px;
 	}
 
