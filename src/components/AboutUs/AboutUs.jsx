@@ -33,7 +33,6 @@ const AboutUs = () => {
 								if (startValue < counter[index].dataset.value) {
 									startValue += 1;
 									counter[index].textContent = startValue;
-									counter[2].textContent = startValue + "+";
 									start();
 								}
 							}, 50);
@@ -64,8 +63,11 @@ const AboutUs = () => {
 					<p>{t("about_us.product")}</p>
 				</div>
 				<div className="stats-card">
-					<p className="counter" data-value="50">
-						0
+					<p>
+						<span className="counter" data-value="50">
+							0
+						</span>
+						<span>+</span>
 					</p>
 					<p>{t("about_us.volume")}</p>
 				</div>

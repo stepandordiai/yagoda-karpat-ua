@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
-
 import PageNavTitle from "../../components/PageNavTitle/PageNavTitle";
 import ProductsData from "../../data/productsData";
 import Product from "../../components/Product/Product";
@@ -84,8 +83,8 @@ const ProductPage = () => {
 												onClick={() => handleVariantId(variant.id)}
 												className={
 													variant.id === activeVariantId
-														? "choose-btn choose-btn--active"
-														: "choose-btn"
+														? "variant-btn variant-btn--active"
+														: "variant-btn"
 												}
 											>
 												{variant.state}

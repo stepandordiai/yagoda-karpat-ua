@@ -1,11 +1,11 @@
-import PageTitle from "../PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
-import phoneIcon from "/assets/icons/old-typical-phone.png";
-import mailIcon from "/assets/icons/email.png";
-import pinIcon from "/assets/icons/pin.png";
-import "./Contacts.scss";
+import PageTitle from "../PageTitle/PageTitle";
 import OurCertificates from "../OurCertificates/OurCertificates";
 import BusinessHours from "../BusinessHours/BusinessHours";
+import phoneIcon from "/icons/old-typical-phone.png";
+import mailIcon from "/icons/email.png";
+import pinIcon from "/icons/pin.png";
+import "./Contacts.scss";
 
 const Contacts = () => {
 	const { t } = useTranslation();

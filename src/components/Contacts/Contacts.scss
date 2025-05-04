@@ -40,25 +40,18 @@
 
 .form-map-container {
 	display: flex;
-	// justify-content: center;
-	// align-items: center;
 	gap: 25px;
-	// height: 600px;
 	margin-top: 25px;
 }
 
-// Form
-
 .form {
 	display: flex;
-	justify-content: flex-start;
 	flex-direction: column;
 	row-gap: 10px;
 	width: 100%;
-	height: 100%;
 	padding: 25px;
 	font-size: 16px;
-	background: white;
+	background: #fff;
 	border-radius: 10px;
 }
 
@@ -76,45 +69,19 @@
 .input-container {
 	display: flex;
 	flex-direction: column;
-	// row-gap: 5px;
 }
 
 .contact-label {
-	padding: 0 10px 5px;
+	padding: 0 5px 5px;
 	font-weight: 500;
 }
 
 .form__input,
 textarea {
-	padding: 10px;
+	padding: 10px 5px;
 	border-radius: 10px;
 	font-size: 1rem;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.checkbox-container {
-	display: flex;
-	flex-direction: column;
-	row-gap: 10px;
-}
-
-.checkbox-title {
-	font-weight: 500;
-}
-
-.checkbox-sec-title {
-	margin: 0 10px 5px;
-	font-weight: 500;
-}
-
-.checkbox-item {
-	// @include flex-center;
-	display: flex;
-	align-items: center;
-
-	label {
-		padding-left: 5px;
-	}
+	border: 1px solid var(--accent-clr);
 }
 
 textarea {
@@ -133,9 +100,9 @@ textarea {
 	padding: 10px;
 	border-radius: 10px;
 	overflow: hidden;
-	//
+
+	// TODO: Does the submit btn has its own font weight?
 	font-weight: inherit;
-	//
 }
 
 .form-submit-btn::before {
@@ -198,10 +165,6 @@ textarea {
 		padding: 10px;
 	}
 
-	.contacts-info {
-		padding: 0 25px;
-	}
-
 	.form-map-container {
 		@include flex-center;
 		gap: 10px;
@@ -220,11 +183,5 @@ textarea {
 		flex-direction: column;
 		gap: 10px;
 		margin-top: 10px;
-	}
-}
-
-@media screen and (max-width: 650px) {
-	.contacts-info {
-		font-size: 14px;
 	}
 }

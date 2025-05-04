@@ -1,56 +1,55 @@
 @use "./../../mixins" as *;
 
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 25px;
 }
 
 .filter-title {
-    font-size: 1rem;
-    font-weight: 500;
-    padding-bottom: 5px;
-    padding-left: 10px;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 0 0 5px 5px;
 }
 
 .search-wrapper {
-    height: 50px;
-    background: #fff;
-    @include flex-between-center;
-    border-radius: 10px;
-    padding-right: 5px;
-    margin-bottom: 25px;
+	height: 50px;
+	background: #fff;
+	@include flex-between-center;
+	border-radius: 10px;
+	padding-right: 5px;
+	margin-bottom: 25px;
 }
 
 .search-input {
-    flex-grow: 1;
-    font-size: 1rem;
-    padding: 0 10px;
-    height: 100%;
+	flex-grow: 1;
+	font-size: 1rem;
+	padding: 0 5px;
+	height: 100%;
 }
 
 .search-icon {
-    width: 40px;
-    aspect-ratio: 1/1;
-    background: var(--accent-clr);
-    border-radius: inherit;
+	width: 40px;
+	aspect-ratio: 1/1;
+	background: var(--accent-clr);
+	border-radius: inherit;
 
-    img {
-        width: 20px;
-    }
+	img {
+		width: 20px;
+	}
 }
 
 @media (max-width: 900px) {
-    .products-container {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
-    }
+	.products-container {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 10px;
+	}
 
-    .search-wrapper {
-        margin-bottom: 10px;
-    }
+	.search-wrapper {
+		margin-bottom: 10px;
+	}
 
-    .products-info {
-        padding: 0 10px;
-    }
+	.products-info {
+		padding: 0 10px;
+	}
 }

@@ -1,12 +1,12 @@
 .page-title {
-    padding: 120px 25px 25px;
-    text-align: left;
-    font-size: clamp(2rem, 6vw, 3rem);
-    font-weight: 600;
+	padding: 120px 0 25px;
+	text-align: left;
+	font-size: clamp(2rem, 6vw, 3rem);
+	font-weight: 600;
 }
 
 @media screen and (max-width: 900px) {
-    .page-title {
-        padding: 90px 10px 10px;
-    }
+	.page-title {
+		padding: 90px 0 10px;
+	}
 }

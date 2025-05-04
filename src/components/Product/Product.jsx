@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import cameraIcon from "/assets/icons/camera.png";
+import cameraIcon from "/icons/camera.png";
 import "./Product.scss";
 
 const Product = ({ product }) => {

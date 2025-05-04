@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import organicStandardImg from "/assets/certificates/organic-standard.jpg";
+import organicStandardImg from "/certificates/organic-standard.jpg";
 import styles from "./OurCertificates.module.scss";
 
 const OurCertificates = () => {
@@ -10,7 +10,7 @@ const OurCertificates = () => {
 			<h2 className={styles["our-certificates__title"]}>
 				{t("certificates_title")}
 			</h2>
-			<img src={organicStandardImg} alt="" />
+			<img src={organicStandardImg} alt="" loading="lazy" />
 		</div>
 	);
 };

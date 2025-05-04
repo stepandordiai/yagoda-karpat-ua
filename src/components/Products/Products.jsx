@@ -1,9 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import Product from "../Product/Product";
 import ProductsData from "../../data/productsData";
 import PageTitle from "../PageTitle/PageTitle";
-import { useTranslation } from "react-i18next";
-import searchIcon from "/assets/icons/search.png";
+import searchIcon from "/icons/search.png";
 import "./Products.scss";
 
 const Products = () => {
