@@ -35,7 +35,7 @@ const Contacts = () => {
 				<form
 					className="form"
 					action="https://formsubmit.co/info@yagodakarpat.com"
-					method="post"
+					method="POST"
 				>
 					<h2 className="form__title">{t("contacts.contact_us_title")}</h2>
 					<div className="input-container">

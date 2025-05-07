@@ -1,5 +1,5 @@
-import PageTitle from "../PageTitle/PageTitle";
 import { useTranslation } from "react-i18next";
+import PageTitle from "../PageTitle/PageTitle";
 import { useEffect } from "react";
 import ProductsData from "../../data/productsData";
 import "./AboutUs.scss";
@@ -22,17 +22,17 @@ const AboutUs = () => {
 	useEffect(() => {
 		document.querySelectorAll(".stats-card").forEach((card, index) => {
 			let isActivated = false;
-			document.addEventListener("scroll", () => {
+			function handleCounter() {
 				const cardRect = card.getBoundingClientRect().top;
-				const counter = document.querySelectorAll(".counter");
+				const counters = document.querySelectorAll(".counter");
 				if (cardRect < window.innerHeight - 25) {
 					if (!isActivated) {
 						let startValue = 0;
 						function start() {
 							setTimeout(() => {
-								if (startValue < counter[index].dataset.value) {
+								if (startValue < counters[index].dataset.value) {
 									startValue += 1;
-									counter[index].textContent = startValue;
+									counters[index].textContent = startValue;
 									start();
 								}
 							}, 50);
@@ -41,7 +41,12 @@ const AboutUs = () => {
 					}
 					isActivated = true;
 				}
-			});
+			}
+			document.addEventListener("scroll", handleCounter);
+
+			return () => {
+				document.removeEventListener("scroll", handleCounter);
+			};
 		});
 	}, []);
 
