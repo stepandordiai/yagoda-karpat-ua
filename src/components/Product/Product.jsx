@@ -1,14 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import cameraIcon from "/icons/camera.png";
+import organicLogo from "/icons/organic-logo.jpg";
 import "./Product.scss";
 
 const Product = ({ product }) => {
 	const { t } = useTranslation();
 
-	const { id, name, variants, latName } = product;
+	const { id, name, variants, latName, isOrganic } = product;
 
-	// Getting all images from variants
 	const allImages = variants.flatMap((variant) =>
 		variant.images ? variant.images : []
 	);
@@ -34,9 +34,12 @@ const Product = ({ product }) => {
 				)}
 			</div>
 			<div className="product__info-container">
-				<div>
-					<p className="product__lat-name">{latName}</p>
-					<h4 className="product-name">{name}</h4>
+				<div className="product__info-container-top">
+					<div>
+						<p className="product__lat-name">{latName}</p>
+						<h4 className="product-name">{name}</h4>
+					</div>
+					{isOrganic && <img src={organicLogo} alt="" />}
 				</div>
 				<NavLink to={`/product-page/${id}`} className="product__info-btn">
 					{t("products.show_more")}

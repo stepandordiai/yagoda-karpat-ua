@@ -96,6 +96,7 @@ const productsData = () => {
 					images: [bilberryImg, bilberryImg2],
 				},
 			],
+			isOrganic: true,
 		},
 		{
 			id: "lingonberry",
@@ -112,6 +113,7 @@ const productsData = () => {
 					images: [lingonberryImg, lingonberryImg2],
 				},
 			],
+			isOrganic: true,
 		},
 		{
 			id: "rosehip",
@@ -128,6 +130,7 @@ const productsData = () => {
 					images: [rosehipImg, rosehipImg2],
 				},
 			],
+			isOrganic: true,
 		},
 		{
 			id: "plum-frozen",
@@ -199,6 +202,7 @@ const productsData = () => {
 					images: [elderberryImg, elderberryImg2],
 				},
 			],
+			isOrganic: true,
 		},
 		{
 			id: "strawberry",
@@ -393,6 +397,7 @@ const productsData = () => {
 					images: [blackberryImg],
 				},
 			],
+			isOrganic: true,
 		},
 		{
 			id: "grape",

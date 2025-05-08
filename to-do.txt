@@ -1,7 +1,6 @@
 add more images for gallery
 maybe on image hover left bottom year and short desc
 for each product page add product harvest
-for each product add bio logo top right maybe or bottom left which we have for
 and maybe add section for harvest with all our products
 maybe add world map with export countries active bg on hover their name (svg map)
 and do smth with start home because now it is ugly
