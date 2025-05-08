@@ -38,7 +38,7 @@ const Products = () => {
 							: product.name.toLowerCase().startsWith(search.toLowerCase());
 					})
 					.map((product) => {
-						return <Product product={product} key={product.id} />;
+						return <Product key={product.id} product={product} />;
 					})}
 			</div>
 		</section>

@@ -129,6 +129,7 @@ const ProductPage = () => {
 									type: "fraction",
 								}}
 								modules={[Autoplay, Pagination]}
+								className="swiper"
 							>
 								{productVariant.images.map((img, index) => {
 									return (
