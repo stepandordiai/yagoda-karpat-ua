@@ -29,7 +29,6 @@ function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/product-page/:id" element={<ProductPage />} />
 			</Routes>
-
 			<Footer />
 		</Router>
 	);

@@ -13,9 +13,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "./ProductPage.scss";
 
 const ProductPage = () => {
@@ -120,18 +119,16 @@ const ProductPage = () => {
 					{productVariant.images && (
 						<>
 							<Swiper
-								spaceBetween={30}
-								centeredSlides={true}
+								spaceBetween={25}
 								autoplay={{
-									delay: 5000,
+									delay: 3000,
 									disableOnInteraction: false,
 								}}
+								loop={true}
 								pagination={{
-									clickable: true,
+									type: "fraction",
 								}}
-								navigation={true}
-								modules={[Autoplay, Pagination, Navigation]}
-								className="mySwiper"
+								modules={[Autoplay, Pagination]}
 							>
 								{productVariant.images.map((img, index) => {
 									return (
@@ -140,16 +137,11 @@ const ProductPage = () => {
 										</SwiperSlide>
 									);
 								})}
-
-								<div className="play-progress">
-									<span className="play-progress-inner"></span>
-								</div>
 							</Swiper>
 						</>
 					)}
 				</div>
 			</div>
-
 			<p className="related-products__title">{t("product_page.related")}</p>
 			{productsData
 				.filter((product) => {
