@@ -97,7 +97,7 @@ const productsData = () => {
 				},
 			],
 			isOrganic: true,
-			harvest: [6, 7, 8],
+			harvest: [7, 8],
 		},
 		{
 			id: "lingonberry",
@@ -115,7 +115,7 @@ const productsData = () => {
 				},
 			],
 			isOrganic: true,
-			harvest: [6, 7, 8],
+			harvest: [8, 9],
 		},
 		{
 			id: "rosehip",
@@ -133,7 +133,7 @@ const productsData = () => {
 				},
 			],
 			isOrganic: true,
-			harvest: [6, 7, 8],
+			harvest: [9, 10, 11],
 		},
 		{
 			id: "plum-frozen",
@@ -156,7 +156,7 @@ const productsData = () => {
 					images: [plumImg],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [8, 9],
 		},
 		{
 			id: "plum-dried",
@@ -174,7 +174,7 @@ const productsData = () => {
 					images: [plumDryImg],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [8, 9],
 		},
 		{
 			id: "prunus",
@@ -191,7 +191,7 @@ const productsData = () => {
 					state: t("product_page.state_6"),
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [8, 9],
 		},
 		{
 			id: "elderberry",
@@ -209,7 +209,7 @@ const productsData = () => {
 				},
 			],
 			isOrganic: true,
-			harvest: [6, 7, 8],
+			harvest: [8, 9],
 		},
 		{
 			id: "strawberry",
@@ -226,7 +226,7 @@ const productsData = () => {
 					images: [strawberryImg, strawberryImg2],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [5, 6, 7],
 		},
 		{
 			id: "raspberry",
@@ -243,7 +243,7 @@ const productsData = () => {
 					images: [raspberryImg2, raspberryImg, raspberryImg3],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [7, 8, 9],
 		},
 		{
 			id: "apricot",
@@ -259,7 +259,7 @@ const productsData = () => {
 					id: "apricot-frozen",
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [7, 8],
 		},
 		{
 			id: "sweet-pepper-red",
@@ -277,7 +277,7 @@ const productsData = () => {
 					images: [sweetPepperImg, sweetPepperImg2],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [7, 8, 9],
 		},
 		{
 			id: "sweet-pepper-green",
@@ -295,7 +295,7 @@ const productsData = () => {
 					images: [sweetPepperImg3],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [7, 8, 9],
 		},
 		{
 			id: "sweet-pepper-yellow",
@@ -312,7 +312,7 @@ const productsData = () => {
 					images: [sweetPepperImg4],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [7, 8, 9],
 		},
 		{
 			id: "boletus",
@@ -340,7 +340,7 @@ const productsData = () => {
 					images: [boletusImg3, boletusImg5],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [7, 8, 9],
 		},
 		{
 			id: "chanterelle",
@@ -357,7 +357,7 @@ const productsData = () => {
 					images: [chanterelleImg, chanterelleImg2],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [7, 8, 9],
 		},
 		{
 			id: "sour-cherry",
@@ -380,7 +380,7 @@ const productsData = () => {
 					images: [sourCherryImg3],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [5, 6],
 		},
 		{
 			id: "honey-fungus",
@@ -397,7 +397,7 @@ const productsData = () => {
 					images: [honeyFungusImg, honeyFungusImg2],
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [8, 9, 10],
 		},
 		{
 			id: "blackberry",
@@ -415,7 +415,7 @@ const productsData = () => {
 				},
 			],
 			isOrganic: true,
-			harvest: [6, 7, 8],
+			harvest: [8, 9],
 		},
 		{
 			id: "grape",
@@ -431,7 +431,7 @@ const productsData = () => {
 					id: "grape-frozen",
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [9, 10],
 		},
 		{
 			id: "corn",
@@ -447,7 +447,7 @@ const productsData = () => {
 					id: "corn-frozen",
 				},
 			],
-			harvest: [6, 7, 8],
+			harvest: [8, 9],
 		},
 	];
 

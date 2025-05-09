@@ -47,7 +47,7 @@ const Product = ({ product }) => {
 					</NavLink>
 				</div>
 			</div>
-			<p style={{ fontWeight: 500 }}>Harvest</p>
+			<p style={{ fontWeight: 500 }}>{t("harvest_calendar")}</p>
 			<div className="product__harvest">
 				<div
 					title="January"
@@ -57,7 +57,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					С
+					{t("jan_s")}
 				</div>
 				<div
 					title="February"
@@ -67,7 +67,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					Л
+					{t("feb_s")}
 				</div>
 				<div
 					title="March"
@@ -77,7 +77,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					Б
+					{t("mar_s")}
 				</div>
 				<div
 					title="April"
@@ -87,7 +87,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					К
+					{t("apr_s")}
 				</div>
 				<div
 					title="May"
@@ -97,7 +97,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					Т
+					{t("may_s")}
 				</div>
 				<div
 					title="June"
@@ -107,7 +107,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					Ч
+					{t("jun_s")}
 				</div>
 				<div
 					title="July"
@@ -117,7 +117,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					Л
+					{t("jul_s")}
 				</div>
 				<div
 					title="August"
@@ -127,7 +127,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					С
+					{t("aug_s")}
 				</div>
 				<div
 					title="September"
@@ -137,7 +137,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					В
+					{t("sep_s")}
 				</div>
 				<div
 					title="October"
@@ -147,7 +147,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					Ж
+					{t("oct_s")}
 				</div>
 				<div
 					title="November"
@@ -157,7 +157,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					Л
+					{t("nov_s")}
 				</div>
 				<div
 					title="December"
@@ -167,7 +167,7 @@ const Product = ({ product }) => {
 							: "harvest-month"
 					}
 				>
-					Г
+					{t("dec_s")}
 				</div>
 			</div>
 		</div>
