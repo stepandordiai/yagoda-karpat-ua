@@ -2,8 +2,8 @@ import { useTranslation } from "react-i18next";
 import PageTitle from "../PageTitle/PageTitle";
 import { useEffect } from "react";
 import ProductsData from "../../data/productsData";
-import "./AboutUs.scss";
 import worldMapImg from "../../assets/world-map.svg";
+import "./AboutUs.scss";
 
 const AboutUs = () => {
 	const { t } = useTranslation();
@@ -11,16 +11,21 @@ const AboutUs = () => {
 	const productsData = ProductsData();
 
 	const dateNow = new Date();
-
 	const companyEstablishedDate = new Date("2010");
-
 	const diffInMilliseconds = dateNow - companyEstablishedDate;
-
 	const diffInYears = Math.floor(
 		diffInMilliseconds / 1000 / 60 / 60 / 24 / 365.25
 	);
 
 	useEffect(() => {
+		async function loadSVG() {
+			const response = await fetch(worldMapImg);
+			const svgText = await response.text();
+			document.getElementById("svgContainer").innerHTML = svgText;
+		}
+
+		loadSVG();
+
 		document.querySelectorAll(".stats-card").forEach((card, index) => {
 			let isActivated = false;
 			function handleCounter() {
@@ -50,15 +55,6 @@ const AboutUs = () => {
 				document.removeEventListener("scroll", handleCounter);
 			};
 		});
-
-		// TODO:
-		async function loadSVG() {
-			const response = await fetch(worldMapImg);
-			const svgText = await response.text();
-			document.getElementById("svgContainer").innerHTML = svgText;
-		}
-
-		loadSVG();
 	}, []);
 
 	return (
@@ -88,6 +84,7 @@ const AboutUs = () => {
 					<p>{t("about_us.volume")}</p>
 				</div>
 			</div>
+			<h3 className="world-map__title">{t("about_us.map_title")}</h3>
 			<div className="world-map__container" id="svgContainer"></div>
 		</div>
 	);

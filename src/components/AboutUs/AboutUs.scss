@@ -6,7 +6,7 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 25px;
-	margin-top: 25px;
+	margin-top: 10px;
 }
 
 .stats-card {
@@ -25,26 +25,33 @@
 	}
 }
 
+.world-map__title {
+	font-size: clamp(20px, 3vw, 30px);
+	font-weight: 500;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
 // svg world-map
 .world-map__container {
 	background: #fff;
 	border-radius: 10px;
 	padding: 25px;
 	width: 100%;
-	margin-top: 25px;
 }
 
 #svgContainer path {
-	fill: var(--bg-clr);
+	fill: var(--accent-clr);
 }
 
+// Countries where we supply our products
 #UA,
 #CZ,
 #PL,
 #LT,
 #RO {
 	position: relative;
-	fill: var(--accent-clr) !important;
+	fill: var(--accent-clr-logo) !important;
 	cursor: pointer;
 	transition: all 0.3s;
 
@@ -57,6 +64,15 @@
 	.about-us__stats {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 10px;
+		margin-top: 10px;
+	}
+
+	.stats-card {
+		padding: 10px;
+	}
+
+	.world-map__title {
+		margin-top: 10px;
 	}
 
 	.world-map__container {

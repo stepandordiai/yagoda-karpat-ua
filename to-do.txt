@@ -1,4 +1,5 @@
 and maybe add section for harvest with all our products
-maybe add world map with export countries active bg on hover their name (svg map)
 and do smth with start home because now it is ugly
 add cross when typing in filter to remove all text
+update padding in contact details
+update padding in certificates
