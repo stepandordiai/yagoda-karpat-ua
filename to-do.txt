@@ -1,5 +1,2 @@
 and maybe add section for harvest with all our products
 and do smth with start home because now it is ugly
-add cross when typing in filter to remove all text
-update padding in contact details
-update padding in certificates

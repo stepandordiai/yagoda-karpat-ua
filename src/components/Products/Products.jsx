@@ -4,6 +4,7 @@ import Product from "../Product/Product";
 import ProductsData from "../../data/productsData";
 import PageTitle from "../PageTitle/PageTitle";
 import searchIcon from "/icons/search.png";
+import closeIcon from "/icons/close.png";
 import "./Products.scss";
 
 const Products = () => {
@@ -12,6 +13,10 @@ const Products = () => {
 	const [search, setSearch] = useState("");
 
 	const productsData = ProductsData();
+
+	function clearSearch() {
+		setSearch("");
+	}
 
 	return (
 		<section className="js-products" id="products">
@@ -22,11 +27,19 @@ const Products = () => {
 					<input
 						className="search-input"
 						type="text"
+						value={search}
 						placeholder={t("products.filter_placeholder")}
 						onChange={(e) => setSearch(e.target.value)}
 					/>
-					<button className="search-icon">
-						<img src={searchIcon} alt="" />
+					<button
+						className="search-icon"
+						onClick={search === "" ? undefined : clearSearch}
+					>
+						{search === "" ? (
+							<img src={searchIcon} alt="" />
+						) : (
+							<img src={closeIcon} alt="" />
+						)}
 					</button>
 				</div>
 			</div>

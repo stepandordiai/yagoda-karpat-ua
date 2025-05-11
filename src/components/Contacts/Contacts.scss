@@ -156,6 +156,15 @@ textarea {
 }
 
 @media screen and (max-width: 895px) {
+	.icon-container {
+		row-gap: 10px;
+		padding: 10px;
+
+		img {
+			width: 30px;
+		}
+	}
+
 	.form-map-container {
 		flex-direction: column;
 	}
