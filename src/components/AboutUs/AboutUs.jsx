@@ -3,6 +3,7 @@ import PageTitle from "../PageTitle/PageTitle";
 import { useEffect } from "react";
 import ProductsData from "../../data/productsData";
 import "./AboutUs.scss";
+import worldMapImg from "../../assets/world-map.svg";
 
 const AboutUs = () => {
 	const { t } = useTranslation();
@@ -42,12 +43,22 @@ const AboutUs = () => {
 					isActivated = true;
 				}
 			}
+
 			document.addEventListener("scroll", handleCounter);
 
 			return () => {
 				document.removeEventListener("scroll", handleCounter);
 			};
 		});
+
+		// TODO:
+		async function loadSVG() {
+			const response = await fetch(worldMapImg);
+			const svgText = await response.text();
+			document.getElementById("svgContainer").innerHTML = svgText;
+		}
+
+		loadSVG();
 	}, []);
 
 	return (
@@ -77,6 +88,7 @@ const AboutUs = () => {
 					<p>{t("about_us.volume")}</p>
 				</div>
 			</div>
+			<div className="world-map__container" id="svgContainer"></div>
 		</div>
 	);
 };
