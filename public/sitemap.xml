@@ -1,26 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://yagodakarpat.com/</loc>
   </url>
 
-  <!-- Products -->
-   <url>
+  <url>
     <loc>https://yagodakarpat.com/product-page/bilberry</loc>
   </url>
-     <url>
+  <url>
     <loc>https://yagodakarpat.com/product-page/lingonberry</loc>
   </url>
-     <url>
+  <url>
     <loc>https://yagodakarpat.com/product-page/rosehip</loc>
   </url>
-     <url>
+  <url>
     <loc>https://yagodakarpat.com/product-page/plum-frozen</loc>
   </url>
-     <url>
+  <url>
     <loc>https://yagodakarpat.com/product-page/plum-dried</loc>
   </url>
-     <url>
+  <url>
     <loc>https://yagodakarpat.com/product-page/prunus</loc>
   </url>
      <url>
@@ -65,4 +64,4 @@
      <url>
     <loc>https://yagodakarpat.com/product-page/corn</loc>
   </url>
-</urlset>
+</urlset> -->
