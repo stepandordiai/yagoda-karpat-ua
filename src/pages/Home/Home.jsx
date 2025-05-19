@@ -25,8 +25,9 @@ const Home = () => {
 						muted
 						src={video}
 					></video>
-					<h1 className="home-container__title">{t("home.title")}</h1>
-					<p className="home-container__sec-title">{t("home.sec_title")}</p>
+					<h1 className="home-container__title">ТОВ Ягода Карпат</h1>
+					<h2 className="home-container__sec-title">{t("home.title")}</h2>
+					<h3 style={{ color: "#fff" }}>{t("home.sec_title")}</h3>
 					<a className="home-container__link" href="#contacts">
 						{t("contact_us")}
 					</a>

@@ -27,13 +27,14 @@
 }
 
 .home-container__title {
-	font-size: clamp(2rem, 4vw, 3rem);
-	font-weight: 600;
+	font-size: 1.5rem;
 	color: #fff;
 }
 
 .home-container__sec-title {
 	color: #fff;
+	font-weight: 600;
+	font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .home-container__link {

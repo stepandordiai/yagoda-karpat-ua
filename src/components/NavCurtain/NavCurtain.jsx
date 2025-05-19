@@ -121,7 +121,9 @@ const NavCurtain = () => {
 							<div className="nav-curtain__dropdown">
 								<div className="nav-curtain__inner-dd">
 									<div>
-										<p className="nav-curtain__sec-title">Berries</p>
+										<p className="nav-curtain__sec-title">
+											{t("berries_title")}
+										</p>
 										<ul className="nav-curtain__products-list">
 											{productsData
 												.filter((product) => product.type == "berry")
@@ -142,7 +144,9 @@ const NavCurtain = () => {
 										</ul>
 									</div>
 									<div>
-										<p className="nav-curtain__sec-title">Fruits</p>
+										<p className="nav-curtain__sec-title">
+											{t("fruits_title")}
+										</p>
 										<ul className="nav-curtain__products-list">
 											{productsData
 												.filter((product) => product.type == "fruit")
@@ -163,7 +167,9 @@ const NavCurtain = () => {
 										</ul>
 									</div>
 									<div>
-										<p className="nav-curtain__sec-title">Mushrooms</p>
+										<p className="nav-curtain__sec-title">
+											{t("mushrooms_title")}
+										</p>
 										<ul className="nav-curtain__products-list">
 											{productsData
 												.filter((product) => product.type == "mushroom")
@@ -184,7 +190,9 @@ const NavCurtain = () => {
 										</ul>
 									</div>
 									<div>
-										<p className="nav-curtain__sec-title">Vegetables</p>
+										<p className="nav-curtain__sec-title">
+											{t("vegetables_title")}
+										</p>
 										<ul className="nav-curtain__products-list">
 											{productsData
 												.filter((product) => product.type == "vegetable")

@@ -19,7 +19,7 @@ const Header = () => {
 	return (
 		<header className="header">
 			<HashLink to={"/#home"} className="header__logo">
-				<img width={30} src={logo} alt="Logo" />
+				<img width={30} src={logo} alt="" />
 				<span>Ягода Карпат</span>
 			</HashLink>
 			<LngSelect />

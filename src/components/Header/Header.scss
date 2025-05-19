@@ -1,72 +1,72 @@
 @use "./../../mixins" as *;
 
 .header {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    left: 25px;
-    z-index: 3;
-    background: rgba(255, 255, 255, 0.75);
-    @include glass-effect;
-    min-height: 70px;
-    padding: 0 10px;
-    @include flex-end-center;
-    column-gap: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s;
+	position: fixed;
+	top: 25px;
+	right: 25px;
+	left: 25px;
+	z-index: 3;
+	background: rgba(255, 255, 255, 0.75);
+	@include glass-effect;
+	min-height: 70px;
+	padding: 0 10px;
+	@include flex-end-center;
+	column-gap: 10px;
+	border-radius: 10px;
+	transition: transform 0.3s;
 }
 
 .header--hide {
-    transform: translateY(calc(-100% - 25px));
+	transform: translateY(calc(-100% - 25px));
 }
 
 .header__logo {
-    margin-right: auto;
-    font-size: 1.5rem;
-    @include flex-center;
-    column-gap: 5px;
+	margin-right: auto;
+	font-size: 1.5rem;
+	@include flex-center;
+	column-gap: 5px;
 }
 
 .header__tel {
-    position: relative;
-    border: 1px solid var(--accent-clr);
-    height: 50px;
-    padding: 0 10px;
-    border-radius: inherit;
-    @include grid-center;
+	position: relative;
+	border: 1px solid var(--accent-clr);
+	height: 50px;
+	padding: 0 10px;
+	border-radius: inherit;
+	@include grid-center;
 }
 
 .header__tel::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-    background: var(--accent-clr);
-    transform: scale(0);
-    transform-origin: center center;
-    transition: transform 0.3s;
+	content: "";
+	position: absolute;
+	z-index: -1;
+	border-radius: inherit;
+	width: 100%;
+	height: 100%;
+	background: var(--accent-clr);
+	transform: scale(0);
+	transform-origin: center center;
+	transition: transform 0.3s;
 }
 
 .header__tel:hover::before {
-    transform: scale(1);
+	transform: scale(1);
 }
 
 @media (max-width: 900px) {
-    .header {
-        top: 10px;
-        right: 10px;
-        left: 10px;
-    }
+	.header {
+		top: 10px;
+		right: 10px;
+		left: 10px;
+	}
 
-    .header--hide {
-        transform: translateY(calc(-100% - 10px));
-    }
+	.header--hide {
+		transform: translateY(calc(-100% - 10px));
+	}
 }
 
 @media (max-width: 600px) {
-    .header__tel {
-        display: none;
-    }
+	.header__tel {
+		display: none;
+	}
 }
