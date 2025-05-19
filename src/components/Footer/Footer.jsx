@@ -260,7 +260,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className="footer__bottom">
-					<p>© Ягода Карпат 2025. Всі права захищені.</p>
+					<p>© ТОВ Ягода Карпат 2025. Всі права захищені.</p>
 					<p>
 						Made with love by{" "}
 						<a

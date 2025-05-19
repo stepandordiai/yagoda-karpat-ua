@@ -1,3 +1,3 @@
 # Yagoda Karpat
 
-<img src='./public/screenshots/yagoda-karpat-screenshot.png' />
+<img src='./public/screenshot/yagoda-karpat-screenshot-v3.png' />

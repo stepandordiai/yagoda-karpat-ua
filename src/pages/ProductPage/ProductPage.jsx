@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import PageNavTitle from "../../components/PageNavTitle/PageNavTitle";
 import ProductsData from "../../data/productsData";

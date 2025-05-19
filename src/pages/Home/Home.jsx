@@ -1,9 +1,10 @@
-import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
 import AboutUs from "./../../components/AboutUs/AboutUs";
 import Products from "./../../components/Products/Products";
 import Contacts from "./../../components/Contacts/Contacts";
 import Gallery from "../../components/Gallery/Gallery";
+import video from "/video.mp4";
 import "./Home.scss";
 
 const Home = () => {
@@ -16,19 +17,17 @@ const Home = () => {
 				<link rel="canonical" href="https://yagodakarpat.com/" />
 			</Helmet>
 			<div className="home js-home" id="home">
-				<div className="home-container__wrapper">
-					<div>
-						<h1 className="home-main-info">{t("home.title")}</h1>
-						<p className="home-info">{t("home.sec_title")}</p>
-					</div>
-					<img
-						className="home-container__img"
-						src={
-							"https://img.freepik.com/free-photo/frozen-mixed-berry_1339-7845.jpg?t=st=1740245971~exp=1740249571~hmac=6e552ffd5c3c25e585266730dd9ce194588861bc437c2bf4bab39fbaa7de64e4&w=1380"
-						}
-						alt=""
-					/>
-					<a className="home-contact-us-btn" href="#contacts">
+				<div className="home-container">
+					<video
+						className="home-container__video"
+						loop
+						autoPlay
+						muted
+						src={video}
+					></video>
+					<h1 className="home-container__title">{t("home.title")}</h1>
+					<p className="home-container__sec-title">{t("home.sec_title")}</p>
+					<a className="home-container__link" href="#contacts">
 						{t("contact_us")}
 					</a>
 				</div>
