@@ -23,6 +23,7 @@ const Home = () => {
 						loop
 						autoPlay
 						muted
+						playsInline
 						src={video}
 					></video>
 					<h1 className="home-container__title">ТОВ Ягода Карпат</h1>
