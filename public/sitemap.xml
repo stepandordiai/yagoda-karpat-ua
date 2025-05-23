@@ -1,67 +1,87 @@
-<!-- <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://yagodakarpat.com/</loc>
-  </url>
-
-  <url>
-    <loc>https://yagodakarpat.com/product-page/bilberry</loc>
-  </url>
-  <url>
-    <loc>https://yagodakarpat.com/product-page/lingonberry</loc>
-  </url>
-  <url>
-    <loc>https://yagodakarpat.com/product-page/rosehip</loc>
-  </url>
-  <url>
-    <loc>https://yagodakarpat.com/product-page/plum-frozen</loc>
-  </url>
-  <url>
-    <loc>https://yagodakarpat.com/product-page/plum-dried</loc>
-  </url>
-  <url>
-    <loc>https://yagodakarpat.com/product-page/prunus</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/elderberry</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/strawberry</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/raspberry</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/apricot</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/sweet-pepper-red</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/sweet-pepper-green</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/sweet-pepper-yellow</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/boletus</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/chanterelle</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/sour-cherry</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/honey-fungus</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/blackberry</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/grape</loc>
-  </url>
-     <url>
-    <loc>https://yagodakarpat.com/product-page/corn</loc>
-  </url>
-</urlset> -->
+<?xml version="1.0" encoding="UTF-8"?>
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://yagodakarpat.com/</loc>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/bilberry</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/lingonberry</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/rosehip</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/plum-frozen</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/plum-dried</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/prunus</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/elderberry</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/strawberry</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/raspberry</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/apricot</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/sweet-pepper-red</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/sweet-pepper-green</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/sweet-pepper-yellow</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/boletus</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/chanterelle</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/sour-cherry</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/honey-fungus</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/blackberry</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/grape</loc>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://yagodakarpat.com/corn</loc>
+	<priority>0.8</priority>
+</url>
+</urlset>
